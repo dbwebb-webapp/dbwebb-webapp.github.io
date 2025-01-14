@@ -1,5 +1,6 @@
 services:
   github_pages:
+    platform: linux/amd64
     image: madduci/docker-github-pages
     ports:
       - "4000:4000"
