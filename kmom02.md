@@ -1,4 +1,5 @@
 ---
+title: kmom02
 author:
   - mos
   - efo
@@ -105,8 +106,6 @@ Gör följande övningar för att träna inför uppgifterna.
 ### Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
-
-1. Gör uppgiften "[Sökverktyg för JSON filer](uppgift/sokverktyg-for-json-filer)". Spara resultatet i `me/kmom02/jq`.
 
 1. Gör uppgiften "[Lager appen del 2](uppgift/lager-appen-del-2)". Spara resultatet i `me/lager`.
 

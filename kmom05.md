@@ -1,4 +1,5 @@
 ---
+title: kmom05
 author:
     - mos
     - efo
@@ -70,7 +71,7 @@ I nedanstående övningar rekommenderas det att spara filerna i två kataloger. 
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 5](uppgift/lager-appen-del-5-v5)". Spara dina filer i `me/lager`.
+1. Gör uppgiften "[Lager appen del 5](uppgift/lager-appen-del-5)". Spara dina filer i `me/lager`.
 
 
 

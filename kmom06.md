@@ -1,4 +1,5 @@
 ---
+title: kmom06
 author:
     - mos
     - efo
@@ -79,7 +80,7 @@ Du kan även med fördel titta på denna video:
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 6](uppgift/lager-appen-del-6-v5)". Spara dina filer i `me/lager`.
+1. Gör uppgiften "[Lager appen del 6](uppgift/lager-appen-del-6)". Spara dina filer i `me/lager`.
 
 
 

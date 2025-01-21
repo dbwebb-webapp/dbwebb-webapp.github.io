@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ site.title }}</title>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/dark.min.css" />
 
@@ -47,6 +47,7 @@
         h2 {
             font-size: 2rem;
             margin-bottom: 1.75rem;
+            border-bottom: 2px solid #41561f;
             font-weight: 900;
         }
 
@@ -71,8 +72,6 @@
             text-decoration: none;
         }
 
-        h1 a:hover,
-        h2 a:hover,
         h3 a:hover,
         h4 a:hover,
         h5 a:hover {
@@ -183,6 +182,11 @@
 
         table tbody tr:hover {
             background-color: #ddd;
+        }
+
+        .revision-list {
+            list-style-type: none;
+            padding-left: 0;
         }
 
         .courses {
@@ -359,11 +363,16 @@
             .main {
                 flex-direction: row;
                 gap: 3.5rem;
+                max-width: 100%;
             }
 
             .sidebar {
                 width: 20%;
                 flex-shrink: 0;
+            }
+
+            .article {
+                max-width: 75%;
             }
 
             .inner-footer {
@@ -410,6 +419,16 @@
     <main class="main" id="main">
         <article class="article" id="article">
             {{ content }}
+
+            {% if page.revision %}
+                <h2 id="revisions">Revideringar</h2>
+                <ul class="revision-list">
+                {% for revision in page.revision %}
+                    <li>{{ revision[0] }}: {{ revision[1] }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+
         </article>
         <aside class="sidebar">
             <h3>Innehåll</h3>

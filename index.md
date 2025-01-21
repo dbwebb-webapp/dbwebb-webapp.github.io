@@ -1,5 +1,4 @@
 ---
-title: webapp-v5
 layout: default
 author:
     - efo
@@ -40,7 +39,6 @@ Kursen omfattar följande områden:
 * Mobilen och läsplattan som test och utvecklingsmiljö.
 * Touch-event.
 * Responsive design, storlekar, landskap, portätt.
-<!-- * Koppling mot server och databas. -->
 * Jobba med RESTful API:er och JSON.
 * Mobil prestanda och tillgänglighet.
 * Att använda hårdvarufunktioner som är specifika på mobila enheter, tex splash-screens, logotyper och filhantering.
@@ -104,7 +102,7 @@ I detta kursmoment fortsätter vi med att utveckla våra GUI komponenter från t
 
 I vår applikation lägger vi till möjligheten att skapa, uppdatera och ta bort data via formulär.
 
-[Instruktion till kursmoment 03](kurser/webapp-v5/kmom03).
+[Instruktion till kursmoment 03](kmom03).
 
 
 
@@ -114,7 +112,7 @@ Vi fortsätter med Lager appen och lägger till en funktion för att skapa faktu
 
 När man skapar en faktura är det bra att ha snygga och responsiva tabeller. Så kursmomentets GUI-komponent är just tabeller och hur vi optimerar dessa för mobila enheter.
 
-[Instruktion till kursmoment 04](kurser/webapp-v5/kmom04).
+[Instruktion till kursmoment 04](kmom04).
 
 
 
@@ -122,7 +120,7 @@ När man skapar en faktura är det bra att ha snygga och responsiva tabeller. S�
 
 Vi tar en titt på hur vi kan använda externa npm-moduler direkt i applikation när vi bygger en karta i appen. Sedan tittar vi på hur vi kan använda webbens inbyggda API:er för att hämta användarens GPS-position.
 
-[Instruktion till kursmoment 05](kurser/webapp-v5/kmom05).
+[Instruktion till kursmoment 05](kmom05).
 
 
 
@@ -130,7 +128,7 @@ Vi tar en titt på hur vi kan använda externa npm-moduler direkt i applikation 
 
 I detta kursmoment fortsätter vi att utnyttja styrkorna i våra mobila enheter. Vi tittar vidare på webbens inbyggda API:er och hur vi kan använda dessa för att skapa mer fullvärdiga webb applikationer.
 
-[Instruktion till kursmoment 06](kurser/webapp-v5/kmom06).
+[Instruktion till kursmoment 06](kmom06).
 
 
 
@@ -140,7 +138,7 @@ Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det si
 
 Projektet bygger på tidigare kursmoment och med dina nya erfarenheter skapar du en tillgänglig och användbar mobil applikation enligt specifikationen.
 
-[Instruktion till kursmoment 10](kurser/webapp-v5/kmom10).
+[Instruktion till kursmoment 10](kmom10).
 
 
 
@@ -161,41 +159,32 @@ Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha ti
 * **[You Don't Know JS](kunskap/boken-you-dont-know-javascript)** -- K. Simpson (@getify)
   Om du vill förstå JavaScript på djupet och därigenom bli kung på JavaScript, men samtidigt en bättre programmerare rekommenderas You Don't Know JS starkt.
 
-* **[HTML och CSS-boken](boken-html-och-css-boken)** -- Rolf Staflin
-  En stabil bok för att komma igång med HTML och CSS.
-
-
-
-### Övrig litteratur {#ovriglitteratur}
-
-I varje kursmoment kan det tillkomma läsanvisningar i till exempel artiklar, manualer och webbmaterial.
-
 
 
 Rekommenderad studieplan {#studieplan}
 ---------------------------------------------
 
-Kursen har en [rekommenderad studieplan](kurser/webapp/studieplan) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
+Kursen har en [rekommenderad studieplan](https://docs.google.com/spreadsheets/d/1F6zSLaDAXLmPgHxrmsiygJxOXbPhZuB69pd0WXhZsUQ/edit?usp=sharing){:target="_blank"} som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
 
 I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
 
-Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan).
+Läs mer om den [rekommenderade studieplanen](https://dbwebb.se/faq/rekommenderad-studieplan){:target="_blank"}.
 
 
 
 Lektionsplan {#lektionsplan}
 ---------------------------------------------
 
-Det finns en [lektionsplan](kurser/webapp/lektionsplan) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
+Det finns en [lektionsplan](https://docs.google.com/spreadsheets/d/1imZXLGYFsyFP6Bd9OP55cTikqz9HzoJgemxtwbfeYNU/edit?usp=sharing){:target="_blank"} som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
 
-Läs mer om [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+Läs mer om [lektionsplanen](https://dbwebb.se/faq/rekommenderad-studieplan){:target="_blank"}.
 
 
 
 Lärarstöd och handledning {#handledning}
 ----------------------------------------
 
-Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
+Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](https://dbwebb.se/faq/lararstod-och-handledning).
 
 Ofta ställda frågor (FAQ) finns på [GitHub issues](https://github.com/dbwebb-se/webapp/issues?q=is%3Aopen+is%3Aissue+label%3Afaq).
 
@@ -204,7 +193,7 @@ Ofta ställda frågor (FAQ) finns på [GitHub issues](https://github.com/dbwebb-
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](https://dbwebb.se/faq/bedomning-och-betygsattning).
 
 
 
@@ -219,7 +208,7 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 | Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
 | Kmom05 - kmom10 | Projekt á 2.5hp               |
 
-Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
+Läs mer om [rapportering av resultat](https://dbwebb.se/faq/resultatrapportering).
 
 
 
@@ -228,7 +217,7 @@ Kursutvärdering och kursutveckling {#kursutvardering}
 
 Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt för mig att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
 
-Läs om hur [jag jobbar med kursutvärdering och kursutveckling](kurser/kursutvardering-och-kursutveckling).
+Läs om hur [jag jobbar med kursutvärdering och kursutveckling](https://dbwebb.se/faq/kursutvardering-och-kursutveckling).
 
 
 

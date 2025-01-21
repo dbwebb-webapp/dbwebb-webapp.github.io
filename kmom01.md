@@ -1,4 +1,5 @@
 ---
+title: kmom01
 author:
   - efo
 revision:
@@ -33,17 +34,7 @@ Labbmiljön  {#labbmiljo}
 
 *(ca: 1 studietimme)*
 
-Det finns en [längre beskrivning om kursens labbmiljö](./../installera-labbmiljo). Läs den om du är osäker på vad som skall göras, eller om detta är din första dbwebb-kurs.
-
-Uppdatera [dbwebb-cli](dbwebb-cli) samt klona och initiera kursrepot.
-
-```text
-# Gå till din katalog för dbwebb-kurser
-dbwebb selfupdate
-dbwebb clone webapp
-cd webapp
-dbwebb init
-```
+I denna kursen använder vi GitHub som utgångspunkt för vår labb- och studiemiljö.
 
 
 
@@ -67,25 +58,25 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande artiklar för att få bakgrunden till övningarna.
 
-1. Läs om viewport på MDN i artikeln "[Using the viewport meta tag to control layout on mobile browsers](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag)".
+1. Läs om viewport på MDN i artikeln "[Using the viewport meta tag to control layout on mobile browsers](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag){:target="_blank"}".
 
-1. Bekanta dig med dokumentationen för [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) som vi använder för att ladda data via JavaScript.
+1. Bekanta dig med dokumentationen för [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API){:target="_blank"} som vi använder för att ladda data via JavaScript.
 
-1. Bekanta dig översiktligt med _web components_ i artikeln "[Introduction](https://www.webcomponents.org/introduction)".
+1. Bekanta dig översiktligt med _web components_ i artikeln "[Introduction](https://www.webcomponents.org/introduction){:target="_blank"}".
 
 
 
 ### Video {#video}
 
-1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_CbhJOudHjxkjYofM98kvh) kopplat till kursen, titta på videos som börjar på 0 och 1.
+1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_CbhJOudHjxkjYofM98kvh){:target="_blank"} kopplat till kursen, titta på videos som börjar på 0 och 1.
 
 
 
 ### Lästips {#lastips}
 
-1. Läs översiktligt denna samling av "best-practices" för typografi på webben [Typography Handbook](http://typographyhandbook.com). Spara den i dina bokmärken som en framtida referens.
+1. Läs översiktligt denna samling av "best-practices" för typografi på webben [Typography Handbook](https://web.archive.org/web/20231219201010/http://typographyhandbook.com/){:target="_blank"}. Spara den i dina bokmärken som en framtida referens.
 
-1. För mer om tillgänglighet (accessibility, a11y) titta in på [The A11Y Project](https://a11yproject.com/).
+1. För mer om tillgänglighet (accessibility, a11y) titta in på [The A11Y Project](https://a11yproject.com/){:target="_blank"}.
 
 
 
@@ -114,10 +105,6 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Lager appen del 1](uppgift/lager-appen-del-1)". Spara din kod i `me/lager`.
 
-Emil visar i nedanstående video hur du gör en inlämning i webapp.
-
-[YOUTUBE src=lGk0n231zlg width=630 caption="En inlämning i webapp"]
-
 
 
 Resultat & Redovisning  {#resultat_redovisning}
@@ -125,9 +112,9 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
+Skriv en redovisningstext och redovisa dina reflektioner från kursmomentet. Besvara de specifika frågor som finns för varje kursmoment. Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc.
 
-Se till att följande frågor besvaras i redovisningstexten och lämnas in på Canvas.
+Se till att följande frågor besvaras i redovisningstexten som en del av din Pull Request, se videon nedan för hur du gör en inlämning.
 
 * Är du sedan tidigare bekant med utveckling av mobila appar?
 * Vilket är den viktigaste lärdomen du gjort om typografi för mobila enheter?
@@ -136,3 +123,9 @@ Se till att följande frågor besvaras i redovisningstexten och lämnas in på C
 TIL är en akronym för “Today I Learned” vilket leksamt anspelar på att det finns alltid nya saker att lära sig, varje dag. Man brukar lyfta upp saker man lärt sig och där man kanske hajade till lite extra över dess nyttighet eller enkelhet, eller så var det bara en ny lärdom för dagen som man vill notera.
 
 * Vilken är din TIL för detta kmom?
+
+I artikeln "[Att skriva en bra redovisningstext](https://dbwebb.se/faq/att-skriva-en-bra-redovisningstext)" finns exempel och goda råd kring att skriva bra redovisningstexter.
+
+Emil visar i nedanstående video hur du gör en inlämning i webapp.
+
+[YOUTUBE src=lGk0n231zlg width=630 caption="En inlämning i webapp"]
