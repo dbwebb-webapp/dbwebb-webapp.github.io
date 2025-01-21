@@ -113,7 +113,10 @@
         .nav ul {
             list-style-type: none;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0;
         }
 
         .nav ul li {
@@ -244,7 +247,8 @@
         }
 
         .inner-footer img {
-            width: 256px;
+            max-width: 256px;
+
         }
 
         .inner-footer div {
@@ -377,12 +381,6 @@
 
             .course {
                 width: 23%;
-            }
-
-            .nav ul {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
             }
 
             .nav ul li {
