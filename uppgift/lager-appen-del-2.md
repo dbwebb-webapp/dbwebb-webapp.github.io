@@ -4,7 +4,7 @@ category: javascript
 revision:
   "2023-03-21": (B, efo) Första utgåvan i samband med kursen webapp v3.
   "2018-01-17": (A, efo) Första utgåvan i samband med kursen webapp v3.
-...
+---
 Lager appen del 2
 ==================================
 
@@ -37,21 +37,21 @@ Krav {#krav}
 
 1. Strukturera din CSS kod, så du har olika moduler för dina komponenter med hjälp av CSS preprocessorn SASS .
 
-1. Skapa en vy där lagerarbetarna ser alla ordrar redo för att packas, dvs. ordrar med status ny.
+2. Skapa en vy där lagerarbetarna ser alla ordrar redo för att packas, dvs. ordrar med status ny.
 
-1. Vyn visar alla varor i en order, hur många som ska plockas och vart varan finns.
+3. Vyn visar alla varor i en order, hur många som ska plockas och vart varan finns.
 
-1. Gör en kontroll om det finns tillräckligt många av varan för att den kan packas.
+4. Gör en kontroll om det finns tillräckligt många av varan för att den kan packas.
 
-1. Om det finns tillräckligt många produkter ska det finnas en möjlighet att byta status för ordern med en knapp. Byt till status Packad.
+5. Om det finns tillräckligt många produkter ska det finnas en möjlighet att byta status för ordern med en knapp. Byt till status Packad.
 
-1. När status för ordern ändras måste även lagersaldot för de packade varorna minskas. Viktigt att du gör ändringar för en produkt (`products`-endpointen) och inte för orderraderna.
+6. När status för ordern ändras måste även lagersaldot för de packade varorna minskas. Viktigt att du gör ändringar för en produkt (`products`-endpointen) och inte för orderraderna.
 
-1. Gör ett medvetet val om du vill använda flat design eller ej.
+7. Gör ett medvetet val om du vill använda flat design eller ej.
 
-1. Se till att det går att testa din app. Lägg till minst en order med en produkt som går att packa.
+8. Se till att det går att testa din app. Lägg till minst en order med en produkt som går att packa.
 
-1. Validera och publicera din kod enligt följande.
+9. Validera och publicera din kod enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen

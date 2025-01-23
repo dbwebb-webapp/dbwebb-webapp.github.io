@@ -5,7 +5,7 @@ revision:
   "2023-03-24": (C, efo) Uppdaterade uppgiften för webapp v5.
   "2019-03-04": (B, efo) Uppdaterade uppgiften för att passa API v2.
   "2018-01-17": (A, efo) Första utgåvan i samband med kursen webapp v3.
-...
+---
 Lager appen del 3
 ==================================
 
@@ -37,11 +37,11 @@ Krav {#krav}
 
 1. Lista alla tidigare inleveranser, om det inte finns inleveranser visa upp ett meddelande om detta.
 
-1. Gör en knapp för 'Ny inleverans' i list-vyn denna ska ta användaren till ett formulär.
+2. Gör en knapp för 'Ny inleverans' i list-vyn denna ska ta användaren till ett formulär.
 
-1. Använd dina kunskapar i att göra ett lättanvänd formulär där man kan göra inleverans av en produkt.
+3. Använd dina kunskapar i att göra ett lättanvänd formulär där man kan göra inleverans av en produkt.
 
-1. Formuläret ska innehålla alla attribut för en inleverans förutom Leverans ID (id) dvs.:
+4. Formuläret ska innehålla alla attribut för en inleverans förutom Leverans ID (id) dvs.:
 
 * Produkt (product_id)
 * Antal (amount)
