@@ -51,16 +51,6 @@ Krav {#krav}
 
 1. Gör det enkelt att testa din app. Ha minst en order med status Packad, som har en adress som fungerar och visas upp med en Geocoder/nominatim.
 
-1. Validera och publicera din kod enligt följande.
-
-```bash
-# Ställ dig i kurskatalogen
-dbwebb validate lager
-dbwebb publish lager
-```
-
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
-
 
 
 Extrauppgift {#extra}

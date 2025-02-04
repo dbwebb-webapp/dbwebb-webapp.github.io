@@ -50,13 +50,3 @@ Krav {#krav}
 7. Gör ett medvetet val om du vill använda flat design eller ej.
 
 8. Se till att det går att testa din app. Lägg till minst en order med en produkt som går att packa.
-
-9. Validera och publicera din kod enligt följande.
-
-```bash
-# Ställ dig i kurskatalogen
-dbwebb validate lager
-dbwebb publish lager
-```
-
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.

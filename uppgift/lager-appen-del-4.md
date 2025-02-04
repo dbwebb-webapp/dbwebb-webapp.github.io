@@ -48,16 +48,6 @@ Krav {#krav}
 
 1. Din app måste innehålla en CSP, som bara tillåter precis det som behövs hämtas för att undvika XSS-attacker och liknande.
 
-1. Validera och publicera din kod enligt följande.
-
-```bash
-# Ställ dig i kurskatalogen
-dbwebb validate lager
-dbwebb publish lager
-```
-
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
-
 
 
 Extrauppgift {#extra}

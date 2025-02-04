@@ -55,13 +55,3 @@ Krav {#krav}
 7. Använd ett `select`-element för att välja produkten som har levererats. Designa `select`-elementet så det passar in i resten av stilen för formuläret.
 
 8. Använd ett `textarea`-element för kommentaren. Designa `textarea`-elementet så det passar in i resten av stilen för formuläret. Använd ett lämpligt standard-värde (default) för textarean.
-
-9. Validera och publicera din kod enligt följande.
-
-```bash
-# Ställ dig i kurskatalogen
-dbwebb validate lager
-dbwebb publish lager
-```
-
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.

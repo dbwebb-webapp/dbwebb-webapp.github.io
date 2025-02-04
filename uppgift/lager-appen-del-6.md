@@ -38,13 +38,3 @@ Krav {#krav}
 1. Din chatt-klient bör dock vara såpass robust att den inte kraschar om data som kommer från servern inte uppfyller ovanstående format. Se till att ha någon form av felhantering.
 
 1. Alla meddelanden tillsammans med användarenamn som kommer in via webbsocketen ska visas upp i chatten i din app.
-
-1. Validera och publicera din kod enligt följande.
-
-```bash
-# Ställ dig i kurskatalogen
-dbwebb validate lager
-dbwebb publish lager
-```
-
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
