@@ -34,7 +34,15 @@ Labbmiljön  {#labbmiljo}
 
 *(ca: 1 studietimme)*
 
+Som i andra kurser bör du ha en lokal labbmiljö innehållande:
+
+* Webbläsare (gärna flertalet olika)
+* En bash-terminal (WSL2 för Windows)
+* Visual Studio Code
+
 I denna kursen använder vi GitHub som utgångspunkt för vår labb- och studiemiljö.
+
+Du börjar kursen genom att skapa en `fork` av repot [dbwebb-webapp/webapp](https://github.com/dbwebb-webapp/webapp){:target="_blank"}. Du klonar sedan repot till din `dbwebb-kurser` katalog.
 
 
 
@@ -91,11 +99,11 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. Läs igenom artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)". Spara koden i `me/kmom01/typography`.
+1. Läs igenom artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)". Du kan spara koden i ditt kursrepo i `src`-katalogen.
 
-1. Skapa en API-nyckel och produkter i ditt egna lager med hjälp av artikeln "[Introduktion till Lager-API:t](kunskap/introduktion-till-lager-api)".
+2. Skapa en API-nyckel och produkter i ditt egna lager med hjälp av artikeln "[Introduktion till Lager-API:t](kunskap/introduktion-till-lager-api)".
 
-1. Gör övningen "[Web Components](kunskap/web-components)". Spara resultatet i `me/lager`.
+3. Gör övningen "[Web Components](kunskap/web-components)". Spara resultatet i ditt kursrepo i `src`-katalogen.
 
 
 
@@ -103,7 +111,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 1](uppgift/lager-appen-del-1)". Spara din kod i `me/lager`.
+1. Gör uppgiften "[Lager appen del 1](uppgift/lager-appen-del-1)". Spara din kod i ditt kursrepo i `src`-katalogen.
 
 
 
