@@ -81,9 +81,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
-
-Se till att följande frågor besvaras i redovisningstexten.
+Se till att följande frågor besvaras i redovisningstexten i din inlämning.
 
 * Vilka faktorer spelar in när du ska designa ett formulär för mobila enheter?
 * Vad tyckte du om den inbyggda formulär validering i webbläsaren?

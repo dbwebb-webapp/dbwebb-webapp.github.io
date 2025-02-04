@@ -77,7 +77,7 @@ Se följande videor.
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. Gör övningen [Tabeller i mobila enheter](kunskap/tabeller-i-mobila-enheter). Spara eventuella testfiler i `me/kmom04/tabeller`.
+1. Gör övningen [Tabeller i mobila enheter](kunskap/tabeller-i-mobila-enheter). Spara eventuella testfiler i `src`.
 
 1. Gör övningen [Login med JWT](kunskap/login-med-jwt).
 
@@ -89,7 +89,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 4](uppgift/lager-appen-del-4)". Spara dina filer i `me/lager`.
+1. Gör uppgiften "[Lager appen del 4](uppgift/lager-appen-del-4)". Spara dina filer i `src`.
 
 
 
@@ -98,9 +98,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
-
-Se till att följande frågor besvaras i redovisningstexten.
+Se till att följande frågor besvaras i redovisningstexten i din inlämning.
 
 * Vilka utmaningar finns med tabeller i mobila enheter?
 * Vilka fördelar finns med JWT?

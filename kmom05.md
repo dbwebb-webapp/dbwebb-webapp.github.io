@@ -19,20 +19,6 @@ I detta kursmoment börjar vi till fullo att utnyttja styrkorna i våra mobila e
 
 
 
-<!--more-->
-
-
-
-Så här kan det se ut när vi är klara med kursmoment 05 del 1.
-
-[YOUTUBE src=emHOf_hnE4I width=630 caption="Lager appen i kursmoment 5 del 1."]
-
-Så här kan det se ut när vi är klara med kursmoment 05 del 2.
-
-[YOUTUBE src=SDvsHIIIC_k width=630 caption="Lager appen i kursmoment 5 del 2."]
-
-
-
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
@@ -57,13 +43,13 @@ Nedan berättar Andreas om veckans övningar och uppgifter och visar lite tips o
 
 ### Övningar {#ovningar}
 
-I nedanstående övningar rekommenderas det att spara filerna i två kataloger. Finns inte katalogerna i ert kursrepo kan detta åtgärdas genom att köra `dbwebb update` och `dbwebb init`.
+Använd nedanstående övningar som inspiration för att klara av uppgiften här i kmom05.
 
-1. Jobba igenom övningen "[Animationer och övergångar](kunskap/animationer-och-overgangar-v2)". Spara eventuella testfiler i `me/kmom05/animation`.
+1. Jobba igenom övningen "[Animationer och övergångar](kunskap/animationer-och-overgangar)". 
 
-1. Jobba igenom övningen "[GPS och karta](kunskap/gps-och-karta-v3)". Spara eventuella testfiler i `me/kmom05/gps`.
+1. Jobba igenom övningen "[GPS och karta](kunskap/gps-och-karta)".
 
-1. Jobba igenom övningen "[Kamera i mobilen](kunskap/kamera-i-mobilen)". Spara eventuella testfiler i `me/kmom05/camera`.
+1. Jobba igenom övningen "[Kamera i mobilen](kunskap/kamera-i-mobilen)".
 
 
 
@@ -71,7 +57,7 @@ I nedanstående övningar rekommenderas det att spara filerna i två kataloger. 
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 5](uppgift/lager-appen-del-5)". Spara dina filer i `me/lager`.
+1. Gör uppgiften "[Lager appen del 5](uppgift/lager-appen-del-5)". Spara dina filer i `src`.
 
 
 
@@ -79,8 +65,6 @@ Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
 *(ca: 1-2 studietimmar)*
-
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

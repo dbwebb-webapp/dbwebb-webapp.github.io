@@ -42,12 +42,11 @@ Andreas jobba igenom övningen.
 [YOUTUBE src=F3sf4-fOw5U width=630 caption="Veckans genomgång"]
 
 
+
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
 *(ca: 6-10 studietimmar)*
-
-
 
 ### Artiklar {#artiklar}
 
@@ -72,7 +71,7 @@ Du kan även med fördel titta på denna video:
 
 ### Övningar {#ovningar}
 
-1. Jobba igenom övningen "[Real-tids chatt](kunskap/real-tids-chatt)". Spara eventuella testfiler i `me/kmom06/chat`.
+1. Jobba igenom övningen "[Real-tids chatt](kunskap/real-tids-chatt)".
 
 
 
@@ -80,7 +79,7 @@ Du kan även med fördel titta på denna video:
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 6](uppgift/lager-appen-del-6)". Spara dina filer i `me/lager`.
+1. Gör uppgiften "[Lager appen del 6](uppgift/lager-appen-del-6)". Spara dina filer i `src`.
 
 
 
@@ -88,8 +87,6 @@ Resultat & Redovisning  {#resultat_redovisning}
 -----------------------------------------------
 
 *(ca: 1-2 studietimmar)*
-
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
