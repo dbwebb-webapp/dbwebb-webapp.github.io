@@ -18,16 +18,6 @@ Vi tar en titt på vilka begränsningar och utmaningar man står inför som anv�
 
 Vi fortsätter med vår applikation från kmom01 och tittar på hur vi kan använda en router för att visa upp olika sidor utan att ladda om sidan.
 
-Innan vi gör detta tittar vi på ett verktyg som hjälper oss att söka och visa information i JSON-filer.
-
-Det kan se ut så här när vi har gjort klart Lager appen del 2.
-
-
-
-<!--more-->
-
-
-
 Nedan finns en liten video som visar hur det kan se ut när man är klar med Lager appen del 2.
 
 [YOUTUBE src=QAvD-vRgSaU width=630 caption="Lager appen del 2."]
@@ -45,9 +35,7 @@ Nedan berättar Andreas om veckans övningar och uppgifter och visar lite tips o
 
 [YOUTUBE src=BKYy78jPcek width=630 caption="Veckans genomgång del 1"]
 
-[YOUTUBE src=2bpb6krqBfw width=630 caption="Veckans genomgång del 2"]
-
-[YOUTUBE src=IaKrJ4BRWBs width=630 caption="Veckans genomgång del 3"]
+[YOUTUBE src=IaKrJ4BRWBs width=630 caption="Veckans genomgång del 2"]
 
 
 
@@ -76,12 +64,6 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 
 
-### Lästips {#lastips}
-
-* Kika igenom [webbplatsen om applikationen jq](https://stedolan.github.io/jq/) som hjälper dig söka och visualisera innehållet i en JSON fil.
-
-
-
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
@@ -93,13 +75,9 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1.  Installera och testa verktyget jq via artikeln "[Installera verktyget jq för att söka i JSON-filer](kunskap/installera-verktyget-jq-for-att-soka-i-json-filer)".
+1. Gör övningen "[Knappar för mobilen](kunskap/knappar-for-mobilen)". Spara eventuella testfiler i `src`.
 
-1. Läs igenom artikeln och installera "[Utvecklingsverktyg för REST tjänster](kunskap/utvecklingsverktyg-for-restful-tjanster)".
-
-1. Gör övningen "[Knappar för mobilen](kunskap/knappar-for-mobilen)". Spara eventuella testfiler i `me/kmom02/buttons`.
-
-1. Gör övningen "[En router i JavaScript](kunskap/en-router-i-javascript)". Spara med fördel koden i `me/lager`.
+1. Gör övningen "[En router i JavaScript](kunskap/en-router-i-javascript)". Spara med fördel koden i `src`.
 
 
 
@@ -107,7 +85,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 2](uppgift/lager-appen-del-2)". Spara resultatet i `me/lager`.
+1. Gör uppgiften "[Lager appen del 2](uppgift/lager-appen-del-2)". Spara resultatet i `src`.
 
 
 
@@ -116,11 +94,8 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](./../redovisa).
+Se till att följande frågor besvaras i redovisningstexten i din inlämning.
 
-Se till att följande frågor besvaras i redovisningstexten.
-
-* Vilka fördelar ser du med verktyg som Postman och jq?
 * Fick du till en bra struktur i din CSS/SASS kod?
 * Vilka fördelar ser du med att kombinera _web components_ med en router i JavaScript?
 * Vilka insikter fick du när du skummade igenom Apples och Androids design guidelines?
