@@ -64,7 +64,7 @@ Läsanvisningar  {#lasanvisningar}
 
 Gör följande övning för att träna inför uppgifterna.
 
-1. Läs igenom artikeln och gör övningarna i "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular)". Skriv koden i `me/lager` för återanvändning i uppgiften.
+1. Läs igenom artikeln och gör övningarna i "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular)". Skriv koden i `src` för återanvändning i uppgiften.
 
 
 
@@ -72,7 +72,7 @@ Gör följande övning för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 3](uppgift/lager-appen-del-3)". Spara resultatet i `me/lager`.
+1. Gör uppgiften "[Lager appen del 3](uppgift/lager-appen-del-3)". Spara resultatet i `src`.
 
 
 
