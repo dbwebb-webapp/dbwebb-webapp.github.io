@@ -57,7 +57,7 @@ Sedan vill du skapa en `fork` av repot [dbwebb-webapp/webapp-lager](https://gith
 git clone https://github.com/akronym/webapp-lager.git
 ```
 
-Gå nu till sidan https://github.com/akronym/webapp-lager/actions och godkänn
+Gå nu till sidan https://github.com/akronym/webapp-lager/actions och godkänn att Actions kan köras genom att klicka på stora gröna knappen: "I understand my workflow, go ahead and run them". Dessa workflows används för att köra tester, validering och rättning.
 
 
 
