@@ -40,9 +40,22 @@ Som i andra kurser bör du ha en lokal labbmiljö innehållande:
 * En bash-terminal (WSL2 för Windows)
 * Visual Studio Code
 
-I denna kursen använder vi GitHub som utgångspunkt för vår labb- och studiemiljö.
+I denna kursen använder vi GitHub som utgångspunkt för vår labb- och studiemiljö. I nedanstående video visar Emil hur du kommer igång med kursen.
 
-Du börjar kursen genom att skapa en `fork` av repot [dbwebb-webapp/webapp](https://github.com/dbwebb-webapp/webapp){:target="_blank"}. Du klonar sedan repot till din `dbwebb-kurser` katalog.
+Du börjar kursen genom att skapa en `webapp` katalog i din `dbwebb-kurser`-katalog. Du kan sedan klona `example`-repot ([dbwebb-webapp/example](https://github.com/dbwebb-webapp/example){:target="_blank"}) till `webapp`-katalogen så du har tillgång till kursens exempel-kod.
+
+```shell
+cd $HOME/dbwebb-kurser
+mkdir webapp
+cd webapp
+git clone https://github.com/dbwebb-webapp/example.git
+```
+
+Sedan vill du skapa en `fork` av repot [dbwebb-webapp/lager](https://github.com/dbwebb-webapp/lager){:target="_blank"}. Du klonar sedan repot till din `dbwebb-kurser/webapp` katalog.
+
+```shell
+git clone https://github.com/akronym/lager.git
+```
 
 
 
