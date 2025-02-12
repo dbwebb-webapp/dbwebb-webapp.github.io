@@ -51,11 +51,13 @@ cd webapp
 git clone https://github.com/dbwebb-webapp/example.git
 ```
 
-Sedan vill du skapa en `fork` av repot [dbwebb-webapp/lager](https://github.com/dbwebb-webapp/lager){:target="_blank"}. Du klonar sedan repot till din `dbwebb-kurser/webapp` katalog.
+Sedan vill du skapa en `fork` av repot [dbwebb-webapp/webapp-lager](https://github.com/dbwebb-webapp/webapp-lager){:target="_blank"}. Du klonar sedan repot till din `dbwebb-kurser/webapp` katalog. Se till att byta ut akronym mot din akronym i de två nedanstående URL'r.
 
 ```shell
-git clone https://github.com/akronym/lager.git
+git clone https://github.com/akronym/webapp-lager.git
 ```
+
+Gå nu till sidan https://github.com/akronym/webapp-lager/actions och godkänn
 
 
 
