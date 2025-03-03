@@ -40,7 +40,7 @@ Som i andra kurser bör du ha en lokal labbmiljö innehållande:
 * En bash-terminal (WSL2 för Windows)
 * Visual Studio Code
 
-I denna kursen använder vi GitHub som utgångspunkt för vår labb- och studiemiljö. I nedanstående video visar Emil hur du kommer igång med kursen.
+I denna kursen använder vi GitHub som utgångspunkt för vår labb- och studiemiljö. I nedanstående video visar Emil hur du kommer igång med kursen. Om du föredrar text kan du hoppa över videon.
 
 Du börjar kursen genom att skapa en `webapp` katalog i din `dbwebb-kurser`-katalog. Du kan sedan klona `example`-repot ([dbwebb-webapp/webapp-example](https://github.com/dbwebb-webapp/webapp-example){:target="_blank"}) till `webapp`-katalogen så du har tillgång till kursens exempel-kod.
 
@@ -57,7 +57,13 @@ Sedan vill du skapa en `fork` av repot [dbwebb-webapp/webapp-lager](https://gith
 git clone https://github.com/akronym/webapp-lager.git
 ```
 
-Gå nu till sidan https://github.com/akronym/webapp-lager/actions och godkänn att Actions kan köras genom att klicka på stora gröna knappen: "I understand my workflows, go ahead and run them". Dessa workflows används för att köra tester, validering och rättning.
+Gå nu till sidan https://github.com/akronym/webapp-lager/actions och godkänn att Actions kan köras genom att klicka på stora gröna knappen: "I understand my workflows, go ahead and run them". Dessa workflows används för att köra tester, validering, driftsättning och rättning.
+
+Avsluta veckans uppstart med att skapa en `branch` för att jobba med kmom01 genom följande kommando.
+
+```shell
+git checkout -b kmom01
+```
 
 
 
@@ -114,11 +120,11 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. Läs igenom artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)". Du kan spara koden i ditt kursrepo i `src`-katalogen.
+1. Läs igenom artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)". Du kan spara koden i ditt webapp-lager repo.
 
 2. Skapa en API-nyckel och produkter i ditt egna lager med hjälp av artikeln "[Introduktion till Lager-API:t](kunskap/introduktion-till-lager-api)".
 
-3. Gör övningen "[Web Components](kunskap/web-components)". Spara resultatet i ditt kursrepo i `src`-katalogen.
+3. Gör övningen "[Web Components](kunskap/web-components)". Spara resultatet i ditt kursrepo i ditt webapp-lager repo.
 
 
 
@@ -126,7 +132,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 1](uppgift/lager-appen-del-1)". Spara din kod i ditt kursrepo i `src`-katalogen.
+1. Gör uppgiften "[Lager appen del 1](uppgift/lager-appen-del-1)". Spara din kod i ditt kursrepo i ditt webapp-lager repo.
 
 
 

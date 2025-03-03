@@ -28,7 +28,19 @@ Nedan finns en liten video som visar hur det kan se ut när man är klar med Lag
 
 
 
-Veckans genomgång  {#genomgang}
+Starta igång veckan {#uppstart}
+----------------------------------------------
+
+Starta igång veckan genom att skapa en `branch` för att jobba med kmom02 genom följande kommandon.
+
+```shell
+cd $HOME/dbwebb-kurser/webapp/webapp-lager
+git checkout -b kmom02
+```
+
+
+
+Veckans genomgång {#genomgang}
 ---------------------------------
 
 Nedan berättar Andreas om veckans övningar och uppgifter och visar lite tips och trix.
@@ -75,9 +87,9 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. Gör övningen "[Knappar för mobilen](kunskap/knappar-for-mobilen)". Spara eventuella testfiler i `src`.
+1. Gör övningen "[Knappar för mobilen](kunskap/knappar-for-mobilen)". Spara eventuella testfiler i ditt webapp-lager repo.
 
-1. Gör övningen "[En router i JavaScript](kunskap/en-router-i-javascript)". Spara med fördel koden i `src`.
+1. Gör övningen "[En router i JavaScript](kunskap/en-router-i-javascript)". Spara med fördel koden i ditt webapp-lager repo.
 
 
 
@@ -85,7 +97,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 2](uppgift/lager-appen-del-2)". Spara resultatet i `src`.
+1. Gör uppgiften "[Lager appen del 2](uppgift/lager-appen-del-2)". Spara resultatet i ditt webapp-lager repo.
 
 
 

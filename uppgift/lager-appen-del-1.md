@@ -10,8 +10,6 @@ revision:
 Lager appen del 1
 ==================================
 
-[FIGURE src=image/webapp/warehouse.jpg?w=c5 class="right"]
-
 I denna uppgift skapar du grunden för en lager-app, du använder dina kunskaper från övningar och kurslitteratur för att skapa en SPA som är tillgängliga och användbar. Du hämtar JSON data från ett befintligt REST API och i denna första del ligger fokus på navigation och en enkel listning av produkter.
 
 
