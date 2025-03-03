@@ -42,13 +42,13 @@ Som i andra kurser bör du ha en lokal labbmiljö innehållande:
 
 I denna kursen använder vi GitHub som utgångspunkt för vår labb- och studiemiljö. I nedanstående video visar Emil hur du kommer igång med kursen.
 
-Du börjar kursen genom att skapa en `webapp` katalog i din `dbwebb-kurser`-katalog. Du kan sedan klona `example`-repot ([dbwebb-webapp/example](https://github.com/dbwebb-webapp/example){:target="_blank"}) till `webapp`-katalogen så du har tillgång till kursens exempel-kod.
+Du börjar kursen genom att skapa en `webapp` katalog i din `dbwebb-kurser`-katalog. Du kan sedan klona `example`-repot ([dbwebb-webapp/webapp-example](https://github.com/dbwebb-webapp/webapp-example){:target="_blank"}) till `webapp`-katalogen så du har tillgång till kursens exempel-kod.
 
 ```shell
 cd $HOME/dbwebb-kurser
 mkdir webapp
 cd webapp
-git clone https://github.com/dbwebb-webapp/example.git
+git clone https://github.com/dbwebb-webapp/webapp-example.git
 ```
 
 Sedan vill du skapa en `fork` av repot [dbwebb-webapp/webapp-lager](https://github.com/dbwebb-webapp/webapp-lager){:target="_blank"}. Du klonar sedan repot till din `dbwebb-kurser/webapp` katalog. Se till att byta ut akronym mot din akronym i de två nedanstående URL'r.
@@ -57,7 +57,7 @@ Sedan vill du skapa en `fork` av repot [dbwebb-webapp/webapp-lager](https://gith
 git clone https://github.com/akronym/webapp-lager.git
 ```
 
-Gå nu till sidan https://github.com/akronym/webapp-lager/actions och godkänn att Actions kan köras genom att klicka på stora gröna knappen: "I understand my workflow, go ahead and run them". Dessa workflows används för att köra tester, validering och rättning.
+Gå nu till sidan https://github.com/akronym/webapp-lager/actions och godkänn att Actions kan köras genom att klicka på stora gröna knappen: "I understand my workflows, go ahead and run them". Dessa workflows används för att köra tester, validering och rättning.
 
 
 
