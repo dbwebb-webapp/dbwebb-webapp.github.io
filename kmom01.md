@@ -50,6 +50,8 @@ Som i andra kurser bör du ha en lokal labbmiljö innehållande:
 
 I denna kursen använder vi GitHub som utgångspunkt för vår labb- och studiemiljö. I nedanstående video visar Emil hur du kommer igång med kursen. Om du föredrar text kan du hoppa över videon.
 
+[YOUTUBE src=47fDUCRsVf0 caption="Kom igång med kursens infrastruktur"]
+
 Du börjar kursen genom att skapa en `webapp` katalog i din `dbwebb-kurser`-katalog. Du kan sedan klona `example`-repot ([dbwebb-webapp/webapp-example](https://github.com/dbwebb-webapp/webapp-example){:target="_blank"}) till `webapp`-katalogen så du har tillgång till kursens exempel-kod.
 
 ```shell
