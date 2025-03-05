@@ -10,6 +10,14 @@ layout: default
 Kmom10: Projekt och examination
 ==================================
 
+[WARNING]
+
+**Påbörja inte kursen**
+
+Kursutveckling pågår. Påbörja inte kursen innan gula rutan är borta.
+
+[/WARNING]
+
 [FIGURE src=image/webapp/v4/kajt.jpg?w=c5 class="right"]
 
 Detta projekt utvecklas i samarbete med Branschprogrammet Kapacitet i järnvägstrafiken – [KAJT](https://kajt.org/). Projektet baseras på öppen data från Trafikverket och handlar om att visualisera förseningar i tågtrafiken

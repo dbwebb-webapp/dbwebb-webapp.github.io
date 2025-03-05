@@ -14,6 +14,14 @@ layout: default
 Kmom02: En router
 ==================================
 
+[WARNING]
+
+**Påbörja inte kursen**
+
+Kursutveckling pågår. Påbörja inte kursen innan gula rutan är borta.
+
+[/WARNING]
+
 Vi tar en titt på vilka begränsningar och utmaningar man står inför som användare av en mobil enhet. Vi bryter ut CSS koden från kmom01 till ett GUI komponentbaserad ramverk och lägger till fler GUI komponenter till vårt ramverk.
 
 Vi fortsätter med vår applikation från kmom01 och tittar på hur vi kan använda en router för att visa upp olika sidor utan att ladda om sidan.

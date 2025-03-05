@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Course webpage for {{ site.title }}{% if page.title %} - Article on {{ page.title }}{% endif %}">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/dark.min.css" />
@@ -336,20 +337,20 @@
         }
 
         .info {
-            background-color: rgb(3, 22, 51);
-            color: rgb(110, 168, 254);
+            background-color: rgb(130, 188, 255);
+            color: rgb(3, 22, 51);
             border-radius: 4px;
             padding: 1.75rem;
-            border: 1px solid rgb(110, 168, 254);
+            border: 1px solid rgb(3, 22, 51);
             margin-bottom: 1.75rem;
         }
 
         .warning {
-            background-color: rgb(51, 39, 1);
-            color: rgb(255, 218, 106);
+            background-color: rgb(255, 218, 106) ;
+            color: rgb(51, 39, 1);
             border-radius: 4px;
             padding: 1.75rem;
-            border: 1px solid rgb(255, 218, 106);
+            border: 1px solid rgb(51, 39, 1);
             margin-bottom: 1.75rem;
         }
 
@@ -419,7 +420,7 @@
         <div>
             <img src="https://cdn.jsdelivr.net/gh/dbwebb-se/utils-2025@main/img/leaf_256x256.png" alt="dbwebb-logo" class="header-logo" />
             <h1 class="dbwebb-header">
-                <a href="https://dbwebb.se">dbwebb.se</a>
+                <a href="/">webapp - dbwebb.se</a>
             </h1>
         </div>
         <!-- <nav class="nav">
@@ -472,8 +473,8 @@
     </footer>
 
     <script type="module">
-        import { parseYoutube, parseInfo, parseWarning, parseImg, parseAsciinema } from "/parse.js";
-        import createToc from "https://cdn.jsdelivr.net/gh/dbwebb-se/utils-2025@v1.0.13/js/toc.js";
+        import { parseYoutube, parseInfo, parseWarning, parseImg } from "https://cdn.jsdelivr.net/gh/dbwebb-se/utils-2025@v1.0.14/js/parse.js";
+        import createToc from "https://cdn.jsdelivr.net/gh/dbwebb-se/utils-2025@v1.0.14/js/toc.js";
 
         let article = document.getElementById("article");
         let toc = document.getElementById("toc");
@@ -484,7 +485,6 @@
         parseInfo(article);
         parseWarning(article);
         parseImg(article);
-        parseAsciinema(article);
 
         hljs.highlightAll();
     </script>

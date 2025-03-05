@@ -8,7 +8,7 @@ revision:
 Typografi för mobila enheter
 ==================================
 
-[FIGURE src=image/webapp/typography.jpg?w=c5 class="right"]
+[FIGURE src=image/webapp/typography.jpg?w=864 class="right"]
 
 I denna artikel går vi igenom hur vi anpassar typsnitt och typografin för våra mobila enheter. Fokus kommer ligga på att skapa användbara, men framför allt tillgängliga och lättlästa gränssnitt för textintensiva hemsidor. Vi kommer ta utgångspunkt i att göra en redovisningssida och kommer formatera den för läsbarhet.
 
