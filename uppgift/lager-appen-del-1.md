@@ -37,5 +37,3 @@ Krav {#krav}
 1. Skapa en webbapplikation anpassad för mobilen.
 
 1. Appen ska innehålla en lagerförteckningslista där produkterna listas med namn (`name`), lagersaldo (`stock`) och lagerplats (`location`).
-
-1. Validera och publicera din kod enligt följande.

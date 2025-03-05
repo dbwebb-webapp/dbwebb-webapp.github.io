@@ -17,16 +17,16 @@ I denna övningen tittar vi på hur vi kan skapa återanvändbara delar av vår 
 Förkunskaper {#prereqs}
 --------------------------------------
 
-Du har gjort övningarna "[Introduktion till Lager-API:t](kunskap/introduktion-till-lager-api)" och "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)".
+Du har gjort övningarna "[Introduktion till Lager-API:t](/kunskap/introduktion-till-lager-api)" och "[Typografi i mobila enheter](/kunskap/typografi-i-mobila-enheter)".
 
 
 
 Exempelkod {#example}
 --------------------------------------
 
-Exempelkod för denna övningen finns i kursrepot under [example/web-component-starter](https://github.com/dbwebb-se/webapp/tree/master/example/web-component-starter).
+Exempelkod för denna övningen finns i kursrepot under [webapp-example/web-component-starter](https://github.com/dbwebb-webapp/webapp-example/tree/main/web-component-starter).
 
-Om du skriver nedanstående kod i `me/lager` katalogen kan du återanvända koden i uppgiften "[Lager appen del 1](uppgift/lager-appen-del-1)".
+Om du skriver nedanstående kod i ditt `webapp-lager`-repo kan du återanvända koden i uppgiften "[Lager appen del 1](/uppgift/lager-appen-del-1)".
 
 
 
@@ -50,7 +50,7 @@ Låt mig se lite kod Emil! {#code}
 
 Nu får det räcka med massa torra forskningsartiklar, böcker och förkortningar, så låt oss titta på lite kod.
 
-Vi börjar med att skapa en HTML-fil `index.html` där vi än så länge har en tom `body`-del, men laddar in en CSS-fil och en JavaScript-fil i `head`-elementet. Se till att skapa filerna `style.css` och `main.js` också. Vi ser till att definiera en `viewport` meta-tag. Och att vi laddar `main.js` scriptet med hjälp av `defer`-attributet. När vi använder `defer` exekveras JavaScript-filen först efter att hela dokumentet har laddats.
+Vi fortsätter i vår HTML-fil `index.html` där vi tar eventuellt innehåll i `body`-delen, men laddar in en CSS-fil och en JavaScript-fil i `head`-elementet. Se till att skapa filen `src/main.js`. Vi ser till att definiera en `viewport` meta-tag. Och att vi laddar `src/main.js` scriptet med hjälp av `defer`-attributet. När vi använder `defer` exekveras JavaScript-filen först efter att hela dokumentet har laddats.
 
 ```html
 <!doctype html>
@@ -61,14 +61,14 @@ Vi börjar med att skapa en HTML-fil `index.html` där vi än så länge har en 
     <title>Lager-Components</title>
 
     <link rel="stylesheet" href="style.css" />
-    <script type="module" src="main.js" defer></script>
+    <script type="module" src="src/main.js" defer></script>
 </head>
 <body>
 </body>
 </html>
 ```
 
-I `style.css` filen lägger vi till grunden från övningen "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)". Så att filen ser ut så här:
+I `style.css` filen behåller vi grunden från övningen "[Typografi i mobila enheter](/kunskap/typografi-i-mobila-enheter)". Så att filen ser ut så här:
 
 ```css
 * {
@@ -119,7 +119,7 @@ I `body`-delen i `index.html` skriver vi in följande.
 
 Vi lägger till ett vanligt `header`-element med `.header` och sedan inuti det elementet har vi vår första komponent. I vanliga fall hade det ovanstående kod inte gjort särskilt mycket, men med hjälp av WebAPI:t [customElements](https://developer.mozilla.org/en-US/docs/Web/API/Window/customElements) kan vi definiera element på webbplatsen som inte i vanliga fall finns i HTML-specifikationen. **Alla _web components_ som vi skapar med hjälp av customElements bör innehålla ett bindestreck (-).** Detta för att särskilja de från de elementen som finns fördefinierade i HTML-specifikationen.
 
-I `main.js` skriver vi in följande rader.
+I `src/main.js` skriver vi in följande rader.
 
 ```javascript
 import LagerTitle from "./components/lager-title.js";
@@ -257,7 +257,7 @@ Låt oss börja genom att lägga till en `main`-del i vår `index.html` och i de
 </body>
 ```
 
-Vi behöver då i `main.js` skapa ytterligare ett `customElements.define()` anrop. Vilket då gör att filen ser ut på följande sätt och gör att vi även behöver skapa komponenten `components/product-list.js`-filen.
+Vi behöver då i `src/main.js` skapa ytterligare ett `customElements.define()` anrop. Vilket då gör att filen ser ut på följande sätt och gör att vi även behöver skapa komponenten `components/product-list.js`-filen.
 
 ```javascript
 import LagerTitle from "./components/lager-title.js";
@@ -362,7 +362,7 @@ export default class ProductList extends HTMLElement {
 }
 ```
 
-Nu behöver vi då skapa komponenten `components/single-product.js` och definiera den som ett `customElement` i `main.js`.
+Nu behöver vi då skapa komponenten `components/single-product.js` och definiera den som ett `customElement` i `src/main.js`.
 
 ```javascript
 import LagerTitle from "./components/lager-title.js";

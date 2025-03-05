@@ -31,17 +31,17 @@ Vi börjar med en enkel grund i HTML där vi laddar in vår CSS kod från filen 
 }
 ```
 
-Jag har skrivit ihop en redovisningssida för kmom01 i HTML dokumentet nedan. En redovisningssida är ett typiskt exempel på en textintensiv webbplats.
+Jag har skrivit ihop en redovisningssida för kmom01 i HTML dokumentet nedan. En redovisningssida är ett typiskt exempel på en textintensiv webbplats. Du kan ersätta `body`-delen av din befintliga `index.html` fil som redan finns i ditt `webapp-lager`-repo.
 
 ```html
 <!-- index.html -->
 
 <!doctype html>
-<html>
+<html lang="sv">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Redovisning</title>
+    <title>Lager-Appen</title>
 
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -76,7 +76,7 @@ Vitt utrymme {#whitespace}
 
 Vi börjar med den del av designen som inte har med typsnittet att göra. Vi vill skapa en sammanhang mellan de element som är besläktade och samtidigt skapa en vertikal rytm. Vi börjar med bestämma oss för ett bra radavstånd och en bra typsnittsstorlek för texten.
 
-Vi använder "best-practice" från [Typography Handbook](http://typographyhandbook.com/) och sätter storleken till 100% och använder oss sedan av den relativa enheterna `rem` för att sätta storleken på typsnittet för paragrafer och rubriker. Anledningen till att vi sätter textstorleken till 100% är att användarens förinställda textstorlek då används och det är viktigt för individer med svagt syn.
+Vi använder "best-practice" från [Typography Handbook](https://web.archive.org/web/20231219201010/http://typographyhandbook.com/) och sätter storleken till 100% och använder oss sedan av den relativa enheterna `rem` för att sätta storleken på typsnittet för paragrafer och rubriker. Anledningen till att vi sätter textstorleken till 100% är att användarens förinställda textstorlek då används och det är viktigt för individer med svagt syn.
 
 I Typography Handbook är även rekommendationen att använda sig av en radhöjd/avstånd på mellan 1,2 och 1,5. Ofta vill man ha lite större radavstånd på breda kolumner och lite mindre på smala. Vi sätter storleken `1rem` för brödtexten och använder oss av `1.4` i radavstånd. Inom typografin pratar man om ett magic number som är `radavstånd * typsnittsstorlek` i vårt fall blir magic number alltså `1.4rem`. Vi använder sedan magic number och multiplar av magic number för att sätta marginaler i höjdled vilket skapar vertikal rytm.
 
@@ -227,6 +227,6 @@ Vi jämför skillnaden mellan den nollställda stilen innan våra ändringar och
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har i denna övning skrapat ytan för typografi i mobila enheter. Vi har en grund att stå på inför redovisningssidan, men även för andra textintensiva gränssnitt. Ni kan nu göra medvetna val med avseende på typsnitt och använda vita utrymmen till eran fördel för att samla besläktade element. Använd [Typography Handbook](http://typographyhandbook.com/) som uppslagsverk när ni skapar tillgängliga och användbara hemsidor, så har ni ett försprång mot 90% av alla andra webbprogrammerare.
+Vi har i denna övning skrapat ytan för typografi i mobila enheter. Vi har en grund att stå på inför redovisningssidan, men även för andra textintensiva gränssnitt. Ni kan nu göra medvetna val med avseende på typsnitt och använda vita utrymmen till eran fördel för att samla besläktade element. Använd [Typography Handbook](https://web.archive.org/web/20231219201010/http://typographyhandbook.com/) som uppslagsverk när ni skapar tillgängliga och användbara hemsidor, så har ni ett försprång mot 90% av alla andra webbprogrammerare.
 
-Exempelprogrammet från denna övning finns i kursrepot [example/typography](https://github.com/dbwebb-se/webapp/tree/master/example/typography) och i `example/typography`.
+Exempelprogrammet från denna övning finns i example-repot [webapp-example/typography](https://github.com/dbwebb-webapp/webapp-example/tree/main/typography).
