@@ -37,3 +37,9 @@ Krav {#krav}
 1. Skapa en webbapplikation anpassad för mobilen.
 
 1. Appen ska innehålla en lagerförteckningslista där produkterna listas med namn (`name`), lagersaldo (`stock`) och lagerplats (`location`).
+
+1. Driftsätt applikationen på Github Pages enligt (om du inte gjort det tidigare):
+
+Gå till ditt `webapp-lager`-repo och under Settings>Pages välj "GitHub Actions" under Source enligt bilden nedan.
+
+<img src="/img/pages-enable-actions.png" alt="Enable GitHub Actions for GitHub Pages source" />
