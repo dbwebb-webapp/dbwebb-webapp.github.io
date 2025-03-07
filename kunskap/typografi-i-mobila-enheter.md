@@ -70,6 +70,49 @@ Jag har skrivit ihop en redovisningssida för kmom01 i HTML dokumentet nedan. En
 [FIGURE src=image/webapp/screenshot-typo-no-style.png?w=c7 caption="Redovisningstext med nollställd stil"]
 
 
+Utvecklingsmiljö {#devenv}
+--------------------------------------
+
+För att vi ska kunna skåda vara mästerverk behöver vi en utvecklingsmiljö med testning och en lokal webbserver. Ditt `webapp-lager` bör redan vara preppat med en sådan. Vi kan ta en titt i `package.json` filen för att se vad som finns:
+
+```json
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "Course material for the course Webbapplikationer för mobila enheter given at Blekinge Institute of Technology.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Implement later\" && exit 0",
+    "start": "http-server .",
+    "posttest": "npm run eslint && npm run stylelint && npm run htmlhint",
+    "eslint": "eslint",
+    "eslint:fix": "eslint --fix",
+    "stylelint": "stylelint \"**/*.css\"",
+    "stylelint:fix": "stylelint --fix \"**/*.css\"",
+    "htmlhint": "htmlhint \"**/*.html\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0",
+    "htmlhint": "^1.1.4",
+    "http-server": "^14.1.1",
+    "stylelint": "^16.13.2",
+    "stylelint-config-standard": "^37.0.0"
+  }
+}
+```
+
+Vi ser i ovanstående fil att vi har ett antal paket i `devDependencies` som behöver att installeras detta gör vi med `npm install`.
+
+Vi kan sedan börja använda de fördefinierade scripten som finns under `scripts`. Vi kan testa att använda först `npm test`, som i detta skedet kör validering av HTML, CSS och JavaScript.
+
+Vi kan även använda oss av `npm start` som startar igång en lokal webbserver. Ni bör i terminalen kunna se en URL där ni kan skåda era alster och ni bör se nått liknande bilden ovan.
+
+
 
 Vitt utrymme {#whitespace}
 --------------------------------------
