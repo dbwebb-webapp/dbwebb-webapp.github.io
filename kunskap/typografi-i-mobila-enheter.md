@@ -256,7 +256,7 @@ h4 {
 p {
     margin-bottom: 1.4rem;
     font-size: 1rem;
-    font-family: 'Merriweather', serif;
+    font-family: Merriweather, serif;
 }
 ```
 
