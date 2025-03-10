@@ -133,7 +133,7 @@ Först importerar vi klassen `LagerTitle` från en fil och klass som vi kommer s
 
 ### Elementets klass {#class}
 
-Vi börjar med att skapa en katalog `components` och här är tanken att vi under utvecklandet av vår lager-app lägger våra egna komponenter. I katalogen skapar vi filen `lager-title.js` som innehåller klassen `LagerTitle`.
+Vi börjar med att skapa en katalog `src/components` och här är tanken att vi under utvecklandet av vår lager-app lägger våra egna komponenter. I katalogen skapar vi filen `lager-title.js` som innehåller klassen `LagerTitle`.
 
 ```javascript
 export default class LagerTitle extends HTMLElement {
@@ -146,9 +146,7 @@ export default class LagerTitle extends HTMLElement {
 
 Det första vi gör är att ärva från den generella HTMLElement klassen som är JavaScripts representation av alla de HTML Element som finns specificerade. Detta för att vi då kan komma attribut som `textContent`, `innerHTML` osv. Vi definierar sedan funktionen `connectedCallback`, viktigt att den heter exakt så då den anropas när komponenten ritas ut i webbläsaren. `connectedCallback` är ett exempel på en såkallad _life-cycle method_ där det finns ett antal fördefinierade [life-cycle methods](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks). Dessa funktioner med specifika fördefinierade namn anropas av webbläsaren under komponentens livs-cykel.
 
-Om du öppnar upp `index.html` i webbläsaren via din **webbserver lokalt**. Din webbserver lokalt kan vara XAMPP eller så kan man använda Python's inbyggda webbserver genom att köra kommandot `python3 -m http.server 9000` i `me/lager` i terminalen. Då kan du gå till `http://localhost:9000` i terminalen och din app bör då visas i webbläsaren.
-
-Nu gör detta inte så mycket mer än att vi i HTML-filen hade kunnat skriva `<h1>Lager-app</h1>`, så låt oss titta vidare på hur vi kan jobba med komponenterna.
+Öppna upp `index.html` i webbläsaren via din **webbserver lokalt** genom att köra kommandot `npm start` i webapp-lager katalogen. Nu gör detta inte så mycket mer än att vi i HTML-filen hade kunnat skriva `<h1>Lager-app</h1>`, så låt oss titta vidare på hur vi kan jobba med komponenterna.
 
 
 
@@ -224,7 +222,9 @@ export default class LagerTitle extends HTMLElement {
 }
 ```
 
-Laddar vi om sidan ser vi att det nu står "Andreas's Lager-app" längst upp i vår webbläsare. Dock utnyttjar vi fortfarande inte attributen på vår komponent så vi ser till att ändra i `index.html`.
+Laddar vi om sidan ser vi att det nu står "Andreas's Lager-app" längst upp i vår webbläsare. Sidan kan ibland behövas laddas om utan cache, det görs oftast med `Ctrl-Shift-R` eller `Cmd-Shift-R` beroende på operativsystem och webbläsare.
+
+Dock utnyttjar vi fortfarande inte attributen på vår komponent så vi ser till att ändra i `index.html`.
 
 ```html
 <body>
@@ -297,10 +297,10 @@ export default class ProductList extends HTMLElement {
 
 Laddar vi om sidan i webbläsaren bör vi nu se ytterligare en rubrik under "Emil's Lager-app" (Vid det här laget det kanske är rimligt att ändra till ditt egna namn). Låt oss då fylla på vår instansvariabel `products` med de produkter som bör finnas i lagret efter att du gjort övningen "[Introduktion till Lager-API:t](kunskap/introduktion-till-lager-api)".
 
-Då vi i ganska många filer och komponenter kommer behöva anropa Lager-API:t lägger vi URL'n och API-nyckeln i en gemensam fil för att på ett enkelt sätt kunna återanvända den informationen. Jag skapar filen `me/lager/utils.js` och lägger följande i den, se till att byta ut så din API-nyckel finns i filen, annars fungerar det inte.
+Då vi i ganska många filer och komponenter kommer behöva anropa Lager-API:t lägger vi URL'n och API-nyckeln i en gemensam fil för att på ett enkelt sätt kunna återanvända den informationen. Jag skapar filen `src/utils.js` och lägger följande i den, se till att byta ut så din API-nyckel finns i filen, annars fungerar det inte.
 
 ```javascript
-const apiKey = "[DIN API NYCKEL]";
+const apiKey = "DIN API NYCKEL";
 const baseURL = "https://lager.emilfolino.se/v2";
 
 export { apiKey, baseURL };
