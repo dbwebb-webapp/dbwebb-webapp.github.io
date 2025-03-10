@@ -176,7 +176,7 @@ Kursen har en [rekommenderad studieplan](https://docs.google.com/spreadsheets/d/
 
 I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
 
-Läs mer om den [rekommenderade studieplanen](https://dbwebb.se/faq/rekommenderad-studieplan){:target="_blank"}.
+Läs mer om den [rekommenderade studieplanen](https://dbwebb.se/kurser/faq/rekommenderad-studieplan){:target="_blank"}.
 
 
 
@@ -185,14 +185,14 @@ Lektionsplan {#lektionsplan}
 
 Det finns en [lektionsplan](https://docs.google.com/spreadsheets/d/1imZXLGYFsyFP6Bd9OP55cTikqz9HzoJgemxtwbfeYNU/edit?usp=sharing){:target="_blank"} som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
 
-Läs mer om [lektionsplanen](https://dbwebb.se/faq/rekommenderad-studieplan){:target="_blank"}.
+Läs mer om [lektionsplanen](https://dbwebb.se/kurser/faq/rekommenderad-studieplan){:target="_blank"}.
 
 
 
 Lärarstöd och handledning {#handledning}
 ----------------------------------------
 
-Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](https://dbwebb.se/faq/lararstod-och-handledning).
+Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](https://dbwebb.se/kurser/faq/lararstod-och-handledning).
 
 Ofta ställda frågor (FAQ) finns på [GitHub issues](https://github.com/dbwebb-se/webapp/issues?q=is%3Aopen+is%3Aissue+label%3Afaq).
 
@@ -201,7 +201,7 @@ Ofta ställda frågor (FAQ) finns på [GitHub issues](https://github.com/dbwebb-
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](https://dbwebb.se/faq/bedomning-och-betygsattning).
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](https://dbwebb.se/kurser/faq/bedomning-och-betygsattning).
 
 
 
@@ -216,7 +216,7 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 | Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
 | Kmom05 - kmom10 | Projekt á 2.5hp               |
 
-Läs mer om [rapportering av resultat](https://dbwebb.se/faq/resultatrapportering).
+Läs mer om [rapportering av resultat](https://dbwebb.se/kurser/faq/resultatrapportering).
 
 
 
@@ -225,7 +225,7 @@ Kursutvärdering och kursutveckling {#kursutvardering}
 
 Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt för mig att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
 
-Läs om hur [jag jobbar med kursutvärdering och kursutveckling](https://dbwebb.se/faq/kursutvardering-och-kursutveckling).
+Läs om hur [jag jobbar med kursutvärdering och kursutveckling](https://dbwebb.se/kurser/faq/kursutvardering-och-kursutveckling).
 
 
 
