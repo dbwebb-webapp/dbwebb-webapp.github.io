@@ -192,16 +192,16 @@ Läs mer om [lektionsplanen](https://dbwebb.se/kurser/faq/rekommenderad-studiepl
 Lärarstöd och handledning {#handledning}
 ----------------------------------------
 
-Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](https://dbwebb.se/kurser/faq/lararstod-och-handledning).
+Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](https://dbwebb.se/kurser/faq/lararstod-och-handledning){:target="_blank"}.
 
-Ofta ställda frågor (FAQ) finns på [GitHub issues](https://github.com/dbwebb-se/webapp/issues?q=is%3Aopen+is%3Aissue+label%3Afaq).
+Ofta ställda frågor (FAQ) finns på [GitHub issues](https://github.com/dbwebb-se/webapp/issues?q=is%3Aopen+is%3Aissue+label%3Afaq){:target="_blank"}.
 
 
 
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](https://dbwebb.se/kurser/faq/bedomning-och-betygsattning).
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](https://dbwebb.se/kurser/faq/bedomning-och-betygsattning){:target="_blank"}.
 
 
 
@@ -216,7 +216,7 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 | Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
 | Kmom05 - kmom10 | Projekt á 2.5hp               |
 
-Läs mer om [rapportering av resultat](https://dbwebb.se/kurser/faq/resultatrapportering).
+Läs mer om [rapportering av resultat](https://dbwebb.se/kurser/faq/resultatrapportering){:target="_blank"}.
 
 
 
@@ -225,7 +225,7 @@ Kursutvärdering och kursutveckling {#kursutvardering}
 
 Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt för mig att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
 
-Läs om hur [jag jobbar med kursutvärdering och kursutveckling](https://dbwebb.se/kurser/faq/kursutvardering-och-kursutveckling).
+Läs om hur [jag jobbar med kursutvärdering och kursutveckling](https://dbwebb.se/kurser/faq/kursutvardering-och-kursutveckling){:target="_blank"}.
 
 
 
@@ -236,6 +236,4 @@ Kursplanen är kursens formella dokument som fastställts av högskolan. När ku
 
 Kursens namn är "Webbapplikationer för mobila enheter".
 
-Från och med våren 2019 hittar du [kursplanen genom att söka på kurskoden DV1609 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1609).
-
-Fram till våren 2018 så gavs kursen under [kurskoden DV1546](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1546).
+Från och med våren 2019 hittar du [kursplanen genom att söka på kurskoden DV1609 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1609){:target="_blank"}.
