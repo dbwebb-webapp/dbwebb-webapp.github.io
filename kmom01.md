@@ -144,6 +144,10 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Lager appen del 1](uppgift/lager-appen-del-1)". Spara din kod i ditt kursrepo i ditt webapp-lager repo.
 
+Emil visar i nedanstående video hur du gör en inlämning i webapp.
+
+[YOUTUBE src=PqbkxMyUGY8 width=630 caption="En inlämning i webapp"]
+
 
 
 Resultat & Redovisning  {#resultat_redovisning}
@@ -163,8 +167,6 @@ TIL är en akronym för “Today I Learned” vilket leksamt anspelar på att de
 
 * Vilken är din TIL för detta kmom?
 
-I artikeln "[Att skriva en bra redovisningstext](https://dbwebb.se/faq/att-skriva-en-bra-redovisningstext)" finns exempel och goda råd kring att skriva bra redovisningstexter.
+I artikeln "[Att skriva en bra redovisningstext](https://dbwebb.se/kurser/faq/att-skriva-en-bra-redovisningstext)" finns exempel och goda råd kring att skriva bra redovisningstexter.
 
-Emil visar i nedanstående video hur du gör en inlämning i webapp.
 
-[YOUTUBE src=lGk0n231zlg width=630 caption="En inlämning i webapp"]
