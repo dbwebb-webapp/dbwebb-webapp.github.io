@@ -80,9 +80,11 @@ git checkout -b kmom01
 Veckans genomgång  {#genomgang}
 ---------------------------------
 
-Nedan berättar Andreas om veckans övningar och uppgifter och visar lite tips och trix.
+Emil har genomgånger måndagar kl 13:15, efter genomgången uppdateras denna delen av sidan med veckans genomgång.
 
-[YOUTUBE src=eJ1iPwzU3Mc width=630 caption="Veckans genomgång"]
+<!-- Nedan berättar Andreas om veckans övningar och uppgifter och visar lite tips och trix.
+
+[YOUTUBE src=eJ1iPwzU3Mc width=630 caption="Veckans genomgång"] -->
 
 
 

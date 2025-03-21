@@ -34,11 +34,7 @@ I detta kursmoment börjar vi till fullo att utnyttja styrkorna i våra mobila e
 Veckans genomgångar  {#genomgang}
 ---------------------------------
 
-Nedan berättar Andreas om veckans övningar och uppgifter och visar lite tips och trix. I genomgångarna använder Andreas `npm install` för att hämta Leaflet och Uploadcare filerna. Vi har dock ändrat det tillvägagångssättet i övningarna.
-
-[YOUTUBE src=2SoIrNSRAGs width=630 caption="Veckans genomgång del 1"]
-
-[YOUTUBE src=PyyagAmR2Eg width=630 caption="Veckans genomgång del 2"]
+Emil har genomgånger måndagar kl 13:15, efter genomgången uppdateras denna delen av sidan med veckans genomgång.
 
 
 
@@ -53,7 +49,7 @@ Nedan berättar Andreas om veckans övningar och uppgifter och visar lite tips o
 
 Använd nedanstående övningar som inspiration för att klara av uppgiften här i kmom05.
 
-1. Jobba igenom övningen "[Animationer och övergångar](kunskap/animationer-och-overgangar)". 
+1. Jobba igenom övningen "[Animationer och övergångar](kunskap/animationer-och-overgangar)".
 
 1. Jobba igenom övningen "[GPS och karta](kunskap/gps-och-karta)".
 

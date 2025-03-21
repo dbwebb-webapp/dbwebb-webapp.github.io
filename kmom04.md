@@ -45,9 +45,7 @@ Så här kan det se ut när vi är klara.
 Veckans genomgång  {#genomgang}
 ---------------------------------
 
-Nedan berättar Andreas om veckans övningar och uppgifter och visar lite tips och trix.
-
-[YOUTUBE src=qCi2fGq91HU width=630 caption="Veckans genomgång"]
+Emil har genomgånger måndagar kl 13:15, efter genomgången uppdateras denna delen av sidan med veckans genomgång.
 
 
 

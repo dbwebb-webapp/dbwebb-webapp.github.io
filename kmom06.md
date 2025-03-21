@@ -45,9 +45,7 @@ Så här kan det se ut när vi är klara med kursmoment 06.
 Veckans genomgång  {#genomgang}
 ---------------------------------
 
-Andreas jobba igenom övningen.
-
-[YOUTUBE src=F3sf4-fOw5U width=630 caption="Veckans genomgång"]
+Emil har genomgånger måndagar kl 13:15, efter genomgången uppdateras denna delen av sidan med veckans genomgång.
 
 
 
