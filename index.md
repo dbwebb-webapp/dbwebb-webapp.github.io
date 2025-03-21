@@ -169,6 +169,14 @@ Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha ti
 
 
 
+### Extra video material
+
+Vårterminerna VT23 och VT24 hade Emil ett inslag i kursen som hette myskodning. Emil kodade oförberedd en applikation som använder sig av liknande tekniker och konstruktioner som i kursmomentet. Om ni vill titta på de videos finns de i nedanstående spellista. Målet med myskodningen var att visa hur en erfaren programmerare använder kontruktioner i ett större sammanhang.
+
+<div class='embed-container'><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=NFIhAKNw2kSlLTvA&amp;list=PLKtP9l5q3ce-fLewSShTtxq6w_4dHtPO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+
+
 Rekommenderad studieplan {#studieplan}
 ---------------------------------------------
 
