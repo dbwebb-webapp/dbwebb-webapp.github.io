@@ -8,7 +8,7 @@ revision:
 Ett mobilanpassad formulär
 ==================================
 
-[FIGURE src="/image/webapp/form.jpeg?w=c5" class="right"]
+[FIGURE src=/image/webapp/form.jpeg class="right"]
 
 Vi ska i denna övning titta på hur vi med hjälp av HTML5 input gör våra mobila appar mer användarvänliga och säkra. Vi skapar även formulär komponenter till vårt GUI komponent ramverk. I slutet av övningen tittar vi på hur vi skapar ett formulär i mithril.
 
@@ -29,7 +29,7 @@ Det helt vanliga text input fältet ger ett vanligt tangentbord och ingen klient
 <input type="text">
 ```
 
-[FIGURE src="/image/webapp/input-screenshot/input-text.png?w=200" caption="Text input"]
+[FIGURE src=/image/webapp/input-screenshot/input-text.png?w=200]
 
 
 
@@ -39,7 +39,7 @@ Om man har ett fält där användaren bara ska ange siffror kan man använda sig
 <input type="number">
 ```
 
-[FIGURE src="/image/webapp/input-screenshot/input-number.png?w=200" caption="Number input"]
+[FIGURE src=/image/webapp/input-screenshot/input-number.png?w=200 caption="Number input"]
 
 
 
@@ -49,7 +49,7 @@ Om användaren skall fylla i sin e-postadress kan det vara bra med et input av t
 <input type="email">
 ```
 
-[FIGURE src="/image/webapp/input-screenshot/input-email.png?w=200" caption="Email input"]
+[FIGURE src=/image/webapp/input-screenshot/input-email.png?w=200 caption="Email input"]
 
 
 
@@ -59,7 +59,7 @@ Vid ifyllning av telefonnummer kan det vara fördelaktigt att använda input av 
 <input type="tel">
 ```
 
-[FIGURE src="/image/webapp/input-screenshot/input-tel.png?w=200" caption="Telephone input"]
+[FIGURE src=/image/webapp/input-screenshot/input-tel.png?w=200 caption="Telephone input"]
 
 
 
@@ -69,7 +69,7 @@ När vi har datumfält finns input av typen `date`. Med `date` får användaren 
 <input type="date">
 ```
 
-[FIGURE src="/image/webapp/input-screenshot/input-date.png?w=200" caption="Date input"]
+[FIGURE src=/image/webapp/input-screenshot/input-date.png?w=200 caption="Date input"]
 
 
 
@@ -79,7 +79,7 @@ För fält där vi vill skriva in lösenord använder vi naturligtvis `password`
 <input type="password">
 ```
 
-[FIGURE src="/image/webapp/input-screenshot/input-password.png?w=200" caption="Password input"]
+[FIGURE src=/image/webapp/input-screenshot/input-password.png?w=200 caption="Password input"]
 
 
 
@@ -207,8 +207,8 @@ Ett annat bra sätt att förtydliga för användaren vad som ska fyllas i är at
 
 Våra formulärfält ser nu ut enligt nedan och vi har nu samma styling trots olika webbläsare och olika typer av formulärfält.
 
-[FIGURE src="/image/webapp/screenshot-inputs-chrome.png?w=c7" class="right" caption="Formulärfält i Chrome med ifylld data."]
-[FIGURE src="/image/webapp/screenshot-inputs-firefox.png?w=c7" caption="Formulärfält i Firefox med placeholders."]
+[FIGURE src=/image/webapp/screenshot-inputs-chrome.png?w=c7 class="right" caption="Formulärfält i Chrome med ifylld data."]
+[FIGURE src=/image/webapp/screenshot-inputs-firefox.png?w=c7 caption="Formulärfält i Firefox med placeholders."]
 
 
 
@@ -263,7 +263,7 @@ Inleverans formulär komponent {#komponent}
 Då vi vill kunna visa upp alla produkter i en dropdown-lista börjar vi med att hämta produkterna. Då vi vill hålla koden **DRY** har jag valt att skapa en `products`-modell i en katalog `models`.
 
 ```javascript
-import { apiKey, baseURL } from "../utils.js";
+import { apiKey, baseURL } from "../../utils.js";
 
 const products = {
     getProducts: async function getProducts() {

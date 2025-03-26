@@ -8,7 +8,7 @@ revision:
 Lager appen del 2
 ==================================
 
-[FIGURE src=image/webapp/pick-list.png?w=c4 class="right"]
+[FIGURE src=image/webapp/pick-list.png class="right"]
 
 I kursmoment 1 skapade vi grunden för vår lager app. Vi ska i detta kursmoment förbättra strukturen på vår CSS kod och bygga in en router. Vi ska bygga en plocklista vy där lagerarbetarna får en bra översikt över vart produkterna från en order finns. När varorna är plockade ska status ändras för ordern och lagersaldo ska minskas.
 

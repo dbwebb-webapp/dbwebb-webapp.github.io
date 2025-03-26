@@ -9,7 +9,7 @@ revision:
 Lager appen del 3
 ==================================
 
-[FIGURE src=image/webapp/truck.jpg?w=c5 class="right"]
+[FIGURE src=image/webapp/truck.jpg class="right"]
 
 I detta kursmoment skapar vi ett formulär för inleverans med hjälp av kunskapen från övningarna. Vi använder vår kunskap om att skapa lättanvända formulär för att snabbt kunna göra inleveranser på produkter.
 
