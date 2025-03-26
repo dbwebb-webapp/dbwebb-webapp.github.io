@@ -17,30 +17,28 @@ I denna övningen tittar vi på hur vi kan använda en Web Component som bas fö
 Förkunskaper {#prereqs}
 --------------------------------------
 
-Du har gjort uppgiften "[Lager appen del 1](uppgift/lager-appen-del-1)" och kan med fördel bygga vidare på den koden.
+Du har gjort uppgiften "[Lager appen del 1](../uppgift/lager-appen-del-1)" och kan med fördel bygga vidare på den koden.
 
 
 
 Exempelkod {#example}
 --------------------------------------
 
-Exempelkod för denna övningen finns i kursrepot under [example/web-component-starter-del2](https://github.com/dbwebb-se/webapp/tree/master/example/web-component-starter-del2).
-
-Om du skriver nedanstående kod i `me/lager` katalogen kan du återanvända koden i uppgiften "[Lager appen del 2](uppgift/lager-appen-del-2)".
+Om du skriver nedanstående kod i ditt webapp-lager repo kan du återanvända koden i uppgiften "[Lager appen del 2](../uppgift/lager-appen-del-2)".
 
 
 
 Förutsättningar för vår router {#demands}
 --------------------------------------
 
-Vår router ska göra så att vi kan byta mellan olika vyer i vår applikation och göra detta utan att vi laddar om själva webbplatsen. Vi kommer använda `#`-deln av en url för att hantera vilken route vi är på. I `location` objektet i webbläsaren finns det massa med godsaker så innan vi drar igång kan det vara bra att titta på [dokumentationen](https://developer.mozilla.org/en-US/docs/Web/API/Location).
+Vår router ska göra så att vi kan byta mellan olika vyer i vår applikation och göra detta utan att vi laddar om själva webbplatsen. Vi kommer använda `#`-delen av en url för att hantera vilken route vi är på. I `location` objektet i webbläsaren finns det massa med godsaker så innan vi drar igång kan det vara bra att titta på [dokumentationen](https://developer.mozilla.org/en-US/docs/Web/API/Location).
 
 
 
 En router komponent {#router-component}
 --------------------------------------
 
-Vi börjar med att skapa filen `me/lager/router.js` som kommer innehålla komponenten som hanterar routingen i vår applikation. Vi skapar detta som en vid det här laget en "vanlig" web component. Jag lägger till lite kod så att vi ser att allting fungerar när vi lägger till den i `main.js` och sedan i `index.html`.
+Vi börjar med att skapa filen `router.js` som kommer innehålla komponenten som hanterar routingen i vår applikation. Vi skapar detta som en "vanlig" web component. Jag lägger till lite kod så att vi ser att allting fungerar när vi lägger till den i `main.js` och sedan i `index.html`.
 
 ```javascript
 export default class Router extends HTMLElement {
@@ -93,7 +91,7 @@ I `index.html` tar vi bort alla andra komponenter och har bara `<router-outlet><
 </html>
 ```
 
-När vi öppnar vår applikation nu ser vi bara texten **router-outlet** men nu vi är på gång.
+När vi kör igång med `npm start` och öppnar vår applikation ser vi bara texten **router-outlet** men nu vi är på gång.
 
 
 
@@ -132,7 +130,7 @@ export default class Router extends HTMLElement {
 }
 ```
 
-I ovanstående kod definierade jag även den publika `getter`-metod routes. Det gör att vi på ett enkelt sätt kan hämta ut alla routes, både inuti `Router` klassen men även från de instanser vi skapar.
+I ovanstående kod definierade jag även den publika `getter`-metod `routes`. Det gör att vi på ett enkelt sätt kan hämta ut alla routes, både inuti `Router` klassen men även från de instanser vi skapar.
 
 
 
@@ -193,7 +191,7 @@ Vyer att visa upp {#views}
 
 Låt oss då ta en titt på dessa vyer som vi vill visa upp när vi navigerar till en route. Jag väljer att skapa en katalog `views` så att jag håller isär rena komponenter och vyer som mer blir en samling av underliggande komponenter.
 
-Nedan syns filen `views/products.js` som i sin tur renderar ut lagersaldo listan med hjälp av de komponenter vi skapade i kmom01.
+Nedan syns filen `src/views/products.js` som i sin tur renderar ut lagersaldo listan med hjälp av de komponenter vi skapade i kmom01.
 
 ```javascript
 export default class ProductsView extends HTMLElement {
@@ -217,7 +215,7 @@ Se till att hålla vyerna ganska rena, så får logiken ligga i de enskilda komp
 Navigationen {#navigation}
 --------------------------------------
 
-För att vi på ett enkelt sätt kan navigera mellan olika vyer skapar vi även en navigations-komponent. Även denna lägga vi i `me/lager` och vi lägger in den på precis samma sätt som `router-outlet`, både i `main.js` och i `index.html`.
+För att vi på ett enkelt sätt kan navigera mellan olika vyer skapar vi även en navigations-komponent. Även denna lägga vi i roten i webapp-lager repot och vi lägger in den på precis samma sätt som `router-outlet`, både i `main.js` och i `index.html`.
 
 ```html
 <!doctype html>
