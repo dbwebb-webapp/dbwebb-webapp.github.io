@@ -21,7 +21,7 @@ I kursmoment 1 skapade vi grunden för vår lager app. Vi ska i detta kursmoment
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har gjort uppgiften [Lager appen del 1](uppgift/lager-appen-del-1). Du har jobbat dig igenom övningarna [Knappar för mobilen](kunskap/knappar-for-mobilen) och [En router i JavaScript](kunskap/en-router-i-javascript).
+Du har gjort uppgiften [Lager appen del 1](../uppgift/lager-appen-del-1). Du har jobbat dig igenom övningarna [Knappar för mobilen](../kunskap/knappar-for-mobilen) och [En router i JavaScript](../kunskap/en-router-i-javascript).
 
 
 

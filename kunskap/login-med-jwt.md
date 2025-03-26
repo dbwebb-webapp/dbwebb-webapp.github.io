@@ -7,7 +7,7 @@ revision:
 Login med JWT
 ==================================
 
-[FIGURE src=/image/webapp/padlock.png?w=c5 class="right"]
+[FIGURE src=/image/webapp/padlock.png class="right"]
 
 Vi har i tidigare kurser och i andra programmeringsspråk hanterat inloggning med hjälp av sessioner. I denna övning ska vi titta på ett sätt att autentisera våra klienter mot servern utan sessioner. Detta ger oss vissa fördelar som att vi har inbyggda utlöpstider och att det underlättar om vi vill skala upp vårt API, samtidigt som det ger ett säkert sätt att identifiera klienterna på.
 
@@ -171,4 +171,5 @@ export default class InvoicesView extends HTMLElement {
 
 Avslutningsvis {#avslutning}
 --------------------------------------
+
 Vi har i denna artikel använd oss av Postman för att registrera en användare och logga in med den användaren. Vi har även tittat på hur man kan använda `headers` som en del av ett anrop med `fetch`.

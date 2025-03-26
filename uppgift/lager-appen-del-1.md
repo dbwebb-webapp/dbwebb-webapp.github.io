@@ -20,7 +20,7 @@ I denna uppgift skapar du grunden för en lager-app, du använder dina kunskaper
 
 Förkunskaper {#forkunskaper}
 -----------------------
-Du har jobbat igenom övningarna "[Web Components](kunskap/web-components)", "[Introduktion till Lager-API:t](kunskap/introduktion-till-lager-api)" och "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)".
+Du har jobbat igenom övningarna "[Web Components](../kunskap/web-components)", "[Introduktion till Lager-API:t](../kunskap/introduktion-till-lager-api)" och "[Typografi i mobila enheter](../kunskap/typografi-i-mobila-enheter)".
 
 
 
@@ -28,7 +28,7 @@ Introduktion {#intro}
 -----------------------
 Du har blivit kontaktat av företaget Infinity Warehouses då ryktet går på stan att du har koll på mobila applikationer. Infinity Warehouses vill ta steget in i 2000-talet och automatisera deras gamla omoderna lagerhanteringssystem. Infinity Warehouses har tidigare anställd en backend programmerare, men när hen hörde orden design, användbarhet och tillgänglighet sprang hen skrikande bort. Backend programmeraren hade dock hunnit skapa ett REST API innan hen försvann ner i serverrummet. [Dokumentationen för API:t](https://lager.emilfolino.se/v2) hjälper dig en bit på vägen.
 
-I "[Introduktion till Lager-API:t](kunskap/introduktion-till-lager-api)" har du skapat en API-nyckel och kopierat, alternativt skapat egna produkter.
+I "[Introduktion till Lager-API:t](../kunskap/introduktion-till-lager-api)" har du skapat en API-nyckel och kopierat, alternativt skapat egna produkter.
 
 
 

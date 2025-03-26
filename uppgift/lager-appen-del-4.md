@@ -8,7 +8,7 @@ revision:
 Lager appen del 4
 ==================================
 
-[FIGURE src=image/webapp/money.jpeg?w=c5 class="right"]
+[FIGURE src=image/webapp/money.jpeg class="right"]
 
 I kursmoment 3 arbetade vi med formulär. Vi ska i denna uppgift skapa delar av appen som är skyddad med hjälp av JWT. I den skyddade delen ska det vara möjligt att se tidigare fakturor och skicka nya.
 
@@ -20,7 +20,7 @@ I kursmoment 3 arbetade vi med formulär. Vi ska i denna uppgift skapa delar av 
 
 Förkunskaper {#forkunskaper}
 -----------------------
-Du har gjort uppgiften [Lager appen del 3](uppgift/lager-appen-del-3). Du har jobbat dig igenom övningarna [Tabeller i mobila enheter](kunskap/tabeller-i-mobila-enheter) och [Login med JWT](kunskap/login-med-jwt).
+Du har gjort uppgiften [Lager appen del 3](../uppgift/lager-appen-del-3). Du har jobbat dig igenom övningarna [Tabeller i mobila enheter](../kunskap/tabeller-i-mobila-enheter) och [Login med JWT](../kunskap/login-med-jwt).
 
 
 

@@ -299,4 +299,4 @@ Avslutningsvis {#avslutning}
 --------------------------------------
 Vi har i denna artikel tittat på två sätt (+ ett bonus sätt) att visa data i tabeller för mobila enheter. Att visa mycket data på liten yta är aldrig lätt, men ovan finns två sätt som underlättar när vi gör responsiv design för mobila enheter.
 
-Exempelprogrammet från denna övning finns i kursrepot [example/sass-examples](https://github.com/dbwebb-se/webapp/tree/master/example/sass-examples) och i `example/sass-examples`.
+Exempelprogrammet från denna övning finns i [webapp-example/sass-examples](https://github.com/dbwebb-webapp/webapp-example/tree/main/sass-examples).

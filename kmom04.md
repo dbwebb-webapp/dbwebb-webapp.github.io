@@ -83,11 +83,11 @@ Se följande videor.
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. Gör övningen [Tabeller i mobila enheter](kunskap/tabeller-i-mobila-enheter). Spara eventuella testfiler i `src`.
+1. Gör övningen [Tabeller i mobila enheter](kunskap/tabeller-i-mobila-enheter). Spara eventuella filer i ditt webapp-lager repo.
 
-1. Gör övningen [Login med JWT](kunskap/login-med-jwt).
+1. Gör övningen [Login med JWT](kunskap/login-med-jwt). Spara eventuella filer i ditt webapp-lager repo.
 
-1. Gör övningen [Content Security Policy](kunskap/content-security-policy).
+1. Gör övningen [Content Security Policy](kunskap/content-security-policy). Spara eventuella filer i ditt webapp-lager repo.
 
 
 
@@ -95,7 +95,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 4](uppgift/lager-appen-del-4)". Spara dina filer i `src`.
+1. Gör uppgiften "[Lager appen del 4](uppgift/lager-appen-del-4)". Spara dina filer i ditt webapp-lager repo.
 
 
 

@@ -6,7 +6,7 @@ revision:
 ---
 Content Security Policy
 ==================================
-[FIGURE src=/image/webapp/xss.jpg?w=c6 class="right"]
+[FIGURE src=/image/webapp/xss.jpg class="right"]
 
 Vi ska i denna övning titta på hur vi säkrar våra appar mot cross-site scripting (XSS), clickjacking och andra typer av attacker där kod exekveras på vår sida av användare. Vi gör detta med hjälp av en Content Security Policy där vi som utvecklare bestämmer vilket innehåll som kan laddas i vår app.
 
@@ -48,6 +48,5 @@ I dokumentation för [Content Security Policy](https://developer.mozilla.org/en-
 
 Avslutningsvis {#avslutning}
 --------------------------------------
-Vi har i denna artikel tittat på hur man på ett enkelt sätt kan skydda sin app mot attacker från användare försöker exekvera kod på din sida. Vi använder en [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) där vi definierar det innehåll vi vill ladda i appen. I MDN dokumentationen finns många bra exempel på hur du kan skriva din CSP för olika appar.
 
-Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/7372) om denna artikeln.
+Vi har i denna artikel tittat på hur man på ett enkelt sätt kan skydda sin app mot attacker från användare försöker exekvera kod på din sida. Vi använder en [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) där vi definierar det innehåll vi vill ladda i appen. I MDN dokumentationen finns många bra exempel på hur du kan skriva din CSP för olika appar.
