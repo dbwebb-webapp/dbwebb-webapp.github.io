@@ -8,7 +8,7 @@ revision:
 Knappar för mobilen
 ==================================
 
-[FIGURE src=image/webapp/button.jpg?w=c5 class="right"]
+[FIGURE src=image/webapp/button.jpg class="right"]
 
 Vi har sedan tidigare gjort CSS kod för navigation och typografi och vi ska i denna övning bygga ytterligare komponenter för våra appar. I slutet av övningen ska vi titta på hur vi kan strukturera CSS koden, både som ren CSS men även med hjälp av SASS en CSS-preprocessor.
 
@@ -21,7 +21,7 @@ Knappar är en viktig del av de flesta CSS ramverk och kanske en av de mera omdi
 
 En annan utmaning när man designar för små mobila enheter är att man inte har samma precision när man använder händerna, som med en gammal hederlig datormus. Därför är det viktigt att designa knappar och andra komponenter så de är lätta att interagera med trots avsaknaden av precision.
 
-Exempelprogrammet från denna övning finns i kursrepot [example/sass-examples](https://github.com/dbwebb-se/webapp/tree/master/example/sass-examples) och i `example/sass-examples`.
+Exempelprogrammet från denna övning finns i [webapp-example/sass-examples](https://github.com/dbwebb-webapp/webapp-example/tree/main/sass-examples) och i `webapp-example/sass-examples`.
 
 
 
@@ -191,17 +191,14 @@ Nu börjar vi få en hel del CSS kod där olika komponenter ligger blandat i sam
 
 Ett smidigare och mer kraftfullt sätt är att använda sig av en CSS-preprocessor. Fördelen med en CSS-preprocessor är inte bara att man kan samla koden i moduler och exportera en enda CSS fil. I CSS-preprocessors finns det inbyggda funktioner som underlättar vid hantering av färg, typsnitt och import av moduler.
 
-Vissa har i kursen [design](kurser/design) redan träffat på SASS och vet hur SASS fungerar, men denna artikeln utgår från att vi inte kan SASS.
+Vissa har i kursen [design](https://dbwebb.se/design) redan träffat på SASS och vet hur SASS fungerar, men denna artikeln utgår från att vi inte kan SASS.
 
 För att installera SASS kan vi använda oss av `npm`.
 
 ```bash
-# Stå i me/kmom02/buttons
-npm init --yes
+# Stå i roten av ditt webapp-lager repo
 npm install --save-dev sass
 ```
-
-Kommandot `npm init --yes` skapar en fil `package.json` som är en konfigurationsfil för projekt som använder sig av npm.
 
 I `package.json` kan vi skriva ett såkallat npm-script för att kompilera en SASS fil till en CSS-fil. Nedanstående script kompilerar SASS filen `base.scss` till filen `style.css`. Vi kan med kommandot `npm run style` i terminalen köra scriptet.
 
@@ -211,7 +208,7 @@ I `package.json` kan vi skriva ett såkallat npm-script för att kompilera en SA
 },
 ```
 
-Vi skapar därför filen `base.scss` i `me/kmom02/buttons` i kodexemplet i kursrepot har jag även skapat en katalog `style`, där jag ligger de olika SASS moduler.
+Vi skapar därför filen `base.scss` i roten av webapp-lager repot och en katalog `style`, där jag ligger de olika SASS moduler.
 
 Följande är en kort introduktion till import, variabler och färghantering i SASS. För mer avancerade funktioner rekommenderas [SASS dokumentationen](http://sass-lang.com/documentation/file.SASS_REFERENCE.html).
 
@@ -229,43 +226,145 @@ p {
 }
 ```
 
-När vi skapade våra knappar använde vi variationer av samma färg för ramen och skuggningen. Hexadecimal-aritmetik är inte världens lättaste sak, men med CSS-preprocessors är det busenkelt att räkna fram dessa variationer av färgerna. Med funktioner som `lighten` och `darken` kan vi ljusa upp eller mörka våra grundfärger enligt exemplet nedan där vi i gradienten gör färgen `$blue` 10% mörkare och ramen görs 20% mörkare. Funktionen `lighten` fungerar på samma sätt som `darken`, men ljuser upp färgen istället för att göra den mörkare.
+När vi skapade våra knappar använde vi variationer av samma färg för ramen och skuggningen. Hexadecimal-aritmetik är inte världens lättaste sak, men med CSS-preprocessors är det busenkelt att räkna fram dessa variationer av färgerna. Med funktioner som `color.scale` från SASS modulen `@use "sass:color";` kan vi ljusa upp eller mörka våra grundfärger enligt exemplet nedan där vi i gradienten gör färgen `$blue` 20% mörkare och ramen görs 20% mörkare.
 
 ```scss
+@use "sass:color";
+
 $blue: #0074d9;
 
 .blue-button {
+    color: #fff;
     background-color: $blue;
-    background-image: linear-gradient($blue, darken($blue, 10%));
-    border-color: darken($blue, 20%);
+    background-image: linear-gradient($blue, color.scale($blue, $lightness: -20%));
+    border-color: color.scale($blue, $lightness: -20%);
 }
 ```
 
-För att strukturera CSS-koden börjar vi med att skapa en fil `base.scss`. I filen `base.scss` importerar vi alla moduler med hjälp av till exempel `@import 'navigation'`. Det är denna fil vi använder när vi sedan ska kompilera SASS till CSS. Jag använder `.scss`-filer då jag gillar syntaxen då den påminner om CSS och ger möjlighet för att återanvända befintlig CSS. Men det är fritt fram att använda `.sass` syntax, om ni tycker om den.
+För att strukturera CSS-koden börjar vi med att skapa en fil `base.scss`. I filen `base.scss` importerar vi alla moduler med hjälp av till exempel `@use 'navigation'`. Det är denna fil vi använder när vi sedan ska kompilera SASS till CSS. Jag använder `.scss`-filer då jag gillar syntaxen då den påminner om CSS och ger möjlighet för att återanvända befintlig CSS. Men det är fritt fram att använda `.sass` syntax, om ni tycker om den.
 
 ```scss
-@import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro');
+@use 'style/variables' as *;
+@use 'style/container';
+@use 'style/navigation';
+@use 'style/typography';
+@use 'style/button';
 
-@import 'style/variables';
-@import 'style/container';
-@import 'style/navigation';
-@import 'style/typography';
-@import 'style/button';
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 ```
 
-Den resulterande `base.scss` blir en samling `@import`, som exemplet visar ovan. Notera att jag inte har med filändelsen på alla `.scss`-filer, detta då SASS automatisk hittar `.scss` och `.sass` filer. I exemplet ovan har jag skapat en fil där jag lägger alla variabler, till exempel vilket typsnitt som ska användas eller vilken färg som är blå. Sedan har jag flyttat CSS koden för navigationen, typografin och knapperna till var sin `.scss`-fil. Koden som definierar grunddesignen finns i `container.scss`.
+Den resulterande `base.scss` blir en samling `@use` och en CSS `@import`, som exemplet visar ovan. Notera att jag inte har med filändelsen på alla `.scss`-filer, detta då SASS automatisk hittar `.scss` och `.sass` filer. I exemplet ovan har jag skapat en fil där jag lägger alla variabler, till exempel vilket typsnitt som ska användas eller vilken färg som är blå. Sedan har jag flyttat CSS koden för navigationen, typografin och knapperna till var sin `.scss`-fil. Koden som definierar grunddesignen finns i `container.scss`.
+
+Vi använder `@use 'style/variables' as *;` för att importera våra variabler som globala variabler. För att detta ska fungera skapar vi en katalog `style/variables` och i katalogen skapar vi två filer: `_index.scss` och `_variables.scss`.
+
+Filerna innehåller i sin tur följande kod. `@forward` används för att tillgängliggöra variablerna utanför `_variables.scss` filen.
+
+```scss
+// style/variables/_index.scss
+@forward 'variables';
+```
+
+```scss
+// style/variables/_variables.scss
+$light-grey: #ccc;
+$dark-grey: #666;
+$almost-black: #333;
+$white: #fff;
+$almost-white: #eee;
+$a-bit-more-grey: #ddd;
+$black: #000;
+
+$blue: #0074d9;
+$blue-text: $white;
+$green: #2ecc40;
+$red: #ff4136;
+$red-text: $white;
+$yellow: #ffdc00;
+
+$font-body: 'Merriweather', sans-serif;
+$font-header: 'Source Sans Pro', sans-serif;
+
+$line-height: 1.4;
+$body-font-size: 1.4rem;
+```
+
+Vi kan sedan i varje fil där vi vill använda variabler lägga `@use 'variables' as *;` och min `style/navigation.scss` ser alltså ut på följande sätt.
+
+```scss
+@use 'variables' as *;
+@use "sass:color";
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    border-top: 1px solid $light-grey;
+    width: 100%;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    background: white;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    font-family: $font-header;
+}
+
+.bottom-nav a {
+    text-align: center;
+    color: $dark-grey;
+}
+
+.bottom-nav a.active {
+    color: $blue;
+}
+
+.bottom-nav i {
+    display: block;
+}
+
+.bottom-nav span {
+    font-size: 0.7rem;
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    border-bottom: 1px solid $light-grey;
+    background-color: color.scale($light-grey, $lightness: -20%);
+    width: 100%;
+    padding: 0.2rem 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: $font-header;
+    font-size: 1.4rem;
+}
+
+.top-nav span {
+    position: absolute;
+    top: 0.2rem;
+    left: 0.8rem;
+    color: $blue;
+}
+
+.top-nav span i {
+    float: left;
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+```
 
 Vi minns att vi med kommandot `npm run style` kan köra npm skriptet `style`, som i sin tur kör kommandot.
 
 ```bash
-sass base.scss style.min.css
+sass base.scss style.css
 ```
 
 Om man istället vill skapa en komprimerad version av CSS koden kan man använda följande scripts. En rekommendation är att använda nedanstående kommandot `npm run style-min` då man annars kan få valideringsfel för den kompilerade CSS filen. Se även till att byta från `style.css` till `style.min.css` i `index.html` för att ladda den filen istället.
 
 ```json
 "scripts": {
-  "style": "sass base.scss style.min.css --no-source-map",
+  "style": "sass base.scss style.css --no-source-map",
   "style-min": "sass base.scss style.min.css  --no-source-map --style compressed"
 },
 ```
@@ -274,6 +373,8 @@ Om man istället vill skapa en komprimerad version av CSS koden kan man använda
 
 Avslutningsvis {#avslutning}
 --------------------------------------
+
 Vi har i denna artikeln skapat knappar som är lätta att klicka på och samtidigt inbjuder till att bli klickade på. Vi designade först en grundknapp och med hjälp av andra klasser designade vi knappar som fyller hela skärmens bredd och knappar med andra färger för olika funktioner. Vi har även tittat på ett sätt att strukturera vår CSS kod med CSS-preprocessorn SASS.
 
-Exempelprogrammet från denna övning finns i kursrepot [example/sass-examples](https://github.com/dbwebb-se/webapp/tree/master/example/sass-examples) och i `example/sass-examples`.
+Exempelprogrammet från denna övning finns i [webapp-example/sass-examples](https://github.com/dbwebb-webapp/webapp-example/tree/main/sass-examples) och i `webapp-example/sass-examples`.
+
