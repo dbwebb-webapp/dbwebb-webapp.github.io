@@ -9,21 +9,7 @@ layout: default
 Kmom01: Web Components
 ==================================
 
-[WARNING]
-
-**Påbörja inte kursen**
-
-Kursutveckling pågår. Påbörja inte kursen innan gula rutan är borta.
-
-[/WARNING]
-
 Tanken är att komma igång med utveckling av mobila applikationer. De mobila applikationerna utvecklar vi med tekniker baserade på HTML, CSS och JavaScript. Vi ser hur vi kan utnyttja dessa tekniker för att ändra innehållet utan att ladda om applikationen. Som ett första steg så läser vi på om grunderna och börjar så smått med det löpande projektet för alla sex kursmoment.
-
-
-
-<!--more-->
-
-
 
 Vi har i tidigare kurser sett hur vi man kan skapa applikationer i webbläsaren där vi aldrig laddar om sidan. Vi ska fortsätta på det spåret och bygga vidare på detta med webbens inbyggda teknologier för till exempel hämtning av data från ett API.
 
@@ -48,7 +34,19 @@ Som i andra kurser bör du ha en lokal labbmiljö innehållande:
 * En bash-terminal (WSL2 för Windows)
 * Visual Studio Code
 
-I denna kursen använder vi GitHub som utgångspunkt för vår labb- och studiemiljö. I nedanstående video visar Emil hur du kommer igång med kursen. Om du föredrar text kan du hoppa över videon.
+I denna kursen använder vi Git och GitHub som utgångspunkt för vår labb- och studiemiljö. 
+
+Har du inte tidigare jobbat med Git rekommenderas denna guiden [Git](https://dbwebb.se/guide/git/introduktion){:target="_blank"}
+
+Börja med att lämna in [uppgiften Github konto på Canvas](https://bth.instructure.com/courses/6413/assignments/56315){:target="_blank"} enligt videon nedan.
+
+[YOUTUBE src=dv09UyTAnQk caption="Uppgiften GitHub Konto"]
+
+Acceptera sedan inbjudan och använd SAML SSO inloggning för att knyta ditt GitHub konto mot ditt studentkonto.
+
+[YOUTUBE src=keEGqOEdpbI caption="Acceptera inbjudan"]
+
+ I nedanstående video visar Emil hur du kommer igång med kursen. Om du föredrar text kan du hoppa över videon, men den är starkt rekommenderat.
 
 [YOUTUBE src=47fDUCRsVf0 caption="Kom igång med kursens infrastruktur"]
 

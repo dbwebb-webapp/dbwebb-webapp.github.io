@@ -8,14 +8,6 @@ revision:
 Webbapplikationer för mobila enheter
 ==================================
 
-[WARNING]
-
-**Påbörja inte kursen**
-
-Kursutveckling pågår. Påbörja inte kursen innan gula rutan är borta.
-
-[/WARNING]
-
 Kursen **Webbapplikationer för mobila enheter**, a.k.a. *webapp*, lär dig hur du bygger applikationer för mobila enheter och läsplattor med HTML, CSS och JavaScript.
 
 Kursen syftar till att lära ut utveckling av webbapplikationer med HTML, CSS och JavaScript och fokuserar på mobila enheter och läsplattor.
