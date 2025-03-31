@@ -34,7 +34,7 @@ Som i andra kurser bör du ha en lokal labbmiljö innehållande:
 * En bash-terminal (WSL2 för Windows)
 * Visual Studio Code
 
-I denna kursen använder vi Git och GitHub som utgångspunkt för vår labb- och studiemiljö. 
+I denna kursen använder vi Git och GitHub som utgångspunkt för vår labb- och studiemiljö.
 
 Har du inte tidigare jobbat med Git rekommenderas denna guiden [Git](https://dbwebb.se/guide/git/introduktion){:target="_blank"}
 
@@ -80,10 +80,7 @@ Veckans genomgång  {#genomgang}
 
 Emil har genomgånger måndagar kl 13:15, efter genomgången uppdateras denna delen av sidan med veckans genomgång.
 
-<!-- Nedan berättar Andreas om veckans övningar och uppgifter och visar lite tips och trix.
-
-[YOUTUBE src=eJ1iPwzU3Mc width=630 caption="Veckans genomgång"] -->
-
+[YOUTUBE src=wc_c5LdvXMw width=630 caption="Veckans genomgång"]
 
 
 Läsanvisningar  {#lasanvisningar}
