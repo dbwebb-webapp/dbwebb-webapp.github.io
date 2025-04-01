@@ -241,7 +241,7 @@ Laddar vi om sidan nu ser vi att titeln på sidan har ändrats från "Andreas's 
 Driftsättning {#deploy}
 --------------------------------------
 
-Än så länge har vi gjort allt lokalt med vår lokala webbserver. Men en webbplats är till för att delas. Vi kommer i denna kursen använda oss av GitHub Pages för driftsättning. Gå till ditt `webapp-lager`-repo och under Settings>Pages välj "GitHub Actions" under Source enligt bilden nedan. Varje gång vi gör en `git push` driftsätts sidan på webbplatsen `https://akronym.github.io/webapp-lager` (byt ut akronym till din akronym).
+Än så länge har vi gjort allt lokalt med vår lokala webbserver. Men en webbplats är till för att delas. Vi kommer i denna kursen använda oss av GitHub Pages för driftsättning. Gå till ditt `webapp-lager`-repo och under Settings>Pages välj "GitHub Actions" under Source enligt bilden nedan. Varje gång vi gör en `git push` driftsätts sidan på webbplatsen `https://användarenamn.github.io/webapp-lager` (byt ut användarenamn till din användarenamn).
 
 <img src="/img/pages-enable-actions.png" alt="Enable GitHub Actions for GitHub Pages source" />
 

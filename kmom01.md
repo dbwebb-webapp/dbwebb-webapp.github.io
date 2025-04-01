@@ -59,13 +59,13 @@ cd webapp
 git clone https://github.com/dbwebb-webapp/webapp-example.git
 ```
 
-Sedan vill du skapa en `fork` av repot [dbwebb-webapp/webapp-lager](https://github.com/dbwebb-webapp/webapp-lager){:target="_blank"}. Du klonar sedan repot till din `dbwebb-kurser/webapp` katalog. Se till att byta ut akronym mot din akronym i de två nedanstående URL'r.
+Sedan vill du skapa en `fork` av repot [dbwebb-webapp/webapp-lager](https://github.com/dbwebb-webapp/webapp-lager){:target="_blank"}. Du klonar sedan repot till din `dbwebb-kurser/webapp` katalog. Se till att byta ut användarenamn mot ditt användarenamn i de två nedanstående URL'r.
 
 ```shell
-git clone git@github.com:akronym/webapp-lager.git
+git clone git@github.com:användarenamn/webapp-lager.git
 ```
 
-Gå nu till sidan https://github.com/akronym/webapp-lager/actions och godkänn att Actions kan köras genom att klicka på stora gröna knappen: "I understand my workflows, go ahead and run them". Dessa workflows används för att köra tester, validering, driftsättning och rättning.
+Gå nu till sidan https://github.com/användarenamn/webapp-lager/actions och godkänn att Actions kan köras genom att klicka på stora gröna knappen: "I understand my workflows, go ahead and run them". Dessa workflows används för att köra tester, validering, driftsättning och rättning.
 
 Avsluta veckans uppstart med att skapa en `branch` för att jobba med kmom01 genom följande kommando.
 
