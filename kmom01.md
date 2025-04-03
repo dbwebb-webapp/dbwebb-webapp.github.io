@@ -83,6 +83,15 @@ Emil har genomgånger måndagar kl 13:15, efter genomgången uppdateras denna de
 [YOUTUBE src=wc_c5LdvXMw width=630 caption="Veckans genomgång"]
 
 
+
+Veckans föreläsning  {#forelasning}
+---------------------------------
+
+Emil har föreläsningar onsdagar kl 10:15, efter föreläsningen uppdateras denna delen av sidan med veckans föreläsning.
+
+[YOUTUBE src=km8ea3-QHQw width=630 caption="Veckans föreläsning"]
+
+
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
