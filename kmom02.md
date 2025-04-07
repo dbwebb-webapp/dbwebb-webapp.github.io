@@ -45,6 +45,8 @@ Veckans genomgång {#genomgang}
 
 Emil har genomgånger måndagar kl 13:15, efter genomgången uppdateras denna delen av sidan med veckans genomgång.
 
+[YOUTUBE src=BdN_-4ZsG0k width=630 caption="Veckans genomgång"]
+
 
 
 Veckans föreläsning  {#forelasning}
