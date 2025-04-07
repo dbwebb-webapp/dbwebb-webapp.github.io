@@ -14,14 +14,6 @@ layout: default
 Kmom04: Autentisering med JWT
 ==================================
 
-[WARNING]
-
-**Påbörja inte kursen**
-
-Kursutveckling pågår. Påbörja inte kursen innan gula rutan är borta.
-
-[/WARNING]
-
 Vi fortsätter med Lager appen och lägger till en funktion för att skapa fakturor utifrån en order. Alla ska inte kunna skapa fakturor så innan vi skapar faktura funktionen skapar vi inloggning och tittar på JSON Web Tokens för autentisering.
 
 När man skapar en faktura är det bra att ha snygga och responsiva tabeller. Så kursmomentets GUI-komponent är just tabeller och hur vi optimerar dessa för mobila enheter.
@@ -39,6 +31,18 @@ Så här kan det se ut när vi är klara.
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+
+Starta igång veckan {#uppstart}
+----------------------------------------------
+
+Starta igång veckan genom att skapa en `branch` för att jobba med kmom04 genom följande kommandon.
+
+```shell
+cd $HOME/dbwebb-kurser/webapp/webapp-lager
+git checkout -b kmom04
+```
 
 
 

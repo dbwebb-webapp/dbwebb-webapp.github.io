@@ -31,6 +31,18 @@ I detta kursmoment börjar vi till fullo att utnyttja styrkorna i våra mobila e
 
 
 
+Starta igång veckan {#uppstart}
+----------------------------------------------
+
+Starta igång veckan genom att skapa en `branch` för att jobba med kmom05 genom följande kommandon.
+
+```shell
+cd $HOME/dbwebb-kurser/webapp/webapp-lager
+git checkout -b kmom05
+```
+
+
+
 Veckans genomgångar  {#genomgang}
 ---------------------------------
 

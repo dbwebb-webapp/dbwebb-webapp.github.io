@@ -42,6 +42,18 @@ Så här kan det se ut när vi är klara med kursmoment 06.
 
 
 
+Starta igång veckan {#uppstart}
+----------------------------------------------
+
+Starta igång veckan genom att skapa en `branch` för att jobba med kmom06 genom följande kommandon.
+
+```shell
+cd $HOME/dbwebb-kurser/webapp/webapp-lager
+git checkout -b kmom06
+```
+
+
+
 Veckans genomgång  {#genomgang}
 ---------------------------------
 

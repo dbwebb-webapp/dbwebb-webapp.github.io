@@ -13,21 +13,7 @@ layout: default
 Kmom03: Formulär och CRUD
 ==================================
 
-[WARNING]
-
-**Påbörja inte kursen**
-
-Kursutveckling pågår. Påbörja inte kursen innan gula rutan är borta.
-
-[/WARNING]
-
 I detta kursmoment fortsätter vi med att utveckla våra GUI komponenter från tidigare kursmoment. Vi skapar lättanvända formulärfält med hjälp av HTML5 och kopplar ihop fälten i formulär som är lätta att använda på små skärmar där kontext och möjligheten att skriva snabbt och enkelt saknas. I vår applikation lägger vi till möjligheten att skapa data via formulär.
-
-
-
-<!--more-->
-
-
 
 Så här kan det se ut när vi är klara.
 
@@ -36,6 +22,18 @@ Så här kan det se ut när vi är klara.
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+
+Starta igång veckan {#uppstart}
+----------------------------------------------
+
+Starta igång veckan genom att skapa en `branch` för att jobba med kmom03 genom följande kommandon.
+
+```shell
+cd $HOME/dbwebb-kurser/webapp/webapp-lager
+git checkout -b kmom03
+```
 
 
 
