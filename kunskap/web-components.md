@@ -255,7 +255,6 @@ Lägg sedan till en deployment branch `kmom*` genom att trycka på plus tecknet 
 
 
 
-
 En mer fullständig komponent {#fullstandig}
 --------------------------------------
 
