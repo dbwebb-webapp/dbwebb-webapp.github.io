@@ -179,7 +179,7 @@ export default class Router extends HTMLElement {
     }
 
     render() {
-        this.innerHTML = this.routes[this.currentRoute].view || "<not-found></not-found>";
+        this.innerHTML = this.routes[this.currentRoute]?.view || "<not-found></not-found>";
     }
 }
 ```
