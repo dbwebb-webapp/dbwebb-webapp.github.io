@@ -245,6 +245,15 @@ Driftsättning {#deploy}
 
 <img src="/img/pages-enable-actions.png" alt="Enable GitHub Actions for GitHub Pages source" />
 
+Om ni efter `git push` får ett problem med följande felmeddelande i GitHub: `Branch "kmom01" is not allowed to deploy to github-pages due to environment protection rules.`. Kan det lösas på följande sätt. Gå till Settings>Environments för ditt repo enligt bilden nedan:
+
+<img src="/img/pages-add-env-1.png" alt="Image showing Environments in GitHub" />
+
+Lägg sedan till en deployment branch `kmom*` genom att trycka på plus tecknet med texten 'Add deployment branch or tag rule' enligt bilden.
+
+<img src="/img/pages-add-env-2.png" alt="Image showing adding deployment branches" />
+
+
 
 
 En mer fullständig komponent {#fullstandig}
