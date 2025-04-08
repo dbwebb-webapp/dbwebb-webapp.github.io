@@ -28,7 +28,7 @@ Exempelprogrammet från denna övning finns i [webapp-example/sass-examples](htt
 En knapp {#intro}
 --------------------------------------
 
-Vi börjar med att definiera en klass för knappar `.button`. Vi vill att denna klassen ska kunna användas för flera olika HTML-element som till exempel `a`, `button` och `input[type=submit]`. I kod exemplet nedan har vi en grundstruktur med `index.html`, `normalize.min.css` och `style.css`. Jag har lagt till tre stycken element som vi ska designa i denna övning genom att använda klassen `.button`.
+Vi börjar med att definiera en klass för knappar `.button`. Vi vill att denna klassen ska kunna användas för flera olika HTML-element som till exempel `a`, `button` och `input[type=submit]`. I kod exemplet nedan har vi en grundstruktur med `index.html` och `style.css`. Jag har lagt till tre stycken element som vi ska designa i denna övning genom att använda klassen `.button`.
 
 ```html
 <!doctype html>
