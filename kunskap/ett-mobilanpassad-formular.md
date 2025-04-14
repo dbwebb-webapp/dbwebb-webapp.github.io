@@ -10,7 +10,7 @@ Ett mobilanpassad formulär
 
 [FIGURE src=/image/webapp/form.jpeg class="right"]
 
-Vi ska i denna övning titta på hur vi med hjälp av HTML5 input gör våra mobila appar mer användarvänliga och säkra. Vi skapar även formulär komponenter till vårt GUI komponent ramverk. I slutet av övningen tittar vi på hur vi skapar ett formulär i mithril.
+Vi ska i denna övning titta på hur vi med hjälp av HTML5 input gör våra mobila appar mer användarvänliga och säkra. Vi skapar även formulär komponenter till vårt GUI komponent ramverk. I slutet av övningen tittar vi på hur vi skapar ett formulär i en web component.
 
 
 
@@ -203,7 +203,7 @@ Om man alltid vill ha ett kolon (:) efter `.input-label` kan man använda pseudo
 }
 ```
 
-Ett annat bra sätt att förtydliga för användaren vad som ska fyllas i är att använda sig av `placeholder` attributet. Detta görs i HTML på detta sättet `<input type="text" placeholder="Fyll i text">`. I mithril exemplet nedan finns exempel på hur man använder en placeholder i mithril.
+Ett annat bra sätt att förtydliga för användaren vad som ska fyllas i är att använda sig av `placeholder` attributet. Detta görs i HTML på detta sättet `<input type="text" placeholder="Fyll i text">`.
 
 Våra formulärfält ser nu ut enligt nedan och vi har nu samma styling trots olika webbläsare och olika typer av formulärfält.
 
