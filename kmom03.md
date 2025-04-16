@@ -52,6 +52,11 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 6-10 studietimmar)*
 
 
+### Artiklar
+
+Läs och använd artiklarna [Website Forms Usability: Top 10 Recommendations](https://www.nngroup.com/articles/web-form-design/) och [A Checklist for Registration and Login Forms on Mobile](https://www.nngroup.com/articles/checklist-registration-login/) för att skapa användbara formulär.
+
+
 
 ### Video  {#video}
 
