@@ -50,6 +50,13 @@ Emil har genomgånger måndagar kl 13:15, efter genomgången uppdateras denna de
 
 
 
+Veckans föreläsning  {#forelasning}
+---------------------------------
+
+Emil har föreläsningar onsdagar kl 10:15, efter föreläsningen uppdateras denna delen av sidan med veckans föreläsning.
+
+
+
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
