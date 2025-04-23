@@ -91,23 +91,29 @@ const auth = {
             api_key: apiKey
         };
 
-        const response = await fetch(`${baseURL}/auth/login`, {
-            body: JSON.stringify(user),
-            headers: {
-              'content-type': 'application/json'
-            },
-            method: 'POST'
-        });
+        try {
+            const response = await fetch(`${baseURL}/auth/login`, {
+                body: JSON.stringify(user),
+                headers: {
+                    'content-type': 'application/json'
+                },
+                method: 'POST'
+            });
 
-        const result = await response.json();
+            if (response.status === 200) {
+                const result = await response.json();
 
-        if (result.data.type === "success") {
-            auth.token = result.data.token;
-            console.log(auth.token);
-            return "ok";
+                if (result.data?.type === "success") {
+                    auth.token = result.data.token;
+
+                    return "ok";
+                }
+            }
+
+            return "not ok";
+        } catch (error) {
+            console.error(error);
         }
-
-        return "not ok";
     },
 
     register: async function register (username, password) {
@@ -136,6 +142,25 @@ const auth = {
 };
 
 export default auth;
+```
+
+Vi kan då skapa en `login-form` komponent `src/components/login-form.js` där vi använder oss av funktionerna i `auth`-modellen. Baserat på tidigare kunskap om formulär har vi ett objekt `this.loginDetails` tillgängligt och vid `submit` av formuläret skickas det iväg till API:t för inloggning.
+
+```javascript
+form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const response = await auth.login(
+        this.loginDetails.email,
+        this.loginDetails.password
+    );
+
+    if (response === "ok") {
+        return location.hash = "invoices";
+    }
+
+    // hantering av att inloggning blev fel.
+});
 ```
 
 Vi kan sedan i våra komponenter och vyer använda detta för att ge användare tillgång till de olika delar som i vanliga fall ligger bakom lås och bom.
