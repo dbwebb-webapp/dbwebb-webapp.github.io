@@ -1,6 +1,7 @@
 ---
 author: efo
 category: javascript
+title: GPS och Karta
 revision:
   "2023-03-20": (B, efo) Första utgåvan inför kursen webapp v5.
   "2018-03-02": (A, efo) Första utgåvan inför kursen webapp v3.

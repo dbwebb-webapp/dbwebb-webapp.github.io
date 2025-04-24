@@ -1,15 +1,16 @@
 ---
 author: efo
 category: javascript
+title: Kamera i mobilen
 revision:
   "2018-03-02": (A, efo) Första utgåvan inför kursen webapp v3.
 ---
 Kamera i mobilen
 ==================================
 
-[FIGURE src=/image/webapp/Leica_M9.jpg?w=c5 class="right"]
+[FIGURE src=/image/webapp/Leica_M9.jpg class="right"]
 
-Exempelprogrammet från denna övning finns i kursrepot [example/camera](https://github.com/dbwebb-se/webapp/tree/master/example/camera) och i `example/camera`. Använd det gärna tillsammans med övningen för att se hur de olika delarna hänger ihop. En del kod utelämnas i exemplet för att det ska vara mer lättläst i artikeln. Finns inte `example/camera`-katalogen gör en `dbwebb update`.
+Exempelprogrammet från denna övning finns i kursrepot [webapp-example/camera](https://github.com/dbwebb-webapp/webapp-example/tree/main/camera) och i `webapp-example/camera`. Använd det gärna tillsammans med övningen för att se hur de olika delarna hänger ihop. En del kod utelämnas i exemplet för att det ska vara mer lättläst i artikeln.
 
 
 
@@ -18,7 +19,7 @@ Kamera i webbläsaren {#camera}
 
 Låt oss ta en titt på Web API:t [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) och se hur vi med hjälp av funktion getUserMedia kan ta en bild.
 
-Vi börjar med att skapa en komponent `CameraComponent` i filen `components/camera.js`.
+Vi börjar med att skapa en komponent `CameraComponent` i filen `src/components/camera.js`.
 
 ```javascript
 export default class CameraComponent extends HTMLElement {
@@ -174,5 +175,3 @@ Avslutningsvis {#avslutning}
 --------------------------------------
 
 Vi har i denna artikel använt oss av Web API:t MediaDevices för att ta bilder med våra mobila enheter. Vi har även använt ett Foto-API för att spara undan bilderna.
-
-Exempelprogrammet från denna övning finns i kursrepot [example/camera](https://github.com/dbwebb-se/webapp/tree/master/example/camera) och i `example/camera`.
