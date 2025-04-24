@@ -16,21 +16,7 @@ layout: default
 Kmom06: Real-tids kommunikation
 ==================================
 
-[WARNING]
-
-**Påbörja inte kursen**
-
-Kursutveckling pågår. Påbörja inte kursen innan gula rutan är borta.
-
-[/WARNING]
-
 I detta kmom tittar vi på hur vi med hjälp av websockets kan kommunicera i real-tid mellan flera olika klienter. Vi gör det genom att bygga en kundtjänst chatt, där alla i kursen kan prata tillsammans.
-
-
-
-<!--more-->
-
-
 
 Så här kan det se ut när vi är klara med kursmoment 06.
 
@@ -96,7 +82,7 @@ Du kan även med fördel titta på denna video:
 
 ### Övningar {#ovningar}
 
-1. Jobba igenom övningen "[Real-tids chatt](kunskap/real-tids-chatt)".
+1. Jobba igenom övningen "[Real-tids chatt](kunskap/real-tids-chatt)". Utöka din app i webbapp-lager repot.
 
 
 
@@ -104,7 +90,7 @@ Du kan även med fördel titta på denna video:
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 6](uppgift/lager-appen-del-6)". Spara dina filer i `src`.
+1. Gör uppgiften "[Lager appen del 6](uppgift/lager-appen-del-6)". Spara dina filer i webapp-lager repot.
 
 
 

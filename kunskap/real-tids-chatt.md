@@ -1,5 +1,6 @@
 ---
 author: efo
+title: Real-tids chatt
 revision:
     "2024-02-16": "(A, efo) Första utgåvan för webapp-v5 VT24."
 ---
@@ -13,16 +14,16 @@ I denna övningen tittar vi på hur vi kan använda websockets för att kommunic
 Förkunskaper {#prereqs}
 --------------------------------------
 
-Du har gjort uppgiften "[Lager appen del 5](uppgift/lager-appen-del-5-v5)" och kan med fördel bygga vidare på den koden.
+Du har gjort uppgiften "[Lager appen del 5](../uppgift/lager-appen-del-5-v5)" och kan med fördel bygga vidare på den koden.
 
 
 
 Exempelkod {#example}
 --------------------------------------
 
-Exempelkod för denna övningen finns i kursrepot under [example/chat](https://github.com/dbwebb-se/webapp/tree/master/example/chat).
+Exempelkod för denna övningen finns i kursrepot under [webapp-example/chat](https://github.com/dbwebb-webapp/webapp-example/tree/main/chat).
 
-Om du skriver nedanstående kod i `me/lager` katalogen kan du återanvända koden i uppgiften "[Lager appen del 6](uppgift/lager-appen-del-6-v5)".
+Om du skriver nedanstående kod i ditt webapp-lager repo kan du återanvända koden i uppgiften "[Lager appen del 6](uppgift/lager-appen-del-6-v5)".
 
 
 
@@ -138,5 +139,3 @@ Avslutningsvis {#avslutning}
 --------------------------------------
 
 Vi har i denna övning tittat på hur vi kan använda `socket.io` för att kommunicera i realtid mellan ett antal olika klienter.
-
-Exempelkod för denna övningen finns i kursrepot under [example/chat](https://github.com/dbwebb-se/webapp/tree/master/example/chat).
