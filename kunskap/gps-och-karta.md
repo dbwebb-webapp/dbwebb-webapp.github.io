@@ -8,80 +8,28 @@ revision:
 GPS och karta v3
 ==================================
 
-[FIGURE src=/image/webapp/gps.png?w=c5 class="right"]
+[FIGURE src=/image/webapp/gps.png class="right"]
 
 Vi ska i denna övning använda [leaflet.js](https://leafletjs.com) tillsammans med [OpenStreetMap](https://www.openstreetmap.org) och Web API:t `geolocation` för att visa positionsdata på en karta. Vi ska alltså titta på hur vi med hjälp av den inbyggda GPS'en kan visa användarens position på kartan.
 
-Exempelprogrammet från denna övning finns i kursrepot [example/gps](https://github.com/dbwebb-se/webapp/tree/master/example/gps-v5) och i `example/gps-v5`. Använd det gärna tillsammans med övningen för att se hur de olika delarna hänger ihop. En del kod utelämnas i exemplet för att det ska vara mer lättläst i artikeln. Finns inte `example/gps-v5`-katalogen gör en `dbwebb update`.
+Exempelprogrammet från denna övning finns i kursrepot [webapp-example/gps-v5](https://github.com/dbwebb-webapp/webapp-example/tree/main/gps-v5) och i `webapp-example/gps-v5`. Använd det gärna tillsammans med övningen för att se hur de olika delarna hänger ihop. En del kod utelämnas i exemplet för att det ska vara mer lättläst i artikeln.
 
 
 
 En karta {#karta}
 --------------------------------------
 
-Vi kommer i detta exemplet använda leaflet.js för att visa upp en karta i vår mobila enhet och för att rita ut markörer på denna karta. Vi börjar med att skapa de filer och kataloger som behövs för att få ihop grunden.
+Vi kommer i detta exemplet använda leaflet.js för att visa upp en karta i vår mobila enhet och för att rita ut markörer på denna karta. Vi börjar med att skapar filerna för att få ihop grunden.
 
 ```bash
-# stå i me/kmom05/gps
-touch index.html main.js style.css
-mkdir components models
-touch components/map-view.js
+touch src/components/map-view.js
 ```
 
 I `index.html` lägger vi in grunden som vi har haft i tidigare kursmoment. Men vi lägger till ett `main`-element och `map-view` som vi senare kommer att skapa som `customElement`.
 
-```html
-<!doctype html>
-<html lang="sv">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Map and GPS v5</title>
-
-    <link rel="stylesheet" href="style.css" />
-
-    <script type="module" src="main.js" defer></script>
-</head>
-<body>
-    <main>
-        <map-view></map-view>
-    </main>
-</body>
-</html>
-```
-
-I `style.css` skapar vi en väldigt enkel grundstil. Viktigt att notera är att vi sätter en explicit höjd på det som kommer vara kart-elementet (`.map`), annars kommer det inte synas.
+I `map.scss` skapar vi en väldigt enkel grundstil. Viktigt att notera är att vi sätter en explicit höjd på det som kommer vara kart-elementet (`.map`), annars kommer det inte synas.
 
 ```css
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 100%;
-}
-
-body {
-    line-height: 1.4;
-    font-family: sans-serif;
-}
-
-main {
-    padding: 0.7rem;
-}
-
-h1 {
-    font-size: 2rem;
-    margin-bottom: 1.4rem;
-}
-
-p {
-    font-size: 1rem;
-    margin-bottom: 1.4rem;
-}
-
 .map {
     height: 50vh;
     width: 100%;
@@ -96,7 +44,7 @@ import MapView from "./components/map-view.js";
 customElements.define("map-view", MapView);
 ```
 
-Vi börjar sedan `components/map-view.js` med att skapa en instansvariabel för kartan `this.map` och sedan skriver vi ut en rubrik bara för att se att allt fungerar som det ska.
+Vi börjar sedan `src/components/map-view.js` med att skapa en instansvariabel för kartan `this.map` och sedan skriver vi ut en rubrik bara för att se att allt fungerar som det ska.
 
 ```javascript
 export default class MapView extends HTMLElement {
@@ -112,7 +60,7 @@ export default class MapView extends HTMLElement {
 }
 ```
 
-Nu bör du kunna se en rubrik om du öppnar upp applikationen i webbläsaren.
+Om du lägger till en route i din router bör du nu kunna se en rubrik om du går till routen.
 
 
 
@@ -162,7 +110,7 @@ export default class MapView extends HTMLElement {
 Markörer {#markorer}
 --------------------------------------
 
-För att vi ska kunna visa olika specifika platser på kartan vill vi kunna rita ut markörer. För att vi ska kunna rita ut markörer behöver vi koordinater och det kan vi antingen skriva in manuellt eller så kan vi omvandla adresser till koordinater. Jag väljer först att skapa en modell för just omvandlingen till koordinater i filen `models/nominatim.js`. I den modellen använder vi tjänsten nominatim.openstreetmap.org för att göra om en adress till koordinater.
+För att vi ska kunna visa olika specifika platser på kartan vill vi kunna rita ut markörer. För att vi ska kunna rita ut markörer behöver vi koordinater och det kan vi antingen skriva in manuellt eller så kan vi omvandla adresser till koordinater. Jag väljer först att skapa en modell för just omvandlingen till koordinater i filen `src/models/nominatim.js`. I den modellen använder vi tjänsten nominatim.openstreetmap.org för att göra om en adress till koordinater.
 
 ```javascript
 export default async function getCoordinates(address) {
@@ -307,5 +255,3 @@ Avslutningsvis {#avslutning}
 --------------------------------------
 
 Vi har i denna artikel använt oss av OpenStreetMap och leaflet.js för att placera ut markörer på en karta på specifika platser. Vi har även tittat på hur vi kan använda `geolocation`-Web-API:t för att rita ut användarens position på kartan.
-
-Exempelprogrammet från denna övning finns i kursrepot [example/gps](https://github.com/dbwebb-se/webapp/tree/master/example/gps-v5) och i `example/gps-v5`.

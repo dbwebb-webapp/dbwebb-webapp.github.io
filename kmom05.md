@@ -15,19 +15,17 @@ layout: default
 Kmom05: Mobila enheters styrkor
 ==================================
 
-[WARNING]
-
-**Påbörja inte kursen**
-
-Kursutveckling pågår. Påbörja inte kursen innan gula rutan är borta.
-
-[/WARNING]
-
 I detta kursmoment börjar vi till fullo att utnyttja styrkorna i våra mobila enheter. Vi kopplar in GPS och enhetens kamera för att skapa en fulländad applikation, som utnyttjar flera av de möjligheter vi har på en mobil plattform.
 
 
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
+
+
+
+Så här kan det se ut när vi är klara med kursmoment 05. Jag vet att jg säger kmom06 i början, men detta är videon för kmom05.
+
+[YOUTUBE src=SDvsHIIIC_k width=630 caption="Lager appen i kursmoment 5."]
 
 
 
@@ -43,14 +41,14 @@ git checkout -b kmom05
 
 
 
-Veckans genomgångar  {#genomgang}
+Veckans genomgång {#genomgang}
 ---------------------------------
 
 Emil har genomgånger måndagar kl 13:15, efter genomgången uppdateras denna delen av sidan med veckans genomgång.
 
 
 
-Veckans föreläsning  {#forelasning}
+Veckans föreläsning {#forelasning}
 ---------------------------------
 
 Emil har föreläsningar onsdagar kl 10:15, efter föreläsningen uppdateras denna delen av sidan med veckans föreläsning.
@@ -68,11 +66,11 @@ Emil har föreläsningar onsdagar kl 10:15, efter föreläsningen uppdateras den
 
 Använd nedanstående övningar som inspiration för att klara av uppgiften här i kmom05.
 
-1. Jobba igenom övningen "[Animationer och övergångar](kunskap/animationer-och-overgangar)".
+1. Jobba igenom övningen "[Animationer och övergångar](kunskap/animationer-och-overgangar)". Utöka din app i `webapp-lager` med utgångspunkt i exempelkoden.
 
-1. Jobba igenom övningen "[GPS och karta](kunskap/gps-och-karta)".
+1. Jobba igenom övningen "[GPS och karta](kunskap/gps-och-karta)". Utöka din app i `webapp-lager` med utgångspunkt i exempelkoden.
 
-1. Jobba igenom övningen "[Kamera i mobilen](kunskap/kamera-i-mobilen)".
+1. Jobba igenom övningen "[Kamera i mobilen](kunskap/kamera-i-mobilen)". Utöka din app i `webapp-lager` med utgångspunkt i exempelkoden.
 
 
 

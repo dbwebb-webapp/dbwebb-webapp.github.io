@@ -1,6 +1,7 @@
 ---
 author: efo
 category: javascript
+title: Animationer och övergånger
 revision:
   "2023-04-03": (B, efo) Uppdaterad inför webapp-v5.
   "2018-03-02": (A, efo) Första utgåvan inför kursen webapp v3.
@@ -8,15 +9,9 @@ revision:
 Animationer och övergångar
 ==================================
 
-[FIGURE src=/image/webapp/moving.jpg?w=c5 class="right"]
+[FIGURE src=/image/webapp/moving.jpg class="right"]
 
 Vi har i tidigare kursmoment tittat på hur vi kan designa webbapplikationer så de ser ut som native appar. Vi ska i denna övning titta på hur vi med hjälp av animationer och övergångar även får känslan av att det är en native app.
-
-
-
-<!--more-->
-
-
 
 Vi ska i följande övning få till samma känsla som nedan när vi går från en list-vy till en detalj-vy.
 
@@ -24,7 +19,7 @@ Vi ska i följande övning få till samma känsla som nedan när vi går från e
 
 Vi ser att detalj-vyn kommer in från höger och försvinner ut till höger. Vi använder CSS3 för animationer och tittar på hur vi löser det i en liten app.
 
-Exempelkoden finns i kursrepot [example/animation](https://github.com/dbwebb-se/webapp/tree/master/example/animation).
+Exempelkoden finns i kursrepot [webapp-example/animation](https://github.com/dbwebb-webapp/webapp-example/tree/main/animation). Se gärna hela exemplet för att förstå hur filer hänger ihop.
 
 
 
@@ -129,7 +124,19 @@ export default class Router extends HTMLElement {
 CSS {#css}
 --------------------------------------
 
-Vi använder `@keyframes` för att göra animation av de olika vyerna. Vi använder `transform: translateX()` för att flytta vy och definierar två stycken `@keyframes`: `moveFromRight` och `moveToRight`.
+Som en grundinställning i webbläsaren har alla Web Components `display: inline;` det vill vi ändra för att våra komponenter ska kunna flyta in och ut snyggt.
+
+```css
+list-component,
+detail-component {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+```
+
+Vi använder sedan `@keyframes` för att göra animation av de olika vyerna. Vi använder `transform: translateX()` för att flytta vy och definierar två stycken `@keyframes`: `moveFromRight` och `moveToRight`.
 
 ```css
 @keyframes moveFromRight {
@@ -192,4 +199,5 @@ För att se animeringen kan ni öppna upp `example/animation` med hjälp av er l
 
 Avslutningsvis {#avslutning}
 --------------------------------------
+
 Vi har i denna övning tittat på hur man med hjälp av animationer får känslan av att använda en mobil enhet och att det inte bara ser ut som en mobil enhet.
