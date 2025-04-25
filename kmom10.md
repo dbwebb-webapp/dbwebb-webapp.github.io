@@ -2,6 +2,7 @@
 author:
     - efo
 revision:
+    "2025-04-25": (C, efo) Uppdatering av projektet enligt nya GitHub strukturen.
     "2024-04-12": (B, efo) Enda projekt från och med VT24.
     "2021-02-12": (A, efo) Första versionen av trafik projektet.
 layout: default
@@ -30,11 +31,22 @@ Upplägget är enligt följande:
 
 Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
-Genomgång av projektet
+
+
+Uppstart {#uppstart}
+--------------------------------------------------------------------
+
+Följ videon eller texten nedan.
+
+Börja med att göra en fork av repot [dbwebb-webapp/webapp-project](https://github.com/dbwebb-webapp/webapp-project).
+
+Se till att godkänna Actions och att sätta GitHub Actions som sätt att publicera GitHub Pages webbplatsen.
+
+Skapa en branch `git checkout -b kmom10`.
+
+Genomgång av projektet från 2024, här nämns inte GitHub infrastrukturen, men naturligtvis utgår vi från den från 2025 och framåt.
 
 [YOUTUBE src=gV2xmBEFh90 width=630 caption="Projektet i webapp."]
-
-Börja med att göra en fork av repot [dbwebb-webapp/project]().
 
 
 
@@ -58,7 +70,7 @@ Varje krav ger maximalt 10 poäng, totalt är det 60 poäng.
 
 ### Kataloger för redovisning {#var}
 
-Samla alla dina filer för projektet i ditt kursrepo under `me/kmom10/proj`.
+Samla alla dina filer för projektet i din fork av [dbwebb-webapp/webapp-project](https://github.com/dbwebb-webapp/webapp-project).
 
 
 
@@ -109,7 +121,7 @@ Rita ut förseningarna som markers på den station där det försenade tåget ä
 
 ### Krav 3: Native design (optionellt) {#k3}
 
-Välj ut en befintlig app på den plattform du utvecklar mot. Den valda appen ska ha ungefär samma typ av vyer som din app har. Försök att så gott det går matcha designen på din app pixel-för-pixel med den befintliga appen.
+Välj ut en befintlig app på den mobila operativ system plattformen som du använder dagligen. Den valda appen ska ha ungefär samma typ av vyer som din app har. Försök att så gott det går matcha designen på din app pixel-för-pixel med den befintliga appen.
 
 Beskriv i ett textstycke om 15-20 meningar designprocessen att efterlikna en befintlig app och vilka verktyg och tekniker du använde. Bifoga tre (3) relevanta skärmdumpar av den befintliga appen.
 
@@ -139,28 +151,16 @@ Istället för att visa upp statisk data enligt Krav 2 använder du real-tids da
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
-I Canvas skriv följande:
+Gör en Pull Request av kmom10 branchen mot din egna fork. Som en del av din Pull Request skriv följande reflektionstext:
 
 1. För varje krav du implementerat skriver du ett textstycke som uppfyller kravet. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg. Underlätta för lärarna som rättar genom att ha en rubrik för varje krav du gör.
 
-1. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
+2. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
 
-1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
+3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
 
 
 ### Presentation {#presentation}
 
-Spela in en kort video där du visar kod och berättar om de tekniska implementationerna du gjorde i den individuella examinationen. Lägg till en länk till videon i redovisningstexten på inlämningen på Canvas.
-
-
-
-[INFO]
-Se till att göra en `dbwebb update` innan `dbwebb publish me` så du får senaste versionen av kursrepot och konfiguration för kursrepot.
-[/INFO]
-
-```bash
-# Ställ dig i kursrepot
-dbwebb update
-dbwebb publish me
-```
+Spela in en kort video där du visar kod och berättar om de tekniska implementationerna du gjorde i den individuella examinationen. Lägg till en länk till videon eller ladda upp video som en del av redovisningstexten för Pull Requesten på GitHub.
