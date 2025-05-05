@@ -37,13 +37,7 @@ Vi kommer i denna övningen använda oss av socket.io som är en modul för att 
 En start {#start}
 --------------------------------------
 
-Vi börjar med att lägga till `socket.io`-klienten i vår index.html, lägg den innan du laddar `main.js`-filen.
-
-```html
-    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
-```
-
-Sedan definierar vi ett `customElement` i `main.js` med följande kod:
+Först definierar vi ett `customElement` i `main.js` med följande kod:
 
 ```javascript
 import ChatForm from "./components/chat-form.js";
@@ -58,10 +52,10 @@ Vilket gör det möjligt att använda oss av `<chat-form></chat-form>` i vår ko
 Vår chatt-komponent {#component}
 --------------------------------------
 
-I komponenten börjar vi med att skriva ut ett fält för att skriva i, en knapp för att skicka meddelanden och en `div` för att kunna visa upp alla meddelanden, som kommer skickas båda från din klient och alla andras klienter.
+I komponenten börjar vi med att importera socket.io-klienten direkt från socket.io's CDN. Sedan skapar ett fält för att skriva i, en knapp för att skicka meddelanden och en `div` för att kunna visa upp alla meddelanden, som kommer skickas båda från din klient och alla andras klienter.
 
 ```javascript
-/* global io */
+import { io } from "https://cdn.socket.io/4.8.1/socket.io.esm.min.js";
 
 export default class ChatForm extends HTMLElement {
     constructor() {
