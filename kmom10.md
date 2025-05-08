@@ -11,15 +11,7 @@ layout: default
 Kmom10: Projekt och examination
 ==================================
 
-[WARNING]
-
-**Påbörja inte kursen**
-
-Kursutveckling pågår. Påbörja inte kursen innan gula rutan är borta.
-
-[/WARNING]
-
-[FIGURE src=image/webapp/v4/kajt.jpg?w=c5 class="right"]
+[FIGURE src=image/webapp/v4/kajt.jpg class="right"]
 
 Detta projekt utvecklas i samarbete med Branschprogrammet Kapacitet i järnvägstrafiken – [KAJT](https://kajt.org/). Projektet baseras på öppen data från Trafikverket och handlar om att visualisera förseningar i tågtrafiken
 
@@ -36,15 +28,15 @@ Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 Uppstart {#uppstart}
 --------------------------------------------------------------------
 
-Följ videon eller texten nedan.
-
 Börja med att göra en fork av repot [dbwebb-webapp/webapp-project](https://github.com/dbwebb-webapp/webapp-project).
-
-Se till att godkänna Actions och att sätta GitHub Actions som sätt att publicera GitHub Pages webbplatsen.
 
 Skapa en branch `git checkout -b kmom10`.
 
-Genomgång av projektet från 2024, här nämns inte GitHub infrastrukturen, men naturligtvis utgår vi från den från 2025 och framåt.
+Se till att godkänna Actions och att sätta GitHub Actions som sätt att publicera GitHub Pages webbplatsen. Om du har menyvalet Settings>Environments se till att lägga kmom10 branchen som en Deployment Branch.
+
+<img src="/img/environments.png" alt="Add deployment branch in GitHub" />
+
+Genomgång av projektet från 2024, här nämns inte GitHub infrastrukturen, men naturligtvis utgår vi från den från 2025 och framåt. Efter genomgången av projekt måndagen den 12:e maj 2025 läggs videon här istället.
 
 [YOUTUBE src=gV2xmBEFh90 width=630 caption="Projektet i webapp."]
 
@@ -74,7 +66,7 @@ Samla alla dina filer för projektet i din fork av [dbwebb-webapp/webapp-project
 
 
 
-### Datakällor {data}
+### Datakällor {#data}
 
 [Trafikverkets API](https://api.trafikinfo.trafikverket.se/) innehållar data om tåg- och vägtrafik i Sverige. API:t följer en lite annan standard än vad vi är vana vid från tidigare i kursen. Därför finns ett API-proxy [trafik.emilfolino.se](https://trafik.emilfolino.se/) som hanterar och cacher tågtrafik data från Trafikverkets API.
 
@@ -151,7 +143,7 @@ Istället för att visa upp statisk data enligt Krav 2 använder du real-tids da
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
-Gör en Pull Request av kmom10 branchen mot din egna fork. Som en del av din Pull Request skriv följande reflektionstext:
+Gör en Pull Request från kmom10 branchen mot din egna fork. Som en del av din Pull Request skriv följande reflektionstext:
 
 1. För varje krav du implementerat skriver du ett textstycke som uppfyller kravet. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg. Underlätta för lärarna som rättar genom att ha en rubrik för varje krav du gör.
 
