@@ -25,6 +25,15 @@ Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
 
 
+Genomgång {#genomgang}
+--------------------------------------------------------------------
+
+Emil går i videon nedan igenom kraven för projektet och visar hur du som student kommer igång med din egna fork.
+
+[YOUTUBE src=DVmEOa4d9so width=630 caption="Projket genomgång"]
+
+
+
 Uppstart {#uppstart}
 --------------------------------------------------------------------
 
@@ -35,10 +44,6 @@ Skapa en branch `git checkout -b kmom10`.
 Se till att godkänna Actions och att sätta GitHub Actions som sätt att publicera GitHub Pages webbplatsen. Om du har menyvalet Settings>Environments se till att lägga kmom10 branchen som en Deployment Branch.
 
 <img src="/img/environments.png" alt="Add deployment branch in GitHub" />
-
-Genomgång av projektet från 2024, här nämns inte GitHub infrastrukturen, men naturligtvis utgår vi från den från 2025 och framåt. Efter genomgången av projekt måndagen den 12:e maj 2025 läggs videon här istället.
-
-[YOUTUBE src=gV2xmBEFh90 width=630 caption="Projektet i webapp."]
 
 
 
