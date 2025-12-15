@@ -1,0 +1,42 @@
+/* #starlight__sidebar {
+    display:none;
+} */
+
+.header {
+    background-color: #23262f;
+    color: rgb(193, 195, 200);
+}
+
+.site-title {
+    color: #ff5b55;
+}
+
+lite-youtube {
+    max-width: 100% !important;
+}
+
+.side-by-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-by-side img {
+    width: 45%;
+    margin-top: 0;
+}
+
+.time {
+    font-style: italic;
+}
+
+.input-img {
+    width: 200px;
+}
+
+@media (min-width: 64em) {
+    html {
+        font-size: 112.5%;
+    }
+}

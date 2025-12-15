@@ -1,40 +1,177 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
-hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+title: Välkommen till webapp
+description: Kurswebbplats för kursen webapp vid BTH
+template: splash
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import { YouTube } from 'astro-embed';
 
-## Next steps
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+Välkommen till kursen Webbapplikationer för mobila enheter.
+
+
+
+## Kursmoment
+
+<CardGrid>
+<LinkCard
+  title="kmom01 - En router"
+  href="/kmom/kmom01"
+  description="Vi startar igång kursen genom att repetera webbkomponenter och skapa en router för navigation utan att ladda om HTML-sidan."
+/>
+
+<LinkCard
+  title="kmom02 - Formulär och CRUD"
+  href="/kmom/kmom02"
+  description="Vi tar en titt på "
+/>
+
+<LinkCard
+  title="kmom03 - Autentisering med JWT"
+  href="/kmom/kmom03"
+  description="Vi använder JavaScript för att skapa en varukorg och piffa till lite."
+/>
+
+<LinkCard
+  title="kmom04 - Mobila enheters styrkor"
+  href="/kmom/kmom04"
+  description="Vi bygger ut webbshoppen med orderhantering."
+/>
+
+<LinkCard
+  title="kmom05 - Real-tids kommunikation"
+  href="/kmom/kmom05"
+  description="Vi tittar på sätt att strukturera upp vår JavaScript för återvinning."
+/>
+
+<LinkCard
+  title="kmom06 - Progressive Web Applications"
+  href="/kmom/kmom06"
+  description="Hur kan vi använda AI för att förbättra användarupplevelsen?"
+/>
 </CardGrid>
+
+<LinkCard
+  title="kmom10 - projekt"
+  href="/kmom/kmom10"
+  description="Vi skapar en app med förseningar i den Svenska Tågtrafiken."
+/>
+
+
+
+## Handledning och stöd
+
+Förutom synkrona lärarledda tillfällen på tisdagar (spelas in), onsdagar (spelas in) och torsdagar finns det möjlighet för asynkron handledning via Discord.
+
+
+## Fusk och disciplinnämnden
+
+I dokumentet [Fusk och disciplinnämnden](kunskap/fusk_och_disciplin) beskrivs förhållningsreglar till plagiarism, fusk och medvetet vilseledande till exempel med AI.
+
+
+
+## Rekommenderad studieplan
+
+Kursen har en [rekommenderad studieplan](https://docs.google.com/spreadsheets/d/1xysWPR80ve_rkjeIDck0ZeVO6a8mo_9HqBoxxHgEsJ8/edit?usp=sharing) som visar en översikt över kursens olika moment och när de i tiden bör utföras för att studenten skall ligga i fas med kursens planering.
+
+I studieplanen visas när rättning sker av respektive inlämnat moment samt när det finns möjligheter att göra restinlämningar.
+
+
+
+## Lektionsplan
+
+Det finns en [lektionsplan](https://docs.google.com/spreadsheets/d/1rb8i71ChsvgeM7a6i2vEyCUWzN_c00dJJVKvb4ejaU0/edit?usp=sharing) som visar en detaljplanering för undervisningen i kursen, vecka för vecka.
+
+
+
+## Kursplan
+
+Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination.
+
+Du hittar [kursplanen genom att söka på kurskoden DV1706 via BTH’s hemsida](https://plan.bth.se/courses/DV1706).
+
+
+
+## Betygsättning
+
+Nedan beskrivs betygsättning i kursen.
+
+
+### Betyg A eller B (VG)
+
+Projektet fungerar i stort sett felfritt med så gott som all funktionalitet implementerad, inklusive optionella krav.
+
+Kursmomenten är utförda med utmärkt resultat och redovisade enligt instruktionen. Inget saknas eller är bristfälligt utfört.
+
+Redovisningstexterna är kompletta, väl strukturerade och insiktsfulla. Via redovisningarna ger studenten en utomordentligt god bild av att förstå övningarna och dess innebörd. Studenten har mycket god förmåga att reflektera över kursmomenten, dess innehåll och sitt eget lärande.
+
+
+
+### Betyg C, D eller E (G)
+
+Projektet fungerar väl med grundläggande funktionalitet implementerad. Kanske även något av de optionella kraven implementerade.
+
+Kursmomenten är utförda och redovisade enligt instruktionerna. Inget är undermåligt utfört.
+
+Redovisningstexterna är välskrivna, kompletta och ger en god bild av att studenten har förstått de olika övningarna. Studenten har god förmåga att reflektera över innehållet i övningarna och sin egen insats i kursmomentet.
+
+
+
+### Poängbedömning
+
+#### Kursmoment & Redovisningstexter
+
+Följande tabell används vid bedömning av genomförda kursmoment och redovisningstexterna. Underlaget är din kompletta me-sida.
+
+| Bedömningspunkt | Poäng | Din poäng |
+|-----------------|-------|-----------|
+| Kursmomenten är utförda enligt instruktion och redovisningstexterna är kompletta. | 30 | |	
+| Kursmomenten är mycket väl utförda och har det lilla extra. Redovisningstexterna är mycket välskrivna, insiktsfulla och visar på en mycket god förmåga att reflektera över kursmomenten, dess innehåll och studentens eget lärande. | 10 | |	
+| TOTALT | 40 | |	
+
+
+
+#### Projektarbete
+
+Följande tabell används vid bedömning av projektet.
+
+| Bedömningspunkt | Poäng | Din poäng |
+|-----------------|-------|-----------|
+| Krav 1 är implementerat och fungerar felfritt. | 10 | |
+| Krav 2 är implementerat och fungerar felfritt. | 10 | |
+| Krav 3 är implementerat och fungerar felfritt. | 10 | |
+| Krav 4 är implementerat och fungerar felfritt. | 10 | |
+| Krav 5 är implementerat och fungerar felfritt. | 10 | |
+| Krav 6 är implementerat och fungerar felfritt. | 10 | |
+| TOTALT | 60 | |
+
+
+
+#### Slutbetyg
+
+Ditt slutbetyg redovisas i tabellen nedan.
+
+| A-F, ECTS | Definition | Poäng nivå |
+|------|------------|------------|
+| A | UTMÄRKT – enastående resultat. | 90+ |
+| B | MYCKET BRA – klart över medelstandard. | 80+ | 
+| C | BÄTTRE ÄN BRA – allmänt bra arbete. | 70+ | 
+| D | BRA – en fullgod prestation. | 60+ | 
+| E | GODKÄNT – resultatet uppfyller minimikriterierna. | 55+ | 
+| FX | KOMPLETTERA – mer arbete krävs innan betyg kan sättas. | 54- | 
+| F | OTILLRÄCKLIGT – (avsevärt) mer arbete krävs. | 50- | 
+
+
+## Ladok
+
+Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens kursmoment enligt följande.
+
+| Kursens moment  | Ladok moment enligt kursplan  |
+|-----------------|-------------------------------|
+| Kmom01 + kmom02 | Uppgift 1 á 2.5hp             |
+| Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
+| Kmom05 - kmom10 | Projekt á 2.5hp               |
+
+Den sista inlämningen bestämmer kursens slutbetyg vilket utfärdas när samtliga moment godkänts.
+
