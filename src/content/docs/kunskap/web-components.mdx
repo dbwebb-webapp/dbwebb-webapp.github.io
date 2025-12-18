@@ -5,6 +5,12 @@ revision:
     "2023-03-01": "(A, efo) Första utgåvan."
 ---
 
+import { Image } from 'astro:assets'; 
+import pagesAddEnv1 from "../../../assets/pages-add-env-1.png";
+import pagesAddEnv2 from "../../../assets/pages-add-env-2.png";
+import pagesEnableActions from "../../../assets/pages-enable-actions.png";
+
+
 I denna övningen tittar vi på hur vi kan skapa återanvändbara delar av vår kod med hjälp av webbens inbyggda tekniker HTML, CSS och JavaScript, samt ett antal inbyggda API:er i webbläsaren.
 
 
@@ -238,15 +244,16 @@ Driftsättning
 
 Än så länge har vi gjort allt lokalt med vår lokala webbserver. Men en webbplats är till för att delas. Vi kommer i denna kursen använda oss av GitHub Pages för driftsättning. Gå till ditt `webapp-lager`-repo och under Settings>Pages välj "GitHub Actions" under Source enligt bilden nedan. Varje gång vi gör en `git push` driftsätts sidan på webbplatsen `https://användarenamn.github.io/webapp-lager` (byt ut användarenamn till din användarenamn).
 
-<img src="/img/pages-enable-actions.png" alt="Enable GitHub Actions for GitHub Pages source" />
+<Image src={pagesEnableActions} alt="Enable GitHub Actions for GitHub Pages source" />
 
 Om ni efter `git push` får ett problem med följande felmeddelande i GitHub: `Branch "kmom01" is not allowed to deploy to github-pages due to environment protection rules.`. Kan det lösas på följande sätt. Gå till Settings>Environments för ditt repo enligt bilden nedan:
 
-<img src="/img/pages-add-env-1.png" alt="Image showing Environments in GitHub" />
+<Image src={pagesAddEnv1} alt="Image showing Environments in GitHub" />
+
 
 Lägg sedan till en deployment branch `kmom*` genom att trycka på plus tecknet med texten 'Add deployment branch or tag rule' enligt bilden.
 
-<img src="/img/pages-add-env-2.png" alt="Image showing adding deployment branches" />
+<Image src={pagesAddEnv2} alt="Image showing adding deployment branches" />
 
 
 

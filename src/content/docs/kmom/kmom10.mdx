@@ -2,6 +2,9 @@
 title: kmom10 - Projekt och examination
 ---
 
+import { Image } from 'astro:assets'; 
+import environment from "../../../assets/environments.png";
+
 import { YouTube } from 'astro-embed';
 
 ![KAJT Logga](https://dbwebb.se/image/webapp/v4/kajt.jpg)
@@ -36,7 +39,7 @@ Skapa en branch `git checkout -b kmom10`.
 
 Se till att godkänna Actions och att sätta GitHub Actions som sätt att publicera GitHub Pages webbplatsen. Om du har menyvalet Settings>Environments se till att lägga kmom10 branchen som en Deployment Branch.
 
-<img src="/img/environments.png" alt="Add deployment branch in GitHub" />
+<Image src={environment} alt="Add deployment branch in GitHub" />
 
 
 
