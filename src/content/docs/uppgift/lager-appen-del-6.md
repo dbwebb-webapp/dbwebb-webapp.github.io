@@ -5,8 +5,6 @@ title: Lager Appen del 6
 revision:
   "2024-02-16": (A, efo) Första utgåvan i samband med kursen webapp VT24.
 ---
-Lager appen del 6
-==================================
 
 Vi avslutar vår Lager-app med en kundservice chatt.
 

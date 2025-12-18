@@ -3,7 +3,7 @@ title: kmom10 - Projekt och examination
 ---
 
 
-[FIGURE src=image/webapp/v4/kajt.jpg class="right"]
+![KAJT Logga](https://dbwebb.se/image/webapp/v4/kajt.jpg)
 
 Detta projekt utvecklas i samarbete med Branschprogrammet Kapacitet i järnvägstrafiken – [KAJT](https://kajt.org/). Projektet baseras på öppen data från Trafikverket och handlar om att visualisera förseningar i tågtrafiken
 
@@ -17,16 +17,16 @@ Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
 
 
-Genomgång {#genomgang}
+Genomgång
 --------------------------------------------------------------------
 
 Emil går i videon nedan igenom kraven för projektet och visar hur du som student kommer igång med din egna fork.
 
-[YOUTUBE src=DVmEOa4d9so width=630 caption="Projket genomgång"]
+<YouTube posterQuality="max" id="DVmEOa4d9so" />
 
 
 
-Uppstart {#uppstart}
+Uppstart
 --------------------------------------------------------------------
 
 Börja med att göra en fork av repot [dbwebb-webapp/webapp-project](https://github.com/dbwebb-webapp/webapp-project).
@@ -39,14 +39,14 @@ Se till att godkänna Actions och att sätta GitHub Actions som sätt att public
 
 
 
-Bedömning och betygsättning {#bedomning}
+Bedömning och betygsättning
 --------------------------------------------------------------------
 
 När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning).
 
 
 
-Projektspecifikation {#projspec}
+Projektspecifikation
 --------------------------------------------------------------------
 
 Utveckla och leverera projektet enligt följande specifikation. Saknas information så kan du själv välja väg, dokumentera dina val i redovisningstexten.
@@ -57,13 +57,13 @@ Varje krav ger maximalt 10 poäng, totalt är det 60 poäng.
 
 
 
-### Kataloger för redovisning {#var}
+### Kataloger för redovisning
 
 Samla alla dina filer för projektet i din fork av [dbwebb-webapp/webapp-project](https://github.com/dbwebb-webapp/webapp-project).
 
 
 
-### Datakällor {#data}
+### Datakällor
 
 [Trafikverkets API](https://api.trafikinfo.trafikverket.se/) innehållar data om tåg- och vägtrafik i Sverige. API:t följer en lite annan standard än vad vi är vana vid från tidigare i kursen. Därför finns ett API-proxy [trafik.emilfolino.se](https://trafik.emilfolino.se/) som hanterar och cacher tågtrafik data från Trafikverkets API.
 
@@ -80,7 +80,7 @@ Dessutom finns real-tids data för försenade tågs positioner som en del av API
 
 
 
-### Krav 1: Specifikation och arkitektur {#k1}
+### Krav 1: Specifikation och arkitektur
 
 Din app ska visa upp förseningar i tågtrafiken i Sverige. I [trafik API:t](https://trafik.emilfolino.se/) finns information om försenade tåg under endpointen `/delayed` med [dokumentation](https://trafik.emilfolino.se/#delayed). Platsinformation för de olika stationerna finns under endpointen `/stations`.
 
@@ -100,7 +100,7 @@ Berätta om någon av de möjligheter som finns för att förbättra din lösnin
 
 
 
-### Krav 2: Karta och GPS {#k2}
+### Krav 2: Karta och GPS
 
 Använd positionsdata som finns för stationerna för att visa upp förseningar i tågtrafiken på en karta med hjälp av de tekniker vi använde i kursmoment 5. Använd Web API:t GeoLocation för att visa upp användarens position på kartan.
 
@@ -108,7 +108,7 @@ Rita ut förseningarna som markers på den station där det försenade tåget ä
 
 
 
-### Krav 3: Native design (optionellt) {#k3}
+### Krav 3: Native design (optionellt)
 
 Välj ut en befintlig app på den mobila operativ system plattformen som du använder dagligen. Den valda appen ska ha ungefär samma typ av vyer som din app har. Försök att så gott det går matcha designen på din app pixel-för-pixel med den befintliga appen.
 
@@ -116,13 +116,13 @@ Beskriv i ett textstycke om 15-20 meningar designprocessen att efterlikna en bef
 
 
 
-### Krav 4: Autentisering av användaren (optionellt) {#k4}
+### Krav 4: Autentisering av användaren (optionellt)
 
 Utnyttja autentiseringstjänsten [auth.emilfolino.se](https://auth.emilfolino.se) för att ge möjlighet för att användare av din app kan autentisera sig med hjälp JSON Web Tokens. En autentiserad användare ska sedan få tillgång till att spara ner favorit stationer och en vy ska skapas där man lätt och överskådligt får en överblick om tåg är försenade till den inloggade användarens favoriter.
 
 
 
-### Krav 5: Utnyttja tiden läge (optionellt) {#k5}
+### Krav 5: Utnyttja tiden läge (optionellt)
 
 Skapa möjlighet för att användare av appen kan utnyttja förseningen av tåget till att se sig omkring. Använd tiden som tåget är försenad och rita sedan ut ett område på kartan där man hinner gå till och tillbaka till tåget innan det åker. Du kan räkna med att man kan gå 100m i minuten. Beräkna även in en marginal för att inte missa tåget.
 
@@ -130,14 +130,14 @@ Beskriv ditt tillvägagångssätt i din redovisningstext. Om du även gör krav 
 
 
 
-### Krav 6: Realtidsdata (optionellt) {#k6}
+### Krav 6: Realtidsdata (optionellt)
 
 Istället för att visa upp statisk data enligt Krav 2 använder du real-tids data enligt [dokumentationen](https://trafik.emilfolino.se/#live) och de lärdomar du gjorde dig i kmom06. Poäng ges för både krav 2 och krav 6 om du gör detta kravet. Se till att skapa en resurs effektiv lösning på problemställningen och beskriv i redovisningstexten hur du gick tillväga.
 
 
 
 
-Redovisning {#redovisning}
+Redovisning
 --------------------------------------------------------------------
 
 Gör en Pull Request från kmom10 branchen mot din egna fork. Som en del av din Pull Request skriv följande reflektionstext:
@@ -150,6 +150,6 @@ Gör en Pull Request från kmom10 branchen mot din egna fork. Som en del av din 
 
 
 
-### Presentation {#presentation}
+### Presentation
 
 Spela in en kort video där du visar kod och berättar om de tekniska implementationerna du gjorde i den individuella examinationen. Lägg till en länk till videon eller ladda upp video som en del av redovisningstexten för Pull Requesten på GitHub.

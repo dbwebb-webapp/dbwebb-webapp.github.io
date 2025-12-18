@@ -7,7 +7,7 @@ revision:
     "2018-01-09": (A, efo) Första utgåvan inför kursen webapp-v3 V18.
 ---
 
-[FIGURE src=image/webapp/typography.jpg?w=864 class="right"]
+![image/webapp/typography.jpg](https://dbwebb.se/image/webapp/typography.jpg)
 
 I denna artikel går vi igenom hur vi anpassar typsnitt och typografin för våra mobila enheter. Fokus kommer ligga på att skapa användbara, men framför allt tillgängliga och lättlästa gränssnitt för textintensiva hemsidor. Vi kommer ta utgångspunkt i att göra en redovisningssida och kommer formatera den för läsbarhet.
 
@@ -17,7 +17,7 @@ I denna artikel går vi igenom hur vi anpassar typsnitt och typografin för vår
 
 
 
-En grund i HTML {#html}
+En grund i HTML
 --------------------------------------
 
 Vi börjar med en enkel grund i HTML där vi laddar in vår CSS kod från filen `style.css` som innehåller följande från en första början. Nedanstående kod återställer den stil som finns från första början i en webbläsare och ser till att den stil inte påverkar den CSS som vi kommer skriva senare.
@@ -66,10 +66,10 @@ Jag har skrivit ihop en redovisningssida för kmom01 i HTML dokumentet nedan. En
 </html>
 ```
 
-[FIGURE src=image/webapp/screenshot-typo-no-style.png?w=c7 caption="Redovisningstext med nollställd stil"]
+![image/webapp/screenshot-typo-no-style.png](https://dbwebb.se/image/webapp/screenshot-typo-no-style.png)
 
 
-Utvecklingsmiljö {#devenv}
+Utvecklingsmiljö
 --------------------------------------
 
 För att vi ska kunna skåda vara mästerverk behöver vi en utvecklingsmiljö med testning och en lokal webbserver. Ditt `webapp-lager` bör redan vara preppat med en sådan. Vi kan ta en titt i `package.json` filen för att se vad som finns:
@@ -113,7 +113,7 @@ Vi kan även använda oss av `npm start` som startar igång en lokal webbserver.
 
 
 
-Vitt utrymme {#whitespace}
+Vitt utrymme
 --------------------------------------
 
 Vi börjar med den del av designen som inte har med typsnittet att göra. Vi vill skapa en sammanhang mellan de element som är besläktade och samtidigt skapa en vertikal rytm. Vi börjar med bestämma oss för ett bra radavstånd och en bra typsnittsstorlek för texten.
@@ -149,8 +149,8 @@ p {
 }
 ```
 
-[FIGURE src=image/webapp/screenshot-typo-whitespace.png?w=c7 class=right caption="Redovisningstext med vitt urymme i stycken"]
-[FIGURE src=image/webapp/screenshot-typo-no-style.png?w=c7 caption="Redovisningstext med nollställd stil"]
+![image/webapp/screenshot-typo-whitespace.png](https://dbwebb.se/image/webapp/screenshot-typo-whitespace.png)
+![image/webapp/screenshot-typo-no-style.png](https://dbwebb.se/image/webapp/screenshot-typo-no-style.png)
 
 Vi vill skapa ett sammanhang mellan frågor och svar för att underlätta för läsaren. Vi vill göra detta men samtidigt bevara den vertikala rytmen. Vi gör detta genom att sätta radavståndet för alla element genom att flytta detta till `body`-elementet.
 
@@ -199,12 +199,12 @@ p {
 
 Vi ser i jämförelsen nedan hur våra val skapar ett bättre sammanhang mellan frågor och svar.
 
-[FIGURE src=image/webapp/screenshot-typo-vertical-rhythm.png?w=c7 class=right caption="Redovisningstext med vitt urymme överallt"]
-[FIGURE src=image/webapp/screenshot-typo-no-style.png?w=c7 caption="Redovisningstext med nollställd stil"]
+![image/webapp/screenshot-typo-vertical-rhythm.png](https://dbwebb.se/image/webapp/screenshot-typo-vertical-rhythm.png)
+![image/webapp/screenshot-typo-no-style.png](https://dbwebb.se/image/webapp/screenshot-typo-no-style.png)
 
 
 
-Typsnitt {#font}
+Typsnitt
 --------------------------------------
 Nu är det dags för det som faktiskt syns på sidan och det nog enklaste sättet att förändra känslan av en hemsida. Jag har vald ut två stycken [Google Fonts](https://fonts.google.com/). Ett serif typsnitt Merriweather för brödtexten och sans-serif typsnitt Source Sans Pro för rubriker. Båda typsnitten har stora och tydliga vita områden i bokstäver som 'o', 'e' och 'c', som ger bra läsbarhet. Merriweather har små men ändå tydliga [seriffer](https://en.wikipedia.org/wiki/Serif), som skapar linjer i texten och förankrar typsnittet. Vi importerar typsnitten från Google Fonts och tilldelar dessa där vi vill att de ska användas.
 
@@ -262,12 +262,12 @@ p {
 
 Vi jämför skillnaden mellan den nollställda stilen innan våra ändringar och hur den slutliga redovisningssidan ser ut på en mobil enhet. En större sammanhang mellan frågor och svar och typsnitt som är läsbara och som följer användarens inställningar för textstorlek i webbläsaren.
 
-[FIGURE src=image/webapp/screenshot-typo-fonts.png?w=c7 class=right caption="Redovisningstext med typsnitt"]
-[FIGURE src=image/webapp/screenshot-typo-no-style.png?w=c7 caption="Redovisningstext med nollställd stil"]
+![image/webapp/screenshot-typo-fonts.png](https://dbwebb.se/image/webapp/screenshot-typo-fonts.png)
+![image/webapp/screenshot-typo-no-style.png](https://dbwebb.se/image/webapp/screenshot-typo-no-style.png)
 
 
 
-Avslutningsvis {#avslutning}
+Avslutningsvis
 --------------------------------------
 Vi har i denna övning skrapat ytan för typografi i mobila enheter. Vi har en grund att stå på inför redovisningssidan, men även för andra textintensiva gränssnitt. Ni kan nu göra medvetna val med avseende på typsnitt och använda vita utrymmen till eran fördel för att samla besläktade element. Använd [Typography Handbook](https://web.archive.org/web/20231219201010/http://typographyhandbook.com/) som uppslagsverk när ni skapar tillgängliga och användbara hemsidor, så har ni ett försprång mot 90% av alla andra webbprogrammerare.
 

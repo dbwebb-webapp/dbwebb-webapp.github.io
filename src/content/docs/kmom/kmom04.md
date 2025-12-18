@@ -26,7 +26,7 @@ När man skapar en faktura är det bra att ha snygga och responsiva tabeller. S�
 
 Så här kan det se ut när vi är klara.
 
-[YOUTUBE src=BPigfJ58JPI width=630 caption="Lager appen i kursmoment 4."]
+<YouTube posterQuality="max" id="BPigfJ58JPI" />
 
 
 
@@ -34,7 +34,7 @@ Så här kan det se ut när vi är klara.
 
 
 
-Starta igång veckan {#uppstart}
+Starta igång veckan
 ----------------------------------------------
 
 Starta igång veckan genom att skapa en `branch` för att jobba med kmom04 genom följande kommandon.
@@ -46,23 +46,23 @@ git checkout -b kmom04
 
 
 
-Veckans genomgång & föreläsning {#genomgang}
+Veckans genomgång & föreläsning
 ---------------------------------
 
 Emil har genomgånger måndagar kl 13:15, efter genomgången uppdateras denna delen av sidan med veckans genomgång.
 
-[YOUTUBE src=UALaFaipAi4 width=630 caption="Veckans föreläsning"]
+<YouTube posterQuality="max" id="UALaFaipAi4" />
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läsanvisningar 
 ---------------------------------
 
 *(ca: 6-10 studietimmar)*
 
 
 
-### Artiklar {#artiklar}
+### Artiklar
 
 Läs följande artiklar för att få bakgrunden till övningarna.
 
@@ -70,7 +70,7 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 
 
-### Video  {#video}
+### Video 
 
 Se följande videor.
 
@@ -78,34 +78,34 @@ Se följande videor.
 
 
 
-Övningar & Uppgifter {#ovningar_uppgifter}
+Övningar & Uppgifter
 -------------------------------------------
 
 *(ca: 6-10 studietimmar)*
 
 
 
-### Övningar {#ovningar}
+### Övningar
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. Gör övningen [Tabeller i mobila enheter](kunskap/tabeller-i-mobila-enheter). Spara eventuella filer i ditt webapp-lager repo.
+1. Gör övningen [Tabeller i mobila enheter](/kunskap/tabeller-i-mobila-enheter). Spara eventuella filer i ditt webapp-lager repo.
 
-1. Gör övningen [Login med JWT](kunskap/login-med-jwt). Spara eventuella filer i ditt webapp-lager repo.
+1. Gör övningen [Login med JWT](/kunskap/login-med-jwt). Spara eventuella filer i ditt webapp-lager repo.
 
-1. Gör övningen [Content Security Policy](kunskap/content-security-policy). Spara eventuella filer i ditt webapp-lager repo.
+1. Gör övningen [Content Security Policy](/kunskap/content-security-policy). Spara eventuella filer i ditt webapp-lager repo.
 
 
 
-### Uppgifter {#uppgifter}
+### Uppgifter
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 4](uppgift/lager-appen-del-4)". Spara dina filer i ditt webapp-lager repo.
+1. Gör uppgiften "[Lager appen del 4](/uppgift/lager-appen-del-4)". Spara dina filer i ditt webapp-lager repo.
 
 
 
-Resultat & Redovisning  {#resultat_redovisning}
+Resultat & Redovisning 
 -----------------------------------------------
 
 *(ca: 1-2 studietimmar)*

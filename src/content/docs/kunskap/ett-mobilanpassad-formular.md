@@ -6,7 +6,7 @@ revision:
   "2023-03-24": (B, efo) Uppdaterad utgåva inför kursen webapp v5.
   "2017-03-15": (A, efo) Första utgåvan inför kursen webapp v2.
 ---
-[FIGURE src=/image/webapp/form.jpeg class="right"]
+![image/webapp/form.jpeg](https://dbwebb.se/image/webapp/form.jpeg)
 
 Vi ska i denna övning titta på hur vi med hjälp av HTML5 input gör våra mobila appar mer användarvänliga och säkra. Vi skapar även formulär komponenter till vårt GUI komponent ramverk. I slutet av övningen tittar vi på hur vi skapar ett formulär i en web component.
 
@@ -16,7 +16,7 @@ Vi ska i denna övning titta på hur vi med hjälp av HTML5 input gör våra mob
 
 
 
-HTML5 input typer {#html5}
+HTML5 input typer
 --------------------------------------
 
 I och med introduktionen av HTML5 introducerades även ett antal nya [input typer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input). Dessa typer specificerar vilken sorts data som inputfältet kan ta som indata. Detta gör det möjligt att hindra användaren från att fylla i fel sorts data, men även att anpassa användargränssnittet till det data som användaren skall fylla i. Nedan finns en listning av 6 input typer och hur den mobila enheten anpassas för input typen. Inputfälten visas i Android emulatorns webbläsare.
@@ -27,7 +27,7 @@ Det helt vanliga text input fältet ger ett vanligt tangentbord och ingen klient
 <input type="text">
 ```
 
-[FIGURE src=/image/webapp/input-screenshot/input-text.png?w=200]
+![image/webapp/input-screenshot/input-text.png](https://dbwebb.se/image/webapp/input-screenshot/input-text.png)
 
 
 
@@ -37,7 +37,7 @@ Om man har ett fält där användaren bara ska ange siffror kan man använda sig
 <input type="number">
 ```
 
-[FIGURE src=/image/webapp/input-screenshot/input-number.png?w=200 caption="Number input"]
+![image/webapp/input-screenshot/input-number.png](https://dbwebb.se/image/webapp/input-screenshot/input-number.png)
 
 
 
@@ -47,7 +47,7 @@ Om användaren skall fylla i sin e-postadress kan det vara bra med et input av t
 <input type="email">
 ```
 
-[FIGURE src=/image/webapp/input-screenshot/input-email.png?w=200 caption="Email input"]
+![image/webapp/input-screenshot/input-email.png](https://dbwebb.se/image/webapp/input-screenshot/input-email.png)
 
 
 
@@ -57,7 +57,7 @@ Vid ifyllning av telefonnummer kan det vara fördelaktigt att använda input av 
 <input type="tel">
 ```
 
-[FIGURE src=/image/webapp/input-screenshot/input-tel.png?w=200 caption="Telephone input"]
+![image/webapp/input-screenshot/input-tel.png](https://dbwebb.se/image/webapp/input-screenshot/input-tel.png)
 
 
 
@@ -67,7 +67,7 @@ När vi har datumfält finns input av typen `date`. Med `date` får användaren 
 <input type="date">
 ```
 
-[FIGURE src=/image/webapp/input-screenshot/input-date.png?w=200 caption="Date input"]
+![image/webapp/input-screenshot/input-date.png](https://dbwebb.se/image/webapp/input-screenshot/input-date.png)
 
 
 
@@ -77,11 +77,11 @@ För fält där vi vill skriva in lösenord använder vi naturligtvis `password`
 <input type="password">
 ```
 
-[FIGURE src=/image/webapp/input-screenshot/input-password.png?w=200 caption="Password input"]
+![image/webapp/input-screenshot/input-password.png](https://dbwebb.se/image/webapp/input-screenshot/input-password.png)
 
 
 
-HTML5 validering av innehåll {#validering}
+HTML5 validering av innehåll
 --------------------------------------
 
 En viktig del av att designa ett formulär är att ge återkoppling till användaren om hen har fyllt i ett värde som är korrekt för detta fältet. Vi såg ovan att input-typen kan ta oss en bit på vägen, men vad om vi vill validera användarens innehåll ytterligare? "HTML5 to the rescue". Som alltid har MDN en bra artikel om dessa möjligheter: [Client-side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation).
@@ -132,7 +132,7 @@ Ytterligare en fördel med form valideringen är att om fältet validerar får f
 
 
 
-Styling av formulär {#styling}
+Styling av formulär
 --------------------------------------
 När vi designade våra knappar i förra kursmomentet ville vi att de tre olika elementen `button`, `a` och `input[type=submit]` skulle se likadana ut. När vi designar formulärfält vill vi att de olika fälten ser likadana ut. Vi ska i denna del av övningen titta på hur vi kan designa formulärfält som är enhetligt designade i olika webbläsare. Hur vi ligger till genomtänkta förifyllda värden och hur vi tydligt visar för användaren vilket fält som är i fokus.
 
@@ -205,8 +205,8 @@ Ett annat bra sätt att förtydliga för användaren vad som ska fyllas i är at
 
 Våra formulärfält ser nu ut enligt nedan och vi har nu samma styling trots olika webbläsare och olika typer av formulärfält.
 
-[FIGURE src=/image/webapp/screenshot-inputs-chrome.png?w=c7 class="right" caption="Formulärfält i Chrome med ifylld data."]
-[FIGURE src=/image/webapp/screenshot-inputs-firefox.png?w=c7 caption="Formulärfält i Firefox med placeholders."]
+![image/webapp/screenshot-inputs-chrome.png](https://dbwebb.se/image/webapp/screenshot-inputs-chrome.png)
+![image/webapp/screenshot-inputs-firefox.png](https://dbwebb.se/image/webapp/screenshot-inputs-firefox.png)
 
 
 
@@ -255,7 +255,7 @@ for (let path in routes) {
 
 
 
-Inleverans formulär komponent {#komponent}
+Inleverans formulär komponent
 --------------------------------------
 
 Då vi vill kunna visa upp alla produkter i en dropdown-lista börjar vi med att hämta produkterna. Då vi vill hålla koden **DRY** har jag valt att skapa en `products`-modell i en katalog `models`.
@@ -345,7 +345,7 @@ export default class DeliveryForm extends HTMLElement {
 
 
 
-### Ett formulärfält {#input}
+### Ett formulärfält
 
 Vi kommer nu ta en titt på hur vi kan skapa formulärfältet för `amount` och hur vi kan spara ner det som skrivs i fältet till `this.delivery`-objektet. Vi skapar ett `input`-element, där vi sätter två attribut. Först typen så vi får ett anpassat tangentbord på mobilen och validering av data. Efter det sätter vi även `required` för att utnyttja webbläsarens inbyggda formulärvalidering.
 
@@ -389,7 +389,7 @@ render() {
 
 
 
-### Spread-operatorn {#spread}
+### Spread-operatorn
 
 Vi använder oss av [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) i kodexemplet ovan `this.delivery = { ...this.delivery, amount: parseInt(event.target.value) };`. Spread Operator kan användas på både arrayer och objekt. För arrayer delas varje element ut som argument som en funktion, så `...[1, 2, 3] => 1, 2, 3`. För ett objekt spridas nyckel-värde paren ut på följande sätt:
 
@@ -406,7 +406,7 @@ let concatenatedPerson = {...person, lastName: "Folino"};
 
 
 
-Avslutningsvis {#avslutning}
+Avslutningsvis
 --------------------------------------
 Detta var en genomgång av ett antal olika input typer i HTML5, som ger bättre användbarhet speciellt på mobila enheter. Genom att tala om vilken sorts data, som varje formulärfält är gjort för, kan den mobila enhet anpassa tangentbord och användargränssnitt för den specifika användningen.
 

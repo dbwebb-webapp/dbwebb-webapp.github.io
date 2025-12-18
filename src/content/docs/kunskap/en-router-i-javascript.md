@@ -14,21 +14,21 @@ I denna övningen tittar vi på hur vi kan använda en Web Component som bas fö
 
 
 
-Förkunskaper {#prereqs}
+Förkunskaper
 --------------------------------------
 
 Du har gjort uppgiften "[Lager appen del 1](../uppgift/lager-appen-del-1)" och kan med fördel bygga vidare på den koden.
 
 
 
-Exempelkod {#example}
+Exempelkod
 --------------------------------------
 
 Om du skriver nedanstående kod i ditt webapp-lager repo kan du återanvända koden i uppgiften "[Lager appen del 2](../uppgift/lager-appen-del-2)".
 
 
 
-Förutsättningar för vår router {#demands}
+Förutsättningar för vår router
 --------------------------------------
 
 Vår router ska göra så att vi kan byta mellan olika vyer i vår applikation och göra detta utan att vi laddar om själva webbplatsen. Vi kommer använda `#`-delen av en url för att hantera vilken route vi är på. I `location` objektet i webbläsaren finns det massa med godsaker så innan vi drar igång kan det vara bra att titta på [dokumentationen](https://developer.mozilla.org/en-US/docs/Web/API/Location).
@@ -95,7 +95,7 @@ När vi kör igång med `npm start` och öppnar vår applikation ser vi bara tex
 
 
 
-Definiera routes {#define}
+Definiera routes
 --------------------------------------
 
 Till en början väljer vi att definiera våra routes direkt i konstruktorn i `Router` klassen. Jag definierar även en variabel för att hålla koll på nuvarande route. Längre ner i koden kommer vi dela upp komponenter och vyer (views) i två olika kataloger. Vyer är _web components_ men kommer mer vara en samling av andra små komponenter som tillsammans bygger ihop hela vyer. Varje route definieras utifrån nyckeln i objektet och det vi skriver där är det vi vill ska stå i adress fältet när vi vill besöka den specifika vyn som vi specificerar under `view`-attributet. `name` kommer i ett senare skede användas för att visas som text i navigationen.
@@ -134,7 +134,7 @@ I ovanstående kod definierade jag även den publika `getter`-metod `routes`. De
 
 
 
-### Hantera ändringar i routes {#changes}
+### Hantera ändringar i routes
 
 Vi kommer i vår router utnyttja [hash-delen](https://developer.mozilla.org/en-US/docs/Web/API/URL/hash) av en URL för routingen, dvs det som kommer efter `#` i en URL. Och som av en händelse finns det ett `event` i webbläsaren `hashchange` som vi kan använda för detta.
 
@@ -186,7 +186,7 @@ export default class Router extends HTMLElement {
 
 
 
-Vyer att visa upp {#views}
+Vyer att visa upp
 --------------------------------------
 
 Låt oss då ta en titt på dessa vyer som vi vill visa upp när vi navigerar till en route. Jag väljer att skapa en katalog `views` så att jag håller isär rena komponenter och vyer som mer blir en samling av underliggande komponenter.
@@ -212,7 +212,7 @@ Se till att hålla vyerna ganska rena, så får logiken ligga i de enskilda komp
 
 
 
-Navigationen {#navigation}
+Navigationen
 --------------------------------------
 
 För att vi på ett enkelt sätt kan navigera mellan olika vyer skapar vi även en navigations-komponent. Även denna lägga vi i roten i webapp-lager repot och vi lägger in den på precis samma sätt som `router-outlet`, både i `main.js` och i `index.html`.
@@ -263,13 +263,13 @@ export default class Navigation extends HTMLElement {
 ```
 
 
-### Styling av menyn {#styling}
+### Styling av menyn
 
 Tanken är att vi ska ha en navigationsmeny längst nere på skärmen, som vi känner igen det från många mobil-appar. Menyn ligger längst nere på skärmen för att underlätta för användaren av den mobila enheten. Nedan finns exempel på en meny längst ner i en mobil-app, till vänster syns det på android och till höger i iOS.
 
-[FIGURE src=image/webapp/ios-bottom-menu.jpeg?w=c7 class="right" caption="Meny längst ner på iOS."]
+![image/webapp/ios-bottom-menu.jpeg](https://dbwebb.se/image/webapp/ios-bottom-menu.jpeg)
 
-[FIGURE src=image/webapp/android-bottom-menu.png?w=c7 caption="Meny längst ner på android."]
+![image/webapp/android-bottom-menu.png](https://dbwebb.se/image/webapp/android-bottom-menu.png)
 
 Vi börjar med att placera menyn längst ner på skärmen och samtidigt fylla ut hela bredden genom att använda följande CSS.
 
@@ -300,7 +300,7 @@ Vi anger att vår meny ska använda sig av flexbox med attributet `display: flex
 
 
 
-Avslutningsvis {#avslutning}
+Avslutningsvis
 --------------------------------------
 
 Vi har i denna övning tittat på hur vi kan skapa en router som enkelt låter oss navigera mellan olika vyer i vår applikation.

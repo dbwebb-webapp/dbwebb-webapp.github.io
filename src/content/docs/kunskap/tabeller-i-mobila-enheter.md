@@ -6,7 +6,7 @@ revision:
   "2018-02-07": (A, efo) Första utgåvan inför kursen webapp v3.
 ---
 
-[FIGURE src=/image/webapp/table.png?w=c5 class="right"]
+![image/webapp/table.png](https://dbwebb.se/image/webapp/table.png)
 
 Tabeller används i stor utsträckning i affärssystem och andra administrationsgränssnitt. Ofta är dessa applikationer för desktop användare, men med tanke på i hur stor utsträckning mobila enheter används är det bra om tabeller även designas för små enheter. Det stora problemet med tabeller är ofta att det är mycket data på liten yta, som blir än mindre på en mobil enhet. Vi ska i denna övning titta på två sätt för att designa tabeller för mobila enheter.
 
@@ -16,7 +16,7 @@ Tabeller används i stor utsträckning i affärssystem och andra administrations
 
 
 
-En tabell att börja med {#tabell}
+En tabell att börja med
 --------------------------------------
 Vi börjar med nedanstående tabell och redan här i övningen ser vi problemet. Det finns inte tillräckligt mycket plats för att visa tabellen utan radbrytningar i cellerna.
 
@@ -40,11 +40,11 @@ Vi börjar med nedanstående tabell och redan här i övningen ser vi problemet.
 
 Jag har gjort i ordning en enkel hemsida som endast innehåller samma `main.container`, som vi använder i tidigare kursmoment och tabellen. Om vi tittar på denna sida i mobilen ser vi ännu mindre av tabellen. Vi noterar även att det nu går att scrolla hela sidan i sidled något vi vill försöka undvika på mobiler då det försvårar navigation. Så målet för de två designs vi gör är **inga radbrytningar i celler** och **tabellen får inte vara bredare än skärmen på mobila enheter**.
 
-[FIGURE src=/image/webapp/screenshot-table-no-style.png?w=c7 caption="Tabellen i en mobil enhet."]
+![image/webapp/screenshot-table-no-style.png](https://dbwebb.se/image/webapp/screenshot-table-no-style.png)
 
 
 
-Metod 1: Scroll i sidled för tabellen {#sidled}
+Metod 1: Scroll i sidled för tabellen
 --------------------------------------
 Vi börjar med radbrytningarna då det är enkelt att åtgärda. Vi definierar klassen `.table` och använder oss av möjligheten för att skriva 'nested' SASS kod, se [dokumentationen](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#nested_rules) för mer information. Vi använder attributet `white-space` med värdet `nowrap`, detta gör att vi inte får radbrytningar i `th` och `td` elementen.
 
@@ -112,7 +112,7 @@ Nu har vi klarat av våra två mål: Vi har inga radbrytningar och tabellen är 
 
 Jag har i exemplet ovan lagt till två stycken hjälpklasser `.table-striped` och `.number-cell`. `.table-striped` lägger till färg på varannan rad med hjälp av pseudo-klassen `:nth-of-type`. `.number-cell` högerställer texten i cellen för kolumner med, kan vara bra att ha för celler med numeriska värden. Nedan visas tabellen med klasserna `table.table.table-striped`.
 
-[FIGURE src=/image/webapp/screenshot-table-scroll.png?w=c7 caption="Tabell med scroll i sidled."]
+![image/webapp/screenshot-table-scroll.png](https://dbwebb.se/image/webapp/screenshot-table-scroll.png)
 
 För att förbereda för metod 2 bryter vi ut delen som har med scrollningen i sidled till klassen `.table-scroll`. Detta gör att vi kan återanvända den generella stylingen för tabellerna, men beroende på vilken klass vi ger förutom `.table` ge olika beteenden för små enheter.
 
@@ -159,7 +159,7 @@ För att se vilken effekt 'nested' SASS kod kan ge är här nedan CSS filen som 
 
 
 
-Metod 2: Stack {#stack}
+Metod 2: Stack
 --------------------------------------
 Ett annat sätt att visa all data är att vända på tabellen och att istället för att visa data i kolumner visa det som rader. Detta fungerar då vi har mycket plats neråt och kan stapla raderna på varandra. Vi definierar en ny klass `.table-stacked`, som får ta hand om att stapla tabellen för små enheter. Vi använder därför ett breakpoint och en media-query för att få till staplingen av rader.
 
@@ -282,11 +282,11 @@ Vi använder `position: absolute;` för att placera ut kolumnnamnen och `content
 
 Tabellen `table.table.table-striped.table-stacked` ser nu ut som nedanstående tabell i 'Responsive Design Mode'.
 
-[FIGURE src=/image/webapp/screenshot-table-stacked.png?w=c7 caption="Tabell med staplade kolumner."]
+![image/webapp/screenshot-table-stacked.png](https://dbwebb.se/image/webapp/screenshot-table-stacked.png)
 
 
 
-Bonus {#bonus}
+Bonus
 --------------------------------------
 Istället för att visa all data i tabellen kan du som utvecklare/designer göra ett medvetet val att bara visa en del av data. Att helt enkelt välja att fokusera på de kolumner som är viktiga för precis denna vy istället för att alltid bara göra en spegling av databasen.
 
@@ -294,7 +294,7 @@ Exempel på detta är de två listor vi har gjort i kursmoment 1 och 2. I lagers
 
 
 
-Avslutningsvis {#avslutning}
+Avslutningsvis
 --------------------------------------
 Vi har i denna artikel tittat på två sätt (+ ett bonus sätt) att visa data i tabeller för mobila enheter. Att visa mycket data på liten yta är aldrig lätt, men ovan finns två sätt som underlättar när vi gör responsiv design för mobila enheter.
 

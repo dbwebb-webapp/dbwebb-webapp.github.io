@@ -8,7 +8,7 @@ revision:
   "2018-01-17": (A, efo) Första utgåvan i samband med kursen webapp v3.
 ---
 
-[FIGURE src=image/webapp/truck.jpg class="right"]
+![image/webapp/truck.jpg](https://dbwebb.se/image/webapp/truck.jpg)
 
 I detta kursmoment skapar vi ett formulär för inleverans med hjälp av kunskapen från övningarna. Vi använder vår kunskap om att skapa lättanvända formulär för att snabbt kunna göra inleveranser på produkter.
 
@@ -18,20 +18,20 @@ I detta kursmoment skapar vi ett formulär för inleverans med hjälp av kunskap
 
 
 
-Förkunskaper {#forkunskaper}
+Förkunskaper
 -----------------------
 
 Du har gjort övningen [Ett mobilanpassad formulär](../kunskap/ett-mobilanpassad-formular).
 
 
-Introduktion {#intro}
+Introduktion
 -----------------------
 
 En inleverans är när lagret får varor levererade och vi ska underlätta för lagerarbetarna att snabbt ta emot varor. I lager [API:t](https://lager.emilfolino.se/v2) finns en datatyp `deliveries` där alla inleveranser ska lagras och dessutom ska du uppdatera lagersaldot för den levererade produkten.
 
 
 
-Krav {#krav}
+Krav
 -----------------------
 
 1. Lista alla tidigare inleveranser, om det inte finns inleveranser visa upp ett meddelande om detta.

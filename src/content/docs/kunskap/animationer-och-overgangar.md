@@ -9,13 +9,13 @@ revision:
 Animationer och övergångar
 ==================================
 
-[FIGURE src=/image/webapp/moving.jpg class="right"]
+![image/webapp/moving.jpg](https://dbwebb.se/image/webapp/moving.jpg)
 
 Vi har i tidigare kursmoment tittat på hur vi kan designa webbapplikationer så de ser ut som native appar. Vi ska i denna övning titta på hur vi med hjälp av animationer och övergångar även får känslan av att det är en native app.
 
 Vi ska i följande övning få till samma känsla som nedan när vi går från en list-vy till en detalj-vy.
 
-[FIGURE src=/img/webapp/animation-ios.gif class="right"]
+![img/webapp/animation-ios.gif](https://dbwebb.se/img/webapp/animation-ios.gif)
 
 Vi ser att detalj-vyn kommer in från höger och försvinner ut till höger. Vi använder CSS3 för animationer och tittar på hur vi löser det i en liten app.
 
@@ -23,10 +23,10 @@ Exempelkoden finns i kursrepot [webapp-example/animation](https://github.com/dbw
 
 
 
-Grunden {#base}
+Grunden
 --------------------------------------
 
-Jag har gjort i ordning en liten applikation med två stycken vyer. En list vy och en detalj vy. Routern som används är den som skapades i övningen "[En router i JavaScript](kunskap/en-router-i-javascript)".
+Jag har gjort i ordning en liten applikation med två stycken vyer. En list vy och en detalj vy. Routern som används är den som skapades i övningen "[En router i JavaScript](/kunskap/en-router-i-javascript)".
 
 ```javascript
 // list-component.js
@@ -121,7 +121,7 @@ export default class Router extends HTMLElement {
 
 
 
-CSS {#css}
+CSS
 --------------------------------------
 
 Som en grundinställning i webbläsaren har alla Web Components `display: inline;` det vill vi ändra för att våra komponenter ska kunna flyta in och ut snyggt.
@@ -197,7 +197,7 @@ För att se animeringen kan ni öppna upp `example/animation` med hjälp av er l
 
 
 
-Avslutningsvis {#avslutning}
+Avslutningsvis
 --------------------------------------
 
 Vi har i denna övning tittat på hur man med hjälp av animationer får känslan av att använda en mobil enhet och att det inte bara ser ut som en mobil enhet.

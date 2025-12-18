@@ -7,7 +7,7 @@ I detta kmom tittar vi på hur vi med hjälp av websockets kan kommunicera i rea
 
 Så här kan det se ut när vi är klara med kursmoment 06.
 
-[YOUTUBE src=5i44jkizxgU width=630 caption="Lager appen i kursmoment 6."]
+<YouTube posterQuality="max" id="5i44jkizxgU" />
 
 
 
@@ -15,7 +15,7 @@ Så här kan det se ut när vi är klara med kursmoment 06.
 
 
 
-Starta igång veckan {#uppstart}
+Starta igång veckan
 ----------------------------------------------
 
 Starta igång veckan genom att skapa en `branch` för att jobba med kmom06 genom följande kommandon.
@@ -27,26 +27,26 @@ git checkout -b kmom06
 
 
 
-Veckans genomgång  {#genomgang}
+Veckans genomgång 
 ---------------------------------
 
 Emil har genomgånger måndagar kl 13:15, efter genomgången uppdateras denna delen av sidan med veckans genomgång.
 
 
 
-Veckans föreläsning  {#forelasning}
+Veckans föreläsning 
 ---------------------------------
 
 Emil har föreläsningar onsdagar kl 10:15, efter föreläsningen uppdateras denna delen av sidan med veckans föreläsning.
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läsanvisningar 
 ---------------------------------
 
 *(ca: 6-10 studietimmar)*
 
-### Artiklar {#artiklar}
+### Artiklar
 
 Läs följande artiklar för att få bakgrunden till övningar och uppgifter.
 
@@ -56,32 +56,32 @@ Läs följande artiklar för att få bakgrunden till övningar och uppgifter.
 
 Du kan även med fördel titta på denna video:
 
-[YOUTUBE src=1BfCnjr_Vjg width=630 caption="WebSockets in 100 seconds and beyond."]
+<YouTube posterQuality="max" id="1BfCnjr_Vjg" />
 
 
 
-Övningar & Uppgifter  {#ovningar_uppgifter}
+Övningar & Uppgifter 
 -------------------------------------------
 
 *(ca: 8-16 studietimmar)*
 
 
 
-### Övningar {#ovningar}
+### Övningar
 
-1. Jobba igenom övningen "[Real-tids chatt](kunskap/real-tids-chatt)". Utöka din app i webbapp-lager repot.
+1. Jobba igenom övningen "[Real-tids chatt](/kunskap/real-tids-chatt)". Utöka din app i webbapp-lager repot.
 
 
 
-### Uppgifter {#uppgifter}
+### Uppgifter
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 6](uppgift/lager-appen-del-6)". Spara dina filer i webapp-lager repot.
+1. Gör uppgiften "[Lager appen del 6](/uppgift/lager-appen-del-6)". Spara dina filer i webapp-lager repot.
 
 
 
-Resultat & Redovisning  {#resultat_redovisning}
+Resultat & Redovisning 
 -----------------------------------------------
 
 *(ca: 1-2 studietimmar)*

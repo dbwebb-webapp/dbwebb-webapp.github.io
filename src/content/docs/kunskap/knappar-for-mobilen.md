@@ -8,13 +8,13 @@ revision:
 ---
 
 
-[FIGURE src=image/webapp/button.jpg class="right"]
+![image/webapp/button.jpg](https://dbwebb.se/image/webapp/button.jpg)
 
 Vi har sedan tidigare gjort CSS kod för navigation och typografi och vi ska i denna övning bygga ytterligare komponenter för våra appar. I slutet av övningen ska vi titta på hur vi kan strukturera CSS koden, både som ren CSS men även med hjälp av SASS en CSS-preprocessor.
 
 
 
-Introduktion {#intro}
+Introduktion
 --------------------------------------
 
 Knappar är en viktig del av de flesta CSS ramverk och kanske en av de mera omdiskuterade delar. Speciellt introduktionen av Flat Design i Apples iOS 7 och Googles Material Design visade på hur bra decor ibland kan vara dålig design. Problemet med Flat Design är att användaren ofta har problem att urskilja vad som går att klicka på och inte. I dessa två artiklar kan intresserade läsa mer: [The Problem with Flat Design According to a UX Expert](https://www.fastcodesign.com/3058094/the-problem-with-flat-design-according-to-a-ux-expert) och [Tablet Usability](https://www.nngroup.com/articles/tablet-usability/).
@@ -25,7 +25,7 @@ Exempelprogrammet från denna övning finns i [webapp-example/sass-examples](htt
 
 
 
-En knapp {#intro}
+En knapp
 --------------------------------------
 
 Vi börjar med att definiera en klass för knappar `.button`. Vi vill att denna klassen ska kunna användas för flera olika HTML-element som till exempel `a`, `button` och `input[type=submit]`. I kod exemplet nedan har vi en grundstruktur med `index.html` och `style.css`. Jag har lagt till tre stycken element som vi ska designa i denna övning genom att använda klassen `.button`.
@@ -145,7 +145,7 @@ Vi kommer dock fortsätta med vår design då vi vill ha knappar, som ser ut som
 
 Vi har nu en grunddesign för våra knappar, alla tre element ser likadana ut och de inbjuder till att bli klickade.
 
-[FIGURE src=image/webapp/screenshot-button-base.png?w=c7 caption="Grunddesign för knappar"]
+![image/webapp/screenshot-button-base.png](https://dbwebb.se/image/webapp/screenshot-button-base.png)
 
 En sak vi vill göra med knappar på mobila enheter är att de ska kunna fylla ut hela sidans bredd. Detta gör att de är lätta att klicka på oavsett om man är vänster- eller högerhänt. Då vi har definierat att knapparna använder sig av `box-sizing: border-box;` är detta enkelt genom att bara sätta bredden till 100%.
 
@@ -157,7 +157,7 @@ En sak vi vill göra med knappar på mobila enheter är att de ska kunna fylla u
 
 
 
-Färger {#colors}
+Färger
 --------------------------------------
 
 För att knappar kan signalera olika funktioner introducerar vi färger. En röd knapp betyder fara, en gul varning, blå eller grön att allt är lugnt. Vi lägger till ytterligare klasser då vi inte vill ändra på grunddesignen. Ett exempel på dessa klasser syns i kod exemplet nedan för en blå knapp. Notera att färgen på typsnittet har ändrats då vi inte vill ha ett mörkt typsnitt på en mörk bakgrund. En blå knapp definieras nu som `<button class="button blue-button">button</button>`.
@@ -184,7 +184,7 @@ För att knappar kan signalera olika funktioner introducerar vi färger. En röd
 
 
 
-Struktur i CSS {#struktur}
+Struktur i CSS
 --------------------------------------
 
 Nu börjar vi få en hel del CSS kod där olika komponenter ligger blandat i samma CSS fil. För att strukturera upp detta kan det vara en fördel att dela upp koden i olika moduler. Ett enkelt och fullt tillräckligt sätt är att dela upp CSS-koden i olika filer och importera alla filer i `index.html`.
@@ -371,7 +371,7 @@ Om man istället vill skapa en komprimerad version av CSS koden kan man använda
 
 
 
-Avslutningsvis {#avslutning}
+Avslutningsvis
 --------------------------------------
 
 Vi har i denna artikeln skapat knappar som är lätta att klicka på och samtidigt inbjuder till att bli klickade på. Vi designade först en grundknapp och med hjälp av andra klasser designade vi knappar som fyller hela skärmens bredd och knappar med andra färger för olika funktioner. Vi har även tittat på ett sätt att strukturera vår CSS kod med CSS-preprocessorn SASS.

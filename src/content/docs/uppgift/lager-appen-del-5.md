@@ -8,26 +8,26 @@ revision:
   "2018-03-01": (A, efo) Första utgåvan i samband med kursen webapp v3.
 ---
 
-[FIGURE src=image/webapp/world-map.jpg class="right"]
+![image/webapp/world-map.jpg](https://dbwebb.se/image/webapp/world-map.jpg)
 
 Vi ska i denna uppgiften använda oss av Web-API:s för att komma åt native-funktionalitet i våra fysiska mobila enheter. Vi använder en mobil enhets styrka och läggar till funktionalitet för GPS, kartor och kamera.
 
 
 
-Förkunskaper {#forkunskaper}
+Förkunskaper
 -----------------------
 Du har gjort uppgiften [Lager appen del 4](../uppgift/lager-appen-del-4). Du har jobbat dig igenom övningarna "[Animationer och övergångar](../kunskap/animationer-och-overgangar)", "[GPS och karta v3](../kunskap/gps-och-karta)" och "[Kamera i mobilen](../kunskap/kamera-i-mobilen)".
 
 
 
-Introduktion {#intro}
+Introduktion
 -----------------------
 
 Använd lager [API:t](https://lager.emilfolino.se/v2) dokumentationen och speciellt sektionen om ordrar. Här kan du hämta ut alla ordrar.
 
 
 
-Krav {#krav}
+Krav
 -----------------------
 
 1. Använd animationer och övergångar för att efterlikna native applikationer.

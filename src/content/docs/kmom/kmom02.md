@@ -20,7 +20,7 @@ Vi fortsätter med vår applikation från kmom01 och tittar på hur vi kan anvä
 
 Nedan finns en liten video som visar hur det kan se ut när man är klar med Lager appen del 2.
 
-[YOUTUBE src=QAvD-vRgSaU width=630 caption="Lager appen del 2."]
+<YouTube posterQuality="max" id="QAvD-vRgSaU" />
 
 
 
@@ -28,7 +28,7 @@ Nedan finns en liten video som visar hur det kan se ut när man är klar med Lag
 
 
 
-Starta igång veckan {#uppstart}
+Starta igång veckan
 ----------------------------------------------
 
 Starta igång veckan genom att skapa en `branch` för att jobba med kmom02 genom följande kommandon.
@@ -40,32 +40,32 @@ git checkout -b kmom02
 
 
 
-Veckans genomgång {#genomgang}
+Veckans genomgång
 ---------------------------------
 
 Emil har genomgånger måndagar kl 13:15, efter genomgången uppdateras denna delen av sidan med veckans genomgång.
 
-[YOUTUBE src=BdN_-4ZsG0k width=630 caption="Veckans genomgång"]
+<YouTube posterQuality="max" id="BdN_-4ZsG0k" />
 
 
 
-Veckans föreläsning  {#forelasning}
+Veckans föreläsning 
 ---------------------------------
 
 Emil har föreläsningar onsdagar kl 10:15, efter föreläsningen uppdateras denna delen av sidan med veckans föreläsning.
 
-[YOUTUBE src=2lDT4OBwm6Q width=630 caption="Veckans föreläsning"]
+<YouTube posterQuality="max" id="2lDT4OBwm6Q" />
 
 
 
-Läsanvisningar  {#lasanvisningar}
+Läsanvisningar 
 ---------------------------------
 
 *(ca: 6-10 studietimmar)*
 
 
 
-### Artiklar {#artiklar}
+### Artiklar
 
 Läs följande artiklar för att få bakgrunden till övningarna.
 
@@ -75,7 +75,7 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 
 
-### Video {#video}
+### Video
 
 1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_CbhJOudHjxkjYofM98kvh) kopplat till kursen, titta på videos som börjar på 2.
 
@@ -83,32 +83,32 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 
 
-Övningar & Uppgifter  {#ovningar_uppgifter}
+Övningar & Uppgifter 
 -------------------------------------------
 
 *(ca: 6-10 studietimmar)*
 
 
 
-### Övningar {#ovningar}
+### Övningar
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. Gör övningen "[Knappar för mobilen](kunskap/knappar-for-mobilen)". Spara eventuella testfiler i ditt webapp-lager repo.
+1. Gör övningen "[Knappar för mobilen](/kunskap/knappar-for-mobilen)". Spara eventuella testfiler i ditt webapp-lager repo.
 
-1. Gör övningen "[En router i JavaScript](kunskap/en-router-i-javascript)". Spara med fördel koden i ditt webapp-lager repo.
+1. Gör övningen "[En router i JavaScript](/kunskap/en-router-i-javascript)". Spara med fördel koden i ditt webapp-lager repo.
 
 
 
-### Uppgifter {#uppgifter}
+### Uppgifter
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 2](uppgift/lager-appen-del-2)". Spara resultatet i ditt webapp-lager repo.
+1. Gör uppgiften "[Lager appen del 2](/uppgift/lager-appen-del-2)". Spara resultatet i ditt webapp-lager repo.
 
 
 
-Resultat & Redovisning  {#resultat_redovisning}
+Resultat & Redovisning 
 -----------------------------------------------
 
 *(ca: 1-2 studietimmar)*

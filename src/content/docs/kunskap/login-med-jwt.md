@@ -6,7 +6,7 @@ revision:
   "2018-02-07": (A, efo) Första utgåvan inför kursen webapp v3.
 ---
 
-[FIGURE src=/image/webapp/padlock.png class="right"]
+![image/webapp/padlock.png](https://dbwebb.se/image/webapp/padlock.png)
 
 Vi har i tidigare kurser och i andra programmeringsspråk hanterat inloggning med hjälp av sessioner. I denna övning ska vi titta på ett sätt att autentisera våra klienter mot servern utan sessioner. Detta ger oss vissa fördelar som att vi har inbyggda utlöpstider och att det underlättar om vi vill skala upp vårt API, samtidigt som det ger ett säkert sätt att identifiera klienterna på.
 
@@ -18,7 +18,7 @@ I denna övning tittar vi på hur vi med hjälp av Postman registrerar en använ
 
 
 
-Registrering och inloggning {#login}
+Registrering och inloggning
 --------------------------------------
 
 Vi börjar med att registrera en användare i Lager API:t genom att skicka en `POST` till URL'en `/v2/auth/register` med 3 parametrar i `body`: `api_key`, `email` och `password`. Detta kan till exempel göras med Postman eller som en POST request från JavaScript.
@@ -53,7 +53,7 @@ Vi får följande svar från Lager API:t. `token` i det nedanstående data objek
 
 
 
-Använda JSON Web Tokens {#jwt}
+Använda JSON Web Tokens
 --------------------------------------
 
 Vi ser att svaret från Lager API:t innehåller attributet `token` och detta är vår JWT som vi använder varje gång vi vill åt funktioner i API:t som ligger bakom skyddet. Vi skickar med `token` som `x-access-token` i HTTP-headern.
@@ -73,7 +73,7 @@ const result = await response.json();
 
 
 
-### Exempelprogram {#example}
+### Exempelprogram
 
 Jag har valt att skapa en modell `models/auth.js` som får hålla koll på om vi har en token eller ej. I modellen finns även de funktioner som står för logga in och registreing med hjälp av `fetch` till Lager-API:t.
 
@@ -193,7 +193,7 @@ export default class InvoicesView extends HTMLElement {
 
 
 
-Avslutningsvis {#avslutning}
+Avslutningsvis
 --------------------------------------
 
 Vi har i denna artikel använd oss av Postman för att registrera en användare och logga in med den användaren. Vi har även tittat på hur man kan använda `headers` som en del av ett anrop med `fetch`.

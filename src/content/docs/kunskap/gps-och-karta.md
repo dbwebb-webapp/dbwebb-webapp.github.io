@@ -9,7 +9,7 @@ revision:
 GPS och karta v3
 ==================================
 
-[FIGURE src=/image/webapp/gps.png class="right"]
+![image/webapp/gps.png](https://dbwebb.se/image/webapp/gps.png)
 
 Vi ska i denna övning använda [leaflet.js](https://leafletjs.com) tillsammans med [OpenStreetMap](https://www.openstreetmap.org) och Web API:t `geolocation` för att visa positionsdata på en karta. Vi ska alltså titta på hur vi med hjälp av den inbyggda GPS'en kan visa användarens position på kartan.
 
@@ -17,7 +17,7 @@ Exempelprogrammet från denna övning finns i kursrepot [webapp-example/gps-v5](
 
 
 
-En karta {#karta}
+En karta
 --------------------------------------
 
 Vi kommer i detta exemplet använda leaflet.js för att visa upp en karta i vår mobila enhet och för att rita ut markörer på denna karta. Vi börjar med att skapar filerna för att få ihop grunden.
@@ -65,7 +65,7 @@ Om du lägger till en route i din router bör du nu kunna se en rubrik om du gå
 
 
 
-Leaflet {#leaflet}
+Leaflet
 --------------------------------------
 
 Låt oss lägga till modulen `leaflet` för att komma igång med kartan. Vi använder ett Content Delivery Network (CDN) för detta ändamålet. Vi ser på [Leaflets hemsida](https://leafletjs.com/download.html) hur vi kan göra detta.
@@ -108,7 +108,7 @@ export default class MapView extends HTMLElement {
 
 
 
-Markörer {#markorer}
+Markörer
 --------------------------------------
 
 För att vi ska kunna visa olika specifika platser på kartan vill vi kunna rita ut markörer. För att vi ska kunna rita ut markörer behöver vi koordinater och det kan vi antingen skriva in manuellt eller så kan vi omvandla adresser till koordinater. Jag väljer först att skapa en modell för just omvandlingen till koordinater i filen `src/models/nominatim.js`. I den modellen använder vi tjänsten nominatim.openstreetmap.org för att göra om en adress till koordinater.
@@ -176,7 +176,7 @@ Vi bör nu kunna se två markörer på kartan, en på Stortorget och en en bit n
 
 
 
-Användarens plats {#plats}
+Användarens plats
 --------------------------------------
 
 Sista pusselbiten vi behöver att få på plats är användarens position utritad på kartan. Vi kommer då använda oss av webbläsarens inbyggda möjlighet för att plocka ut användarens position. [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) beskriver hur det fungerar med att hämta ut användarens position.
@@ -252,7 +252,7 @@ export default class MapView extends HTMLElement {
 
 
 
-Avslutningsvis {#avslutning}
+Avslutningsvis
 --------------------------------------
 
 Vi har i denna artikel använt oss av OpenStreetMap och leaflet.js för att placera ut markörer på en karta på specifika platser. Vi har även tittat på hur vi kan använda `geolocation`-Web-API:t för att rita ut användarens position på kartan.

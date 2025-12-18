@@ -13,11 +13,11 @@ I detta kursmoment börjar vi till fullo att utnyttja styrkorna i våra mobila e
 
 Så här kan det se ut när vi är klara med kursmoment 05. Jag vet att jg säger kmom06 i början, men detta är videon för kmom05.
 
-[YOUTUBE src=SDvsHIIIC_k width=630 caption="Lager appen i kursmoment 5."]
+<YouTube posterQuality="max" id="SDvsHIIIC_k" />
 
 
 
-Starta igång veckan {#uppstart}
+Starta igång veckan
 ----------------------------------------------
 
 Starta igång veckan genom att skapa en `branch` för att jobba med kmom05 genom följande kommandon.
@@ -29,48 +29,48 @@ git checkout -b kmom05
 
 
 
-Veckans genomgång {#genomgang}
+Veckans genomgång
 ---------------------------------
 
 Emil har genomgånger måndagar kl 13:15, efter genomgången uppdateras denna delen av sidan med veckans genomgång.
 
 
 
-Veckans föreläsning {#forelasning}
+Veckans föreläsning
 ---------------------------------
 
 Emil har föreläsningar onsdagar kl 10:15, efter föreläsningen uppdateras denna delen av sidan med veckans föreläsning.
 
 
 
-Övningar & Uppgifter  {#ovningar_uppgifter}
+Övningar & Uppgifter 
 -------------------------------------------
 
 *(ca: 8-16 studietimmar)*
 
 
 
-### Övningar {#ovningar}
+### Övningar
 
 Använd nedanstående övningar som inspiration för att klara av uppgiften här i kmom05.
 
-1. Jobba igenom övningen "[Animationer och övergångar](kunskap/animationer-och-overgangar)". Utöka din app i `webapp-lager` med utgångspunkt i exempelkoden.
+1. Jobba igenom övningen "[Animationer och övergångar](/kunskap/animationer-och-overgangar)". Utöka din app i `webapp-lager` med utgångspunkt i exempelkoden.
 
-1. Jobba igenom övningen "[GPS och karta](kunskap/gps-och-karta)". Utöka din app i `webapp-lager` med utgångspunkt i exempelkoden.
+1. Jobba igenom övningen "[GPS och karta](/kunskap/gps-och-karta)". Utöka din app i `webapp-lager` med utgångspunkt i exempelkoden.
 
-1. Jobba igenom övningen "[Kamera i mobilen](kunskap/kamera-i-mobilen)". Utöka din app i `webapp-lager` med utgångspunkt i exempelkoden.
+1. Jobba igenom övningen "[Kamera i mobilen](/kunskap/kamera-i-mobilen)". Utöka din app i `webapp-lager` med utgångspunkt i exempelkoden.
 
 
 
-### Uppgifter {#uppgifter}
+### Uppgifter
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 5](uppgift/lager-appen-del-5)". Spara dina filer i `src`.
+1. Gör uppgiften "[Lager appen del 5](/uppgift/lager-appen-del-5)". Spara dina filer i `src`.
 
 
 
-Resultat & Redovisning  {#resultat_redovisning}
+Resultat & Redovisning 
 -----------------------------------------------
 
 *(ca: 1-2 studietimmar)*

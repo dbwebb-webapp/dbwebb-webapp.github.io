@@ -17,14 +17,14 @@ Vi ska i denna övning bekanta oss med [Lager-API:t](https://lager.emilfolino.se
 
 
 
-Postman {#postman}
+Postman
 --------------------------------------
 
 Installera [Postman](https://www.postman.com/downloads/) för ditt operativsystem. Postman är ett bra verktyg att ha i vår webbprogrammerare-verktygslåda.
 
 
 
-Lager-API:t via Postman {#lager}
+Lager-API:t via Postman
 --------------------------------------
 
 Skapa först en API-nyckel som du använder för att hämta just din data. Du kan sedan välja om du vill skapa nya produkter eller kopiera de befintliga produkterna. Du kommer i kommande kursmoment fortsätta arbetet med din lager-app, så rekommendationen är att skapa dina egna produkter då du kan vinkla din app mot dina intressen.
@@ -33,10 +33,10 @@ Ett bra verktyg för att testa sig fram med API:er är Postman. Du kan även ska
 
 I följande videos visar Emil hur du skapar en API-nyckel. I Postman fortsätter vi sedan med att kopiera den befintliga uppsättning produkter och uppdatera produkterna så de blir lite mer intressanta. Vi skapar även helt nya produkter.
 
-[YOUTUBE src=Ad7R_iHXR7k width=630 caption="API nyckel"]
+<YouTube posterQuality="max" id="Ad7R_iHXR7k" />
 
-[YOUTUBE src=464oRgVq4ns width=630 caption="Kopiera produkter"]
+<YouTube posterQuality="max" id="464oRgVq4ns" />
 
-[YOUTUBE src=AFMaZJk_jmo width=630 caption="Ändra produkt"]
+<YouTube posterQuality="max" id="AFMaZJk_jmo" />
 
-[YOUTUBE src=nwcFboQY_lk width=630 caption="Skapa produkt"]
+<YouTube posterQuality="max" id="nwcFboQY_lk" />

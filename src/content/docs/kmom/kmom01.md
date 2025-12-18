@@ -15,7 +15,7 @@ Vi har i tidigare kurser sett hur vi man kan skapa applikationer i webbläsaren 
 
 Som ett första steg ska vi börja med en löpande uppgift där vi i detta kursmoment skapar början till en lagerhanteringsapp. Nedan finns en liten video som visar hur det kan se ut när man är klar med Lager appen del 1.
 
-[YOUTUBE src=DxGlC-MUwJo width=630 caption="Lager appen del 1."]
+<YouTube posterQuality="max" id="DxGlC-MUwJo" />
 
 
 
@@ -23,7 +23,7 @@ Som ett första steg ska vi börja med en löpande uppgift där vi i detta kursm
 
 
 
-Labbmiljön  {#labbmiljo}
+Labbmiljön
 ---------------------------------
 
 *(ca: 1 studietimme)*
@@ -36,21 +36,19 @@ Som i andra kurser bör du ha en lokal labbmiljö innehållande:
 
 I denna kursen använder vi Git och GitHub som utgångspunkt för vår labb- och studiemiljö.
 
-Har du inte tidigare jobbat med Git rekommenderas denna guiden [Git](https://dbwebb.se/guide/git/introduktion){:target="_blank"}
+Börja med att lämna in [uppgiften Github konto på Canvas](https://bth.instructure.com/courses/6413/assignments/56315) enligt videon nedan.
 
-Börja med att lämna in [uppgiften Github konto på Canvas](https://bth.instructure.com/courses/6413/assignments/56315){:target="_blank"} enligt videon nedan.
-
-[YOUTUBE src=dv09UyTAnQk caption="Uppgiften GitHub Konto"]
+<YouTube posterQuality="max" id="dv09UyTAnQk" />
 
 Acceptera sedan inbjudan och använd SAML SSO inloggning för att knyta ditt GitHub konto mot ditt studentkonto.
 
-[YOUTUBE src=keEGqOEdpbI caption="Acceptera inbjudan"]
+<YouTube posterQuality="max" id="keEGqOEdpbI" />
 
  I nedanstående video visar Emil hur du kommer igång med kursen. Om du föredrar text kan du hoppa över videon, men den är starkt rekommenderat.
 
-[YOUTUBE src=47fDUCRsVf0 caption="Kom igång med kursens infrastruktur"]
+<YouTube posterQuality="max" id="47fDUCRsVf0" />
 
-Du börjar kursen genom att skapa en `webapp` katalog i din `dbwebb-kurser`-katalog. Du kan sedan klona `example`-repot ([dbwebb-webapp/webapp-example](https://github.com/dbwebb-webapp/webapp-example){:target="_blank"}) till `webapp`-katalogen så du har tillgång till kursens exempel-kod.
+Du börjar kursen genom att skapa en `webapp` katalog i din `dbwebb-kurser`-katalog. Du kan sedan klona `example`-repot ([dbwebb-webapp/webapp-example](https://github.com/dbwebb-webapp/webapp-example)) till `webapp`-katalogen så du har tillgång till kursens exempel-kod.
 
 ```shell
 cd $HOME/dbwebb-kurser
@@ -59,7 +57,7 @@ cd webapp
 git clone https://github.com/dbwebb-webapp/webapp-example.git
 ```
 
-Sedan vill du skapa en `fork` av repot [dbwebb-webapp/webapp-lager](https://github.com/dbwebb-webapp/webapp-lager){:target="_blank"}. Du klonar sedan repot till din `dbwebb-kurser/webapp` katalog. Se till att byta ut användarenamn mot ditt användarenamn i de två nedanstående URL'r.
+Sedan vill du skapa en `fork` av repot [dbwebb-webapp/webapp-lager](https://github.com/dbwebb-webapp/webapp-lager). Du klonar sedan repot till din `dbwebb-kurser/webapp` katalog. Se till att byta ut användarenamn mot ditt användarenamn i de två nedanstående URL'r.
 
 ```shell
 git clone git@github.com:användarenamn/webapp-lager.git
@@ -75,88 +73,88 @@ git checkout -b kmom01
 
 
 
-Veckans genomgång  {#genomgang}
+Veckans genomgång
 ---------------------------------
 
 Emil har genomgånger måndagar kl 13:15, efter genomgången uppdateras denna delen av sidan med veckans genomgång.
 
-[YOUTUBE src=wc_c5LdvXMw width=630 caption="Veckans genomgång"]
+<YouTube posterQuality="max" id="wc_c5LdvXMw" />
 
 
 
-Veckans föreläsning  {#forelasning}
+Veckans föreläsning
 ---------------------------------
 
 Emil har föreläsningar onsdagar kl 10:15, efter föreläsningen uppdateras denna delen av sidan med veckans föreläsning.
 
-[YOUTUBE src=km8ea3-QHQw width=630 caption="Veckans föreläsning"]
+<YouTube posterQuality="max" id="km8ea3-QHQw" />
 
 
-Läsanvisningar  {#lasanvisningar}
+Läsanvisningar
 ---------------------------------
 
 *(ca: 6-10 studietimmar)*
 
 
 
-### Artiklar {#artiklar}
+### Artiklar
 
 Läs följande artiklar för att få bakgrunden till övningarna.
 
-1. Läs om viewport på MDN i artikeln "[Using the viewport meta tag to control layout on mobile browsers](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag){:target="_blank"}".
+1. Läs om viewport på MDN i artikeln "[Using the viewport meta tag to control layout on mobile browsers](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag)".
 
-1. Bekanta dig med dokumentationen för [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API){:target="_blank"} som vi använder för att ladda data via JavaScript.
+1. Bekanta dig med dokumentationen för [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) som vi använder för att ladda data via JavaScript.
 
-1. Bekanta dig översiktligt med _web components_ i artikeln "[Introduction](https://www.webcomponents.org/introduction){:target="_blank"}".
-
-
-
-### Video {#video}
-
-1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_CbhJOudHjxkjYofM98kvh){:target="_blank"} kopplat till kursen, titta på videos som börjar på 0 och 1.
+1. Bekanta dig översiktligt med _web components_ i artikeln "[Introduction](https://www.webcomponents.org/introduction)".
 
 
 
-### Lästips {#lastips}
+### Video
 
-1. Läs översiktligt denna samling av "best-practices" för typografi på webben [Typography Handbook](https://web.archive.org/web/20231219201010/http://typographyhandbook.com/){:target="_blank"}. Spara den i dina bokmärken som en framtida referens.
-
-1. För mer om tillgänglighet (accessibility, a11y) titta in på [The A11Y Project](https://a11yproject.com/){:target="_blank"}.
+1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_CbhJOudHjxkjYofM98kvh) kopplat till kursen, titta på videos som börjar på 0 och 1.
 
 
 
-Övningar & Uppgifter  {#ovningar_uppgifter}
+### Lästips
+
+1. Läs översiktligt denna samling av "best-practices" för typografi på webben [Typography Handbook](https://web.archive.org/web/20231219201010/http://typographyhandbook.com/). Spara den i dina bokmärken som en framtida referens.
+
+1. För mer om tillgänglighet (accessibility, a11y) titta in på [The A11Y Project](https://a11yproject.com/).
+
+
+
+Övningar & Uppgifter
 -------------------------------------------
 
 *(ca: 6-10 studietimmar)*
 
 
 
-### Övningar {#ovningar}
+### Övningar
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. Läs igenom artikeln "[Typografi i mobila enheter](kunskap/typografi-i-mobila-enheter)". Du kan spara koden i ditt webapp-lager repo.
+1. Läs igenom artikeln "[Typografi i mobila enheter](/kunskap/typografi-i-mobila-enheter)". Du kan spara koden i ditt webapp-lager repo.
 
-2. Skapa en API-nyckel och produkter i ditt egna lager med hjälp av artikeln "[Introduktion till Lager-API:t](kunskap/introduktion-till-lager-api)".
+2. Skapa en API-nyckel och produkter i ditt egna lager med hjälp av artikeln "[Introduktion till Lager-API:t](/kunskap/introduktion-till-lager-api)".
 
-3. Gör övningen "[Web Components](kunskap/web-components)". Spara resultatet i ditt kursrepo i ditt webapp-lager repo.
+3. Gör övningen "[Web Components](/kunskap/web-components)". Spara resultatet i ditt kursrepo i ditt webapp-lager repo.
 
 
 
-### Uppgifter {#uppgifter}
+### Uppgifter
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Lager appen del 1](uppgift/lager-appen-del-1)". Spara din kod i ditt kursrepo i ditt webapp-lager repo.
+1. Gör uppgiften "[Lager appen del 1](/uppgift/lager-appen-del-1)". Spara din kod i ditt kursrepo i ditt webapp-lager repo.
 
 Emil visar i nedanstående video hur du gör en inlämning i webapp.
 
-[YOUTUBE src=PqbkxMyUGY8 width=630 caption="En inlämning i webapp"]
+<YouTube posterQuality="max" id="PqbkxMyUGY8" />
 
 
 
-Resultat & Redovisning  {#resultat_redovisning}
+Resultat & Redovisning
 -----------------------------------------------
 
 *(ca: 1-2 studietimmar)*

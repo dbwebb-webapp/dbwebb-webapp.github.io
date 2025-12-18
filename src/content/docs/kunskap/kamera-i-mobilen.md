@@ -8,13 +8,13 @@ revision:
 Kamera i mobilen
 ==================================
 
-[FIGURE src=/image/webapp/Leica_M9.jpg class="right"]
+![image/webapp/Leica_M9.jpg](https://dbwebb.se/image/webapp/Leica_M9.jpg)
 
 Exempelprogrammet från denna övning finns i kursrepot [webapp-example/camera](https://github.com/dbwebb-webapp/webapp-example/tree/main/camera) och i `webapp-example/camera`. Använd det gärna tillsammans med övningen för att se hur de olika delarna hänger ihop. En del kod utelämnas i exemplet för att det ska vara mer lättläst i artikeln.
 
 
 
-Kamera i webbläsaren {#camera}
+Kamera i webbläsaren
 --------------------------------------
 
 Låt oss ta en titt på Web API:t [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) och se hur vi med hjälp av funktion getUserMedia kan ta en bild.
@@ -171,7 +171,7 @@ I ovanstående funktion tar vi först och gör om vår dataUrl till en [blob](ht
 
 
 
-Avslutningsvis {#avslutning}
+Avslutningsvis
 --------------------------------------
 
 Vi har i denna artikel använt oss av Web API:t MediaDevices för att ta bilder med våra mobila enheter. Vi har även använt ett Foto-API för att spara undan bilderna.

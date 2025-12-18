@@ -11,30 +11,30 @@ I denna övningen tittar vi på hur vi kan använda websockets för att kommunic
 
 
 
-Förkunskaper {#prereqs}
+Förkunskaper
 --------------------------------------
 
 Du har gjort uppgiften "[Lager appen del 5](../uppgift/lager-appen-del-5-v5)" och kan med fördel bygga vidare på den koden.
 
 
 
-Exempelkod {#example}
+Exempelkod
 --------------------------------------
 
 Exempelkod för denna övningen finns i kursrepot under [webapp-example/chat](https://github.com/dbwebb-webapp/webapp-example/tree/main/chat).
 
-Om du skriver nedanstående kod i ditt webapp-lager repo kan du återanvända koden i uppgiften "[Lager appen del 6](uppgift/lager-appen-del-6-v5)".
+Om du skriver nedanstående kod i ditt webapp-lager repo kan du återanvända koden i uppgiften "[Lager appen del 6](/uppgift/lager-appen-del-6-v5)".
 
 
 
-Förutsättningar för chatten {#demands}
+Förutsättningar för chatten
 --------------------------------------
 
 Vi kommer i denna övningen använda oss av socket.io som är en modul för att underlätta websocket kommunikation. Vi kommer allihopa koppla oss mot chatt-servern [https://lager-chat.emilfolino.se](https://lager-chat.emilfolino.se) för att det ska bli lite meddelanden i allas chattar.
 
 
 
-En start {#start}
+En start
 --------------------------------------
 
 Först definierar vi ett `customElement` i `main.js` med följande kod:
@@ -49,7 +49,7 @@ Vilket gör det möjligt att använda oss av `<chat-form></chat-form>` i vår ko
 
 
 
-Vår chatt-komponent {#component}
+Vår chatt-komponent
 --------------------------------------
 
 I komponenten börjar vi med att importera socket.io-klienten direkt från socket.io's CDN. Sedan skapar ett fält för att skriva i, en knapp för att skicka meddelanden och en `div` för att kunna visa upp alla meddelanden, som kommer skickas båda från din klient och alla andras klienter.
@@ -114,7 +114,7 @@ För att vi även ska kunna ta emot meddelanden från socket-servern vill vi äv
 
 
 
-Skicka objekt {#objects}
+Skicka objekt
 --------------------------------------
 
 I kodexemplet skickar vi enbart en sträng som värde med hjälp av `emit`, men det går lika bra att skicka mer avancerade datatyper som till exempel objekt.
@@ -129,7 +129,7 @@ socket.emit('chat message', message);
 ```
 
 
-Avslutningsvis {#avslutning}
+Avslutningsvis
 --------------------------------------
 
 Vi har i denna övning tittat på hur vi kan använda `socket.io` för att kommunicera i realtid mellan ett antal olika klienter.

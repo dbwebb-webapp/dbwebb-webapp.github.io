@@ -7,7 +7,7 @@ revision:
   "2018-02-12": (A, efo) Första utgåvan i samband med kursen webapp v3.
 ---
 
-[FIGURE src=image/webapp/money.jpeg class="right"]
+![image/webapp/money.jpeg](https://dbwebb.se/image/webapp/money.jpeg)
 
 I kursmoment 3 arbetade vi med formulär. Vi ska i denna uppgift skapa delar av appen som är skyddad med hjälp av JWT. I den skyddade delen ska det vara möjligt att se tidigare fakturor och skicka nya.
 
@@ -17,20 +17,20 @@ I kursmoment 3 arbetade vi med formulär. Vi ska i denna uppgift skapa delar av 
 
 
 
-Förkunskaper {#forkunskaper}
+Förkunskaper
 -----------------------
 Du har gjort uppgiften [Lager appen del 3](../uppgift/lager-appen-del-3). Du har jobbat dig igenom övningarna [Tabeller i mobila enheter](../kunskap/tabeller-i-mobila-enheter) och [Login med JWT](../kunskap/login-med-jwt).
 
 
 
-Introduktion {#intro}
+Introduktion
 -----------------------
 
 Använd lager [API:t](https://lager.emilfolino.se/v2) dokumentationen och speciellt sektionen om invoices. Här kan du hämta ut alla invoices och skapa nya.
 
 
 
-Krav {#krav}
+Krav
 -----------------------
 
 1. Skapa ett formulär för att kunna registrera och logga in som en användare i Lager appen.
@@ -49,7 +49,7 @@ Krav {#krav}
 
 
 
-Extrauppgift {#extra}
+Extrauppgift
 -----------------------
 
 * Lägg till felmeddelanden i registrerings/inloggnings-formuläret för användaren får en förståelse för vad som blev fel.

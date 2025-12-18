@@ -13,14 +13,14 @@ I denna övningen tittar vi på hur vi kan skapa återanvändbara delar av vår 
 
 
 
-Förkunskaper {#prereqs}
+Förkunskaper
 --------------------------------------
 
 Du har gjort övningarna "[Introduktion till Lager-API:t](/kunskap/introduktion-till-lager-api)" och "[Typografi i mobila enheter](/kunskap/typografi-i-mobila-enheter)".
 
 
 
-Exempelkod {#example}
+Exempelkod
 --------------------------------------
 
 Exempelkod för denna övningen finns i kursrepot under [webapp-example/web-component-starter](https://github.com/dbwebb-webapp/webapp-example/tree/main/web-component-starter).
@@ -29,7 +29,7 @@ Om du skriver nedanstående kod i ditt `webapp-lager`-repo kan du återanvända 
 
 
 
-Web komponenter {#components}
+Web komponenter
 --------------------------------------
 
 När vi utvecklar mjukvara är det ett antal olika principer och best-practices som har vunnit mark och som karakteriserar bra mjukvara. Ofta har de lite olika roliga förkortningar och nedan är ett par av de som _web components_ är ett försök på att efterleva.
@@ -44,7 +44,7 @@ Vi vill alltså kapsla in vår kod som har exakt ett (1) ansvarsområde för att
 
 
 
-Låt mig se lite kod Emil! {#code}
+Låt mig se lite kod Emil!
 --------------------------------------
 
 Nu får det räcka med massa torra forskningsartiklar, böcker och förkortningar, så låt oss titta på lite kod.
@@ -102,7 +102,7 @@ p {
 
 
 
-### Vår första komponent {#first}
+### Vår första komponent
 
 Vi ska nu skriva vår första komponent. Tanken är att den ska skriva ut en titel på sidan allra längst upp. Detta hade vi kunnat göra med enbart HTML, men väljer att göra det som en _web component_. Både för att demonstrera konceptet, men även för att vi i kommande kursmoment kommer återanvända komponenten för att ändra titeln längst upp när vi byter vy.
 
@@ -130,7 +130,7 @@ Först importerar vi klassen `LagerTitle` från en fil och klass som vi kommer s
 
 
 
-### Elementets klass {#class}
+### Elementets klass
 
 Vi börjar med att skapa en katalog `src/components` och här är tanken att vi under utvecklandet av vår lager-app lägger våra egna komponenter. I katalogen skapar vi filen `lager-title.js` som innehåller klassen `LagerTitle`.
 
@@ -149,7 +149,7 @@ Det första vi gör är att ärva från den generella HTMLElement klassen som ä
 
 
 
-### Elementets attribut {#attributes}
+### Elementets attribut
 
 Vi börjar med att lägga till en konstruktor i vår `LagerTitle` klass. Här ser vi först till att klassen vi ärver ifrån `HMTLElement`'s konstruktor anrops för att sedan definiera en instansvariabel för objekten som skapas utifrån klassen. Instansvariabeln skapas med kodraden `this.name = "Andreas";` där `this` i klasser i JavaScript alltid pekar tillbaka på instansen som skapats.
 
@@ -237,7 +237,7 @@ Laddar vi om sidan nu ser vi att titeln på sidan har ändrats från "Andreas's 
 
 
 
-Driftsättning {#deploy}
+Driftsättning
 --------------------------------------
 
 Än så länge har vi gjort allt lokalt med vår lokala webbserver. Men en webbplats är till för att delas. Vi kommer i denna kursen använda oss av GitHub Pages för driftsättning. Gå till ditt `webapp-lager`-repo och under Settings>Pages välj "GitHub Actions" under Source enligt bilden nedan. Varje gång vi gör en `git push` driftsätts sidan på webbplatsen `https://användarenamn.github.io/webapp-lager` (byt ut användarenamn till din användarenamn).
@@ -254,7 +254,7 @@ Lägg sedan till en deployment branch `kmom*` genom att trycka på plus tecknet 
 
 
 
-En mer fullständig komponent {#fullstandig}
+En mer fullständig komponent
 --------------------------------------
 
 Än så länge har vi inte riktigt sett några större fördelar med detta sättet att strukturera vår kod förutom att vi kan lägga logik för en tagg på en specifik plats på ett specifikt sätt. Så låt oss ta ytterligare ett steg och börja med att bygga en lista på de produkter som finns i lagret.
@@ -302,7 +302,7 @@ export default class ProductList extends HTMLElement {
 }
 ```
 
-Laddar vi om sidan i webbläsaren bör vi nu se ytterligare en rubrik under "Emil's Lager-app" (Vid det här laget det kanske är rimligt att ändra till ditt egna namn). Låt oss då fylla på vår instansvariabel `products` med de produkter som bör finnas i lagret efter att du gjort övningen "[Introduktion till Lager-API:t](kunskap/introduktion-till-lager-api)".
+Laddar vi om sidan i webbläsaren bör vi nu se ytterligare en rubrik under "Emil's Lager-app" (Vid det här laget det kanske är rimligt att ändra till ditt egna namn). Låt oss då fylla på vår instansvariabel `products` med de produkter som bör finnas i lagret efter att du gjort övningen "[Introduktion till Lager-API:t](/kunskap/introduktion-till-lager-api)".
 
 Då vi i ganska många filer och komponenter kommer behöva anropa Lager-API:t lägger vi URL'n och API-nyckeln i en gemensam fil för att på ett enkelt sätt kunna återanvända den informationen. Jag skapar filen `src/utils.js` och lägger följande i den, se till att byta ut så din API-nyckel finns i filen, annars fungerar det inte.
 
@@ -341,7 +341,7 @@ export default class ProductList extends HTMLElement {
 
 
 
-### Enskilda produkter {#single}
+### Enskilda produkter
 
 Nu vill vi skriva ut en lista på de enskilda produkterna som finns i ditt egna lager. Det att visa upp detaljer om en enskild produkt känns som något vi vill kunna göra mer än en gång i vår applikation. Med tanke på **DRY** väljer vi därför att lägga denna funktionalitet i en egen komponent. I `product-list.js` skriver vi därför ut en lång sträng med taggarna `<single-product></single-product>` och använder attribut för att skicka med den specifika produkten. Då de enskilda produkterna är komplexa objekt väljer vi att göra om objekten till en JSON-sträng innan vi skickar med som attribut till `single-product` komponenten.
 
@@ -418,14 +418,14 @@ I ovanstående kod (och på andra ställen i koden) använder vi en [`getter`-fu
 
 
 
-Avslutningsvis {#avslutning}
+Avslutningsvis
 --------------------------------------
 
 Vi har i denna övningen tittat på hur vi kan använda _web components_ för att kapsla in kod till egna komponenter. Vi har dessutom tittat på anledningar till varför vi vill använda _web components_ och hur vi kan använda oss av attribut för att dynamiskt ändra innehåll i komponenter.
 
 
 
-Referenser {#references}
+Referenser
 --------------------------------------
 
 [1] Thomas, D., & Hunt, A. (2019). The pragmatic programmer. Addison-Wesley Professional.
