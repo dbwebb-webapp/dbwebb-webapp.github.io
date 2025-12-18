@@ -1,0 +1,274 @@
+---
+title: Typografi för mobila enheter
+author: efo
+category: javascript
+revision:
+    "2019-02-14": (B, efo) Genomarbetad inför VT19.
+    "2018-01-09": (A, efo) Första utgåvan inför kursen webapp-v3 V18.
+---
+
+![image/webapp/typography.jpg](https://dbwebb.se/image/webapp/typography.jpg)
+
+I denna artikel går vi igenom hur vi anpassar typsnitt och typografin för våra mobila enheter. Fokus kommer ligga på att skapa användbara, men framför allt tillgängliga och lättlästa gränssnitt för textintensiva hemsidor. Vi kommer ta utgångspunkt i att göra en redovisningssida och kommer formatera den för läsbarhet.
+
+
+
+
+
+
+
+En grund i HTML
+--------------------------------------
+
+Vi börjar med en enkel grund i HTML där vi laddar in vår CSS kod från filen `style.css` som innehåller följande från en första början. Nedanstående kod återställer den stil som finns från första början i en webbläsare och ser till att den stil inte påverkar den CSS som vi kommer skriva senare.
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+```
+
+Jag har skrivit ihop en redovisningssida för kmom01 i HTML dokumentet nedan. En redovisningssida är ett typiskt exempel på en textintensiv webbplats. Du kan ersätta `body`-delen av din befintliga `index.html` fil som redan finns i ditt `webapp-lager`-repo.
+
+```html
+<!-- index.html -->
+
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lager-Appen</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Redovisning</h1>
+        </header>
+        <article>
+            <h2>kmom01</h2>
+
+            <h4>Är du sedan tidigare bekant med utveckling av mobila appar?</h4>
+            <p>Jag har tidigare utvecklad en app för App Store. Men det var i Objective-C och långt ifrån webbens tekniker som används i denna kurs. Utvecklingsmiljön i denna kurs känns som mer den jag är van vid från tidigare webb kurser och webbprogrammering i allmänhet.</p>
+
+            <h4>Vilket är den viktigaste lärdomen du gjort om typografi för mobila enheter?</h4>
+            <p>Hur viktigt det är med vita utrymmen (whitespace) för att klumpa ihop besläktade element. Vita utrymmen ger dessutom ett luftigare utseende, som känns mer modernt.</p>
+
+            <h4>Du har i kursmomentet hämtat data från två stycken API. Hur kändes detta?</h4>
+            <p>Att med XMLHttpRequest och fetch hämta data från de två API fungerade bra. Dokumentationen för Githubs API var från början överväldigande, men med lite tillvänjning gick det att få fram det jag sökte. Ger stora möjligheter med API:er där man frikopplad från implementeringen kan få fram snygga klienter. Blir spännande att jobba vidare med detta i kommande kursmoment.</p>
+        </article>
+    </main>
+</body>
+</html>
+```
+
+![image/webapp/screenshot-typo-no-style.png](https://dbwebb.se/image/webapp/screenshot-typo-no-style.png)
+
+
+Utvecklingsmiljö
+--------------------------------------
+
+För att vi ska kunna skåda vara mästerverk behöver vi en utvecklingsmiljö med testning och en lokal webbserver. Ditt `webapp-lager` bör redan vara preppat med en sådan. Vi kan ta en titt i `package.json` filen för att se vad som finns:
+
+```json
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "Course material for the course Webbapplikationer för mobila enheter given at Blekinge Institute of Technology.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Implement later\" && exit 0",
+    "start": "http-server .",
+    "posttest": "npm run eslint && npm run stylelint && npm run htmlhint",
+    "eslint": "eslint",
+    "eslint:fix": "eslint --fix",
+    "stylelint": "stylelint \"**/*.css\"",
+    "stylelint:fix": "stylelint --fix \"**/*.css\"",
+    "htmlhint": "htmlhint \"**/*.html\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0",
+    "htmlhint": "^1.1.4",
+    "http-server": "^14.1.1",
+    "stylelint": "^16.13.2",
+    "stylelint-config-standard": "^37.0.0"
+  }
+}
+```
+
+Vi ser i ovanstående fil att vi har ett antal paket i `devDependencies` som behöver att installeras detta gör vi med `npm install`.
+
+Vi kan sedan börja använda de fördefinierade scripten som finns under `scripts`. Vi kan testa att använda först `npm test`, som i detta skedet kör validering av HTML, CSS och JavaScript.
+
+Vi kan även använda oss av `npm start` som startar igång en lokal webbserver. Ni bör i terminalen kunna se en URL där ni kan skåda era alster och ni bör se nått liknande bilden ovan.
+
+
+
+Vitt utrymme
+--------------------------------------
+
+Vi börjar med den del av designen som inte har med typsnittet att göra. Vi vill skapa en sammanhang mellan de element som är besläktade och samtidigt skapa en vertikal rytm. Vi börjar med bestämma oss för ett bra radavstånd och en bra typsnittsstorlek för texten.
+
+Vi använder "best-practice" från [Typography Handbook](https://web.archive.org/web/20231219201010/http://typographyhandbook.com/) och sätter storleken till 100% och använder oss sedan av den relativa enheterna `rem` för att sätta storleken på typsnittet för paragrafer och rubriker. Anledningen till att vi sätter textstorleken till 100% är att användarens förinställda textstorlek då används och det är viktigt för individer med svagt syn.
+
+I Typography Handbook är även rekommendationen att använda sig av en radhöjd/avstånd på mellan 1,2 och 1,5. Ofta vill man ha lite större radavstånd på breda kolumner och lite mindre på smala. Vi sätter storleken `1rem` för brödtexten och använder oss av `1.4` i radavstånd. Inom typografin pratar man om ett magic number som är `radavstånd * typsnittsstorlek` i vårt fall blir magic number alltså `1.4rem`. Vi använder sedan magic number och multiplar av magic number för att sätta marginaler i höjdled vilket skapar vertikal rytm.
+
+Vi väljer även att lägga halva magic number som inre marginal (`padding`) runt vår text genom `padding: 0.7rem;`.
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    line-height: 1.4;
+}
+
+main {
+    padding: 0.7rem;
+}
+
+p {
+    margin-bottom: 1.4rem;
+    font-size: 1rem;
+}
+```
+
+![image/webapp/screenshot-typo-whitespace.png](https://dbwebb.se/image/webapp/screenshot-typo-whitespace.png)
+![image/webapp/screenshot-typo-no-style.png](https://dbwebb.se/image/webapp/screenshot-typo-no-style.png)
+
+Vi vill skapa ett sammanhang mellan frågor och svar för att underlätta för läsaren. Vi vill göra detta men samtidigt bevara den vertikala rytmen. Vi gör detta genom att sätta radavståndet för alla element genom att flytta detta till `body`-elementet.
+
+Sedan definierar vi `margin-bottom` för `h1` och `h2` till en multipel av vårt magic number. För att frågan och svaret ska hänga ihop sätter vi marginalen till 0 för `h4` elementen.
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    line-height: 1.4;
+}
+
+main {
+    padding: 0.7rem;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 2.8rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.4rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+
+p {
+    margin-bottom: 1.4rem;
+    font-size: 1rem;
+}
+```
+
+Vi ser i jämförelsen nedan hur våra val skapar ett bättre sammanhang mellan frågor och svar.
+
+![image/webapp/screenshot-typo-vertical-rhythm.png](https://dbwebb.se/image/webapp/screenshot-typo-vertical-rhythm.png)
+![image/webapp/screenshot-typo-no-style.png](https://dbwebb.se/image/webapp/screenshot-typo-no-style.png)
+
+
+
+Typsnitt
+--------------------------------------
+Nu är det dags för det som faktiskt syns på sidan och det nog enklaste sättet att förändra känslan av en hemsida. Jag har vald ut två stycken [Google Fonts](https://fonts.google.com/). Ett serif typsnitt Merriweather för brödtexten och sans-serif typsnitt Source Sans Pro för rubriker. Båda typsnitten har stora och tydliga vita områden i bokstäver som 'o', 'e' och 'c', som ger bra läsbarhet. Merriweather har små men ändå tydliga [seriffer](https://en.wikipedia.org/wiki/Serif), som skapar linjer i texten och förankrar typsnittet. Vi importerar typsnitten från Google Fonts och tilldelar dessa där vi vill att de ska användas.
+
+```css
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    line-height: 1.4;
+}
+
+main {
+    padding: 0.7rem;
+}
+
+
+h1,
+h2,
+h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 2.8rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.4rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+
+p {
+    margin-bottom: 1.4rem;
+    font-size: 1rem;
+    font-family: Merriweather, serif;
+}
+```
+
+
+Vi jämför skillnaden mellan den nollställda stilen innan våra ändringar och hur den slutliga redovisningssidan ser ut på en mobil enhet. En större sammanhang mellan frågor och svar och typsnitt som är läsbara och som följer användarens inställningar för textstorlek i webbläsaren.
+
+![image/webapp/screenshot-typo-fonts.png](https://dbwebb.se/image/webapp/screenshot-typo-fonts.png)
+![image/webapp/screenshot-typo-no-style.png](https://dbwebb.se/image/webapp/screenshot-typo-no-style.png)
+
+
+
+Avslutningsvis
+--------------------------------------
+Vi har i denna övning skrapat ytan för typografi i mobila enheter. Vi har en grund att stå på inför redovisningssidan, men även för andra textintensiva gränssnitt. Ni kan nu göra medvetna val med avseende på typsnitt och använda vita utrymmen till eran fördel för att samla besläktade element. Använd [Typography Handbook](https://web.archive.org/web/20231219201010/http://typographyhandbook.com/) som uppslagsverk när ni skapar tillgängliga och användbara hemsidor, så har ni ett försprång mot 90% av alla andra webbprogrammerare.
+
+Exempelprogrammet från denna övning finns i example-repot [webapp-example/typography](https://github.com/dbwebb-webapp/webapp-example/tree/main/typography).
