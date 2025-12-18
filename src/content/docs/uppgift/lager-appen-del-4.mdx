@@ -1,55 +1,49 @@
 ---
-title: Lager appen del 4
+title: Lager appen del 5
 author: efo
 category: javascript
 revision:
-  "2023-03-28": (B, efo) Uppdatering i samband med webapp-v5.
-  "2018-02-12": (A, efo) Första utgåvan i samband med kursen webapp v3.
+  "2024-02-16": (C, efo) Uppdaterad inför VT24. La ihop 05 och 06.
+  "2023-04-03": (B, efo) Uppdaterad för webapp-v5.
+  "2018-03-01": (A, efo) Första utgåvan i samband med kursen webapp v3.
 ---
 
-![image/webapp/money.jpeg](https://dbwebb.se/image/webapp/money.jpeg)
+![image/webapp/world-map.jpg](https://dbwebb.se/image/webapp/world-map.jpg)
 
-I kursmoment 3 arbetade vi med formulär. Vi ska i denna uppgift skapa delar av appen som är skyddad med hjälp av JWT. I den skyddade delen ska det vara möjligt att se tidigare fakturor och skicka nya.
-
-
-
-
+Vi ska i denna uppgiften använda oss av Web-API:s för att komma åt native-funktionalitet i våra fysiska mobila enheter. Vi använder en mobil enhets styrka och läggar till funktionalitet för GPS, kartor och kamera.
 
 
 
 Förkunskaper
 -----------------------
-Du har gjort uppgiften [Lager appen del 3](../uppgift/lager-appen-del-3). Du har jobbat dig igenom övningarna [Tabeller i mobila enheter](../kunskap/tabeller-i-mobila-enheter) och [Login med JWT](../kunskap/login-med-jwt).
+Du har gjort uppgiften [Lager appen del 4](../uppgift/lager-appen-del-4). Du har jobbat dig igenom övningarna "[Animationer och övergångar](../kunskap/animationer-och-overgangar)", "[GPS och karta v3](../kunskap/gps-och-karta)" och "[Kamera i mobilen](../kunskap/kamera-i-mobilen)".
 
 
 
 Introduktion
 -----------------------
 
-Använd lager [API:t](https://lager.emilfolino.se/v2) dokumentationen och speciellt sektionen om invoices. Här kan du hämta ut alla invoices och skapa nya.
+Använd lager [API:t](https://lager.emilfolino.se/v2) dokumentationen och speciellt sektionen om ordrar. Här kan du hämta ut alla ordrar.
 
 
 
 Krav
 -----------------------
 
-1. Skapa ett formulär för att kunna registrera och logga in som en användare i Lager appen.
+1. Använd animationer och övergångar för att efterlikna native applikationer.
 
-1. Bakom de skyddade delarna ska faktura vyerna ligga.
+2. Skapa en vy i din app med de ordrar som är redo att skickas. Dvs. ordrar med status Packad (200).
 
-1. Skapa ett formulär för att göra om en order till en faktura. Ändra orderns status till 'fakturerad' enligt API:t.
+3. När man klickar in på ordern får man information om ordern och en karta där paketet ska levereras.
 
-1. Det ska inte gå att fakturera en order två gånger.
+4. Använd GPS för att visa nuvarande position på kartan.
 
-1. Skapa en tabell med information om befintliga fakturor, välj själv vilken information som ska finnas.
+5. Lägg till möjligheten att ta ett foto när paketet levererats i order-vyn med kartan.
 
-1. Tabellen ska fungera på alla enheter, gör ett medvetet val av design.
+6. När du har tagit ett kort ska det laddas upp till Foto-API tjänsten beskrivit i "[Kamera i mobilen](../kunskap/kamera-i-mobilen)".
 
-1. Din app måste innehålla en CSP, som bara tillåter precis det som behövs hämtas för att undvika XSS-attacker och liknande.
+7. När bilden har laddats upp ska order-status ändras till status **Skickad (400)** och attributet `image_url` på ordern ska sättas till bild url'n vi precis laddade upp.
 
+8. Lägg till en vy som visar de levererade ordrar (status Skickad) och bilden som togs vid leverans.
 
-
-Extrauppgift
------------------------
-
-* Lägg till felmeddelanden i registrerings/inloggnings-formuläret för användaren får en förståelse för vad som blev fel.
+9. Gör det enkelt att testa din app. Ha minst en order med status Packad, som har en adress som fungerar och visas upp med en Geocoder/nominatim.
