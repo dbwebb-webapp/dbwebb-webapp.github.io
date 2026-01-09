@@ -57,12 +57,12 @@ Vi fortsätter i vår HTML-fil `index.html` där vi tar eventuellt innehåll i `
 <!doctype html>
 <html lang="sv">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Lager-Components</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Lager-Components</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <script type="module" src="src/main.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="src/main.js" defer></script>
 </head>
 <body>
 </body>
@@ -73,32 +73,32 @@ I `style.css` filen behåller vi grunden från övningen "[Typografi i mobila en
 
 ```css
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 100%;
+  font-size: 100%;
 }
 
 body {
-    line-height: 1.4;
-    font-family: sans-serif;
+  line-height: 1.4;
+  font-family: sans-serif;
 }
 
 h1 {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 h2 {
-    font-size: 1.6rem;
-    margin-bottom: 1.4rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.4rem;
 }
 
 p {
-    margin-bottom: 1.4rem;
-    font-size: 1rem;
+  margin-bottom: 1.4rem;
+  font-size: 1rem;
 }
 ```
 
@@ -112,9 +112,9 @@ I `body`-delen i `index.html` skriver vi in följande.
 
 ```html
 <body>
-    <header class="header">
-        <lager-title></lager-title>
-    </header>
+  <header class="header">
+    <lager-title></lager-title>
+  </header>
 </body>
 ```
 
@@ -123,9 +123,9 @@ Vi lägger till ett vanligt `header`-element med `.header` och sedan inuti det e
 I `src/main.js` skriver vi in följande rader.
 
 ```javascript
-import LagerTitle from "./components/lager-title.js";
+import LagerTitle from "./components/lager-title.js"
 
-customElements.define('lager-title', LagerTitle);
+customElements.define('lager-title', LagerTitle)
 ```
 
 Först importerar vi klassen `LagerTitle` från en fil och klass som vi kommer skapa om en liten stund. Sedan definierar vi vårt element `lager-title` och skickar med klassen `LagerTitle` så den anrops när webbläsaren _parser_ vår HTML med den taggen/elementet.
@@ -138,10 +138,10 @@ Vi börjar med att skapa en katalog `src/components` och här är tanken att vi 
 
 ```javascript
 export default class LagerTitle extends HTMLElement {
-    // connect component
-    connectedCallback() {
-        this.innerHTML = `<h1>Lager-app</h1>`;
-    }
+  // connect component
+  connectedCallback() {
+    this.innerHTML = `<h1>Lager-app</h1>`
+  }
 }
 ```
 
@@ -157,16 +157,16 @@ Vi börjar med att lägga till en konstruktor i vår `LagerTitle` klass. Här se
 
 ```javascript
 export default class LagerTitle extends HTMLElement {
-    constructor() {
-        super();
+  constructor() {
+    super()
 
-        this.name = "Andreas";
-    }
+    this.name = "Andreas"
+  }
 
-    // connect component
-    connectedCallback() {
-        this.innerHTML = `<h1>Lager-app</h1>`;
-    }
+  // connect component
+  connectedCallback() {
+    this.innerHTML = `<h1>Lager-app</h1>`
+  }
 }
 ```
 
@@ -174,21 +174,21 @@ Vi skapar sedan en `getter`-metod i klassen returnerar en array med de attribut 
 
 ```javascript
 export default class LagerTitle extends HTMLElement {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.name = "Andreas";
-    }
+    this.name = "Andreas"
+  }
 
-    // component attributes
-    static get observedAttributes() {
-        return ['name'];
-    }
+  // component attributes
+  static get observedAttributes() {
+    return ['name']
+  }
 
-    // connect component
-    connectedCallback() {
-        this.innerHTML = `<h1>Lager-app</h1>`;
-    }
+  // connect component
+  connectedCallback() {
+    this.innerHTML = `<h1>Lager-app</h1>`
+  }
 }
 ```
 
@@ -196,30 +196,30 @@ För att komponenten sedan ska kunna upptäcka att ett attribut ändrats använd
 
 ```javascript
 export default class LagerTitle extends HTMLElement {
-    constructor() {
-        super();
+  constructor() {
+    super()
 
-        this.name = "Andreas";
+    this.name = "Andreas"
+  }
+
+  // component attributes
+  static get observedAttributes() {
+    return ['name']
+  }
+
+  // attribute change
+  attributeChangedCallback(property, oldValue, newValue) {
+    if (oldValue === newValue) {
+        return
     }
 
-    // component attributes
-    static get observedAttributes() {
-        return ['name'];
-    }
+    this[property] = newValue
+  }
 
-    // attribute change
-    attributeChangedCallback(property, oldValue, newValue) {
-        if (oldValue === newValue) {
-            return;
-        }
-
-        this[property] = newValue;
-    }
-
-    // connect component
-    connectedCallback() {
-        this.innerHTML = `<h1>${this.name}'s Lager-app</h1>`;
-    }
+  // connect component
+  connectedCallback() {
+    this.innerHTML = `<h1>${this.name}'s Lager-app</h1>`
+  }
 }
 ```
 
@@ -229,9 +229,9 @@ Dock utnyttjar vi fortfarande inte attributen på vår komponent så vi ser till
 
 ```html
 <body>
-    <header class="header">
-        <lager-title name="Emil"></lager-title>
-    </header>
+  <header class="header">
+    <lager-title name="Emil"></lager-title>
+  </header>
 </body>
 ```
 
@@ -266,42 +266,42 @@ Låt oss börja genom att lägga till en `main`-del i vår `index.html` och i de
 
 ```html
 <body>
-    <header class="header">
-        <lager-title name="Emil"></lager-title>
-    </header>
+  <header class="header">
+    <lager-title name="Emil"></lager-title>
+  </header>
 
-    <main class="main">
-        <product-list></product-list>
-    </main>
+  <main class="main">
+    <product-list></product-list>
+  </main>
 </body>
 ```
 
 Vi behöver då i `src/main.js` skapa ytterligare ett `customElements.define()` anrop. Vilket då gör att filen ser ut på följande sätt och gör att vi även behöver skapa komponenten `components/product-list.js`-filen.
 
 ```javascript
-import LagerTitle from "./components/lager-title.js";
-import ProductList from "./components/product-list.js";
+import LagerTitle from "./components/lager-title.js"
+import ProductList from "./components/product-list.js"
 
-customElements.define('lager-title', LagerTitle);
-customElements.define('product-list', ProductList);
+customElements.define('lager-title', LagerTitle)
+customElements.define('product-list', ProductList)
 ```
 
 I filen `components/product-list.js` skapar vi sedan klassen och till en början har vi med konstruktorn och `connectedCallback`-metoden.
 
 ```javascript
-import { apiKey, baseURL } from "../utils.js";
+import { apiKey, baseURL } from "../utils.js"
 
 export default class ProductList extends HTMLElement {
-    constructor() {
-        super();
+  constructor() {
+    super()
 
-        this.products = [];
-    }
+    this.products = []
+  }
 
-    // connect component
-    async connectedCallback() {
-        this.innerHTML = `<h2>Produktlista</h2>`;
-    }
+  // connect component
+  async connectedCallback() {
+    this.innerHTML = `<h2>Produktlista</h2>`
+  }
 }
 ```
 
@@ -310,35 +310,35 @@ Laddar vi om sidan i webbläsaren bör vi nu se ytterligare en rubrik under "Emi
 Då vi i ganska många filer och komponenter kommer behöva anropa Lager-API:t lägger vi URL'n och API-nyckeln i en gemensam fil för att på ett enkelt sätt kunna återanvända den informationen. Jag skapar filen `src/utils.js` och lägger följande i den, se till att byta ut så din API-nyckel finns i filen, annars fungerar det inte.
 
 ```javascript
-const apiKey = "DIN API NYCKEL";
-const baseURL = "https://lager.emilfolino.se/v2";
+const apiKey = "DIN API NYCKEL"
+const baseURL = "https://lager.emilfolino.se/v2"
 
-export { apiKey, baseURL };
+export { apiKey, baseURL }
 ```
 
 Vi kan då i klassen importera värdena och använda de. Vi ser till att definiera `connectedCallback`-metoden som en `async` metod för att kunna använda `await` när vi hämtar data från Lager-API:t. I ett första skede skriver vi bara ut de hämtade produkterna till konsollen.
 
 ```javascript
-import { apiKey, baseURL } from "../utils.js";
+import { apiKey, baseURL } from "../utils.js"
 
 export default class ProductList extends HTMLElement {
-    constructor() {
-        super();
+  constructor() {
+    super()
 
-        this.products = [];
-    }
+    this.products = []
+  }
 
-    // connect component
-    async connectedCallback() {
-        const response = await fetch(`${baseURL}/products?api_key=${apiKey}`);
-        const result = await response.json();
+  // connect component
+  async connectedCallback() {
+    const response = await fetch(`${baseURL}/products?api_key=${apiKey}`)
+    const result = await response.json()
 
-        this.products = result.data;
+    this.products = result.data
 
-        console.log(this.products);
+    console.log(this.products)
 
-        this.innerHTML = `<h2>Produktlista</h2>`;
-    }
+    this.innerHTML = `<h2>Produktlista</h2>`
+  }
 }
 ```
 
@@ -351,46 +351,46 @@ Nu vill vi skriva ut en lista på de enskilda produkterna som finns i ditt egna 
 Jag väljer även att extrahera själva ritandet av listan till en egen metod `render()` då det kan finnas tillfällen där vi bara vill rendera ut listan utan att hämta data på nytt.
 
 ```javascript
-import { apiKey, baseURL } from "../utils.js";
+import { apiKey, baseURL } from "../utils.js"
 
 export default class ProductList extends HTMLElement {
-    constructor() {
-        super();
+  constructor() {
+    super()
 
-        this.products = [];
-    }
+    this.products = []
+  }
 
-    // connect component
-    async connectedCallback() {
-        const response = await fetch(`${baseURL}/products?api_key=${apiKey}`);
-        const result = await response.json();
+  // connect component
+  async connectedCallback() {
+    const response = await fetch(`${baseURL}/products?api_key=${apiKey}`)
+    const result = await response.json()
 
-        this.products = result.data;
+    this.products = result.data
 
-        this.render();
-    }
+    this.render()
+  }
 
-    render() {
-        const list = this.products.map((product) => {
-            return `<single-product product='${JSON.stringify(product)}'>
-                        </single-product>`;
-        }).join("");
+  render() {
+    const list = this.products.map((product) => {
+        return `<single-product product='${JSON.stringify(product)}'>
+                    </single-product>`
+    }).join("")
 
-        this.innerHTML = `<h2>Produktlista</h2>${list}`;
-    }
+    this.innerHTML = `<h2>Produktlista</h2>${list}`
+  }
 }
 ```
 
 Nu behöver vi då skapa komponenten `components/single-product.js` och definiera den som ett `customElement` i `src/main.js`.
 
 ```javascript
-import LagerTitle from "./components/lager-title.js";
-import ProductList from "./components/product-list.js";
-import SingleProduct from "./components/single-product.js";
+import LagerTitle from "./components/lager-title.js"
+import ProductList from "./components/product-list.js"
+import SingleProduct from "./components/single-product.js"
 
-customElements.define('lager-title', LagerTitle);
-customElements.define('product-list', ProductList);
-customElements.define('single-product', SingleProduct);
+customElements.define('lager-title', LagerTitle)
+customElements.define('product-list', ProductList)
+customElements.define('single-product', SingleProduct)
 ```
 
 I klassen `SingleProduct` definierar vi först de attribut vi vill kunna "observera" och sedan en `getter`-funktion som använder sig av `HTMLElement`'s `getAttribute` funktion som vi sedan gör om från en JSON-sträng till original objektet.
@@ -399,19 +399,19 @@ I `connectedCallback` ser det ut som tidigare när vi använt en instansvariabel
 
 ```javascript
 export default class SingleProduct extends HTMLElement {
-    // component attributes
-    static get observedAttributes() {
-        return ['product'];
-    }
+  // component attributes
+  static get observedAttributes() {
+    return ['product']
+  }
 
-    get product() {
-        return JSON.parse(this.getAttribute("product"));
-    }
+  get product() {
+    return JSON.parse(this.getAttribute("product"))
+  }
 
-    // connect component
-    connectedCallback() {
-        this.innerHTML = `<p>${this.product.name}</p>`;
-    }
+  // connect component
+  connectedCallback() {
+    this.innerHTML = `<p>${this.product.name}</p>`
+  }
 }
 ```
 
