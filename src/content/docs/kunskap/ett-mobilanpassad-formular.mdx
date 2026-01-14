@@ -6,13 +6,10 @@ revision:
   "2023-03-24": (B, efo) Uppdaterad utgåva inför kursen webapp v5.
   "2017-03-15": (A, efo) Första utgåvan inför kursen webapp v2.
 ---
+
 ![image/webapp/form.jpeg](https://dbwebb.se/image/webapp/form.jpeg)
 
 Vi ska i denna övning titta på hur vi med hjälp av HTML5 input gör våra mobila appar mer användarvänliga och säkra. Vi skapar även formulär komponenter till vårt GUI komponent ramverk. I slutet av övningen tittar vi på hur vi skapar ett formulär i en web component.
-
-
-
-
 
 
 
@@ -140,9 +137,9 @@ Vi börjar med den enhetliga stylingen. Vi börjar med att definiera klassen `.i
 
 ```scss
 .input {
-    font-size: $body-font-size;
-    line-height: $line-height;
-    font-family: $font-body;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-family: sans-serif;
     display: block;
     border: 1px solid #ccc;
     border-radius: 0.2rem;
@@ -153,14 +150,14 @@ Vi börjar med den enhetliga stylingen. Vi börjar med att definiera klassen `.i
 }
 ```
 
-För att använda oss av `:valid` och `:invalid` pseudoklasserna kan vi göra följande. Här sätter vi ramen runt fältet till grön om det validerar och röd om det inte validerar.
+För att använda oss av `:user-valid` och `:user-invalid` pseudoklasserna kan vi göra följande. Här sätter vi ramen runt fältet till grön om det validerar och röd om det inte validerar.
 
 ```css
-.input:valid {
+.input:user-valid {
     border: 1px solid green;
 }
 
-.input:invalid {
+.input:user-invalid {
     border: 1px solid red;
 }
 ```
@@ -234,20 +231,20 @@ this.allRoutes = {
         name: "Ny inleverans",
         hidden: true,
     },
-};
+}
 ```
 
-Som vi ser ovan har jag en `deliveries` route som visar upp alla inleveranser, ett smart sätt att skapa den är att utgå från lagersaldo vyn vi skapade i kmom01. Det borde vara ganska så snarlik information som bör finnas i den. Sedan har jag en `deliveries-form` route, här har jag valt att lägga ett attribut `hidden` som gör att den döljs i menyn. Det börjar bli mycket där och jag bara vill att det ska gå att komma åt från `deliveries` routen.
+Som vi ser ovan har jag en `deliveries` route som visar upp alla inleveranser, ett smart sätt att skapa den är att utgå från lagersaldo vyn som fanns i repot sedan innan. Det borde vara ganska så snarlik information som bör finnas i den. Sedan har jag en `deliveries-form` route, här har jag valt att lägga ett attribut `hidden` som gör att den döljs i menyn. Det börjar bli mycket där och jag bara vill att det ska gå att komma åt från `deliveries` routen.
 
 I `Navigation` klassen har jag valt att implementera det på följande sätt.
 
 ```javascript
 for (let path in routes) {
     if (routes[path].hidden) {
-        continue;
+        continue
     }
 
-    navigationLinks += `<a href='#${path}'>${routes[path].name}</a>`;
+    navigationLinks += `<a href='#${path}'>${routes[path].name}</a>`
 }
 ```
 
@@ -261,43 +258,43 @@ Inleverans formulär komponent
 Då vi vill kunna visa upp alla produkter i en dropdown-lista börjar vi med att hämta produkterna. Då vi vill hålla koden **DRY** har jag valt att skapa en `products`-modell i en katalog `models`.
 
 ```javascript
-import { apiKey, baseURL } from "../../utils.js";
+import { apiKey, baseURL } from "../utils.js"
 
 const products = {
     getProducts: async function getProducts() {
-        const response = await fetch(`${baseURL}/products?api_key=${apiKey}`);
-        const result = await response.json();
+        const response = await fetch(`${baseURL}/products?api_key=${apiKey}`)
+        const result = await response.json()
 
-        return result.data;
+        return result.data
     }
-};
+}
 
-export default products;
+export default products
 ```
 
 Vi kan nu i `delivery-form` hämta alla produkter i `connectedCallback` och sedan anropa funktionen `render` för att rendera ut formuläret. Vi skapar även två stycken instansvariabler. En array för att hålla produkterna och ett objekt för att hålla data om den inleverans som vi skapar i formuläret.
 
 ```javascript
-import productsModel from "../models/products.js";
-import deliveriesModel from "../models/deliveries.js";
+import productsModel from "../models/products.js"
+import deliveriesModel from "../models/deliveries.js"
 
 export default class DeliveryForm extends HTMLElement {
     constructor() {
-        super();
+        super()
 
-        this.products = [];
-        this.delivery = {};
+        this.products = []
+        this.delivery = {}
     }
 
     // connect component
     async connectedCallback() {
-        this.products = await productsModel.getProducts();
+        this.products = await productsModel.getProducts()
 
-        this.render();
+        this.render()
     }
 
     render() {
-        this.innerHTML = `formulär`;
+        this.innerHTML = `formulär`
     }
 }
 ```
@@ -305,40 +302,40 @@ export default class DeliveryForm extends HTMLElement {
 Vi skapar sedan ett `form`-element som kommer innehålla formuläret. Och kopplar en `EventListener` till `submit`-eventet på formuläret. För att vi ska kunna göra en `submit` skapar vi även en knapp som vi lägger till i formuläret och formuläret läggs sedan till som barn till `this`. Viktigt i `EventListener`-callbacken att använda sig av `event.preventDefault()` för att inte sidan ska laddas om och formuläret skickas. Vi kommer istället vela ta hand om det med hjälp av JavaScript.
 
 ```javascript
-import productsModel from "../models/products.js";
-import deliveriesModel from "../models/deliveries.js";
+import productsModel from "../models/products.js"
+import deliveriesModel from "../models/deliveries.js"
 
 export default class DeliveryForm extends HTMLElement {
     constructor() {
-        super();
+        super()
 
-        this.products = [];
-        this.delivery = {};
+        this.products = []
+        this.delivery = {}
     }
 
     // connect component
     async connectedCallback() {
-        this.products = await productsModel.getProducts();
+        this.products = await productsModel.getProducts()
 
-        this.render();
+        this.render()
     }
 
     render() {
-        let form = document.createElement("form");
+        let form = document.createElement("form")
 
         form.addEventListener("submit", (event) => {
-            event.preventDefault();
-        });
+            event.preventDefault()
+        })
 
-        let submitButton = document.createElement("input");
+        let submitButton = document.createElement("input")
 
-        submitButton.setAttribute("type", "submit");
-        submitButton.setAttribute("value", "Skapa inleverans");
-        submitButton.classList.add("button", "green-button");
+        submitButton.setAttribute("type", "submit")
+        submitButton.setAttribute("value", "Skapa inleverans")
+        submitButton.classList.add("button", "green-button")
 
-        form.appendChild(submitButton);
+        form.appendChild(submitButton)
 
-        this.appendChild(form);
+        this.appendChild(form)
     }
 }
 ```
@@ -353,37 +350,37 @@ Sedan kopplar vi en `EventListener` till `input`-eventet och hämtar då ut vär
 
 ```javascript
 render() {
-    let form = document.createElement("form");
+    let form = document.createElement("form")
 
     form.addEventListener("submit", (event) => {
-        event.preventDefault();
+        event.preventDefault()
 
-        console.log(this.delivery);
-    });
+        console.log(this.delivery)
+    })
 
-    let amountInput = document.createElement("input");
+    let amountInput = document.createElement("input")
 
-    amountInput.setAttribute("type", "number");
-    amountInput.setAttribute("required", "required");
-    amountInput.classList.add("input");
+    amountInput.setAttribute("type", "number")
+    amountInput.setAttribute("required", "required")
+    amountInput.classList.add("input")
 
     amountInput.addEventListener("input", (event) => {
         this.delivery = {
             ...this.delivery,
             amount: parseInt(event.target.value)
-        };
-    });
+        }
+    })
 
-    let submitButton = document.createElement("input");
+    let submitButton = document.createElement("input")
 
-    submitButton.setAttribute("type", "submit");
-    submitButton.setAttribute("value", "Skapa inleverans");
-    submitButton.classList.add("button", "green-button");
+    submitButton.setAttribute("type", "submit")
+    submitButton.setAttribute("value", "Skapa inleverans")
+    submitButton.classList.add("button", "green-button")
 
-    form.appendChild(amountInput);
-    form.appendChild(submitButton);
+    form.appendChild(amountInput)
+    form.appendChild(submitButton)
 
-    this.appendChild(form);
+    this.appendChild(form)
 }
 ```
 
@@ -391,15 +388,15 @@ render() {
 
 ### Spread-operatorn
 
-Vi använder oss av [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) i kodexemplet ovan `this.delivery = { ...this.delivery, amount: parseInt(event.target.value) };`. Spread Operator kan användas på både arrayer och objekt. För arrayer delas varje element ut som argument som en funktion, så `...[1, 2, 3] => 1, 2, 3`. För ett objekt spridas nyckel-värde paren ut på följande sätt:
+Vi använder oss av [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) i kodexemplet ovan `this.delivery = { ...this.delivery, amount: parseInt(event.target.value) }`. Spread Operator kan användas på både arrayer och objekt. För arrayer delas varje element ut som argument som en funktion, så `...[1, 2, 3] => 1, 2, 3`. För ett objekt spridas nyckel-värde paren ut på följande sätt:
 
 ```javascript
 let person = {
     name: "Emil",
     age: 35,
-};
+}
 
-let concatenatedPerson = {...person, lastName: "Folino"};
+let concatenatedPerson = {...person, lastName: "Folino"}
 
 // concatenatedPerson: {name: "Emil", age: 35, lastName: "Folino"}
 ```
