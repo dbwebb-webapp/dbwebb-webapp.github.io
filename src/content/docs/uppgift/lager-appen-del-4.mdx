@@ -16,7 +16,7 @@ Vi ska i denna uppgiften använda oss av Web-API:s för att komma åt native-fun
 
 Förkunskaper
 -----------------------
-Du har gjort uppgiften [Lager appen del 4](../uppgift/lager-appen-del-4). Du har jobbat dig igenom övningarna "[Animationer och övergångar](../kunskap/animationer-och-overgangar)", "[GPS och karta v3](../kunskap/gps-och-karta)" och "[Kamera i mobilen](../kunskap/kamera-i-mobilen)".
+Du har gjort uppgiften [Lager appen del 3](../uppgift/lager-appen-del-3). Du har jobbat dig igenom övningarna "[Animationer och övergångar](../kunskap/animationer-och-overgangar)", "[Byggverktyget Vite](../kunskap/vite)", "[GPS och karta v3](../kunskap/gps-och-karta)" och "[Kamera i mobilen](../kunskap/kamera-i-mobilen)".
 
 
 
@@ -30,20 +30,22 @@ Använd lager [API:t](https://lager.emilfolino.se/v2) dokumentationen och specie
 Krav
 -----------------------
 
+1. Din app ska kunna servas och byggas med hjälp av byggverktyget vite. Den driftsatta sidan på github pages ska vara byggt med vite.
+
 1. Använd animationer och övergångar för att efterlikna native applikationer.
 
-2. Skapa en vy i din app med de ordrar som är redo att skickas. Dvs. ordrar med status Packad (200).
+1. Skapa en vy i din app med de ordrar som är redo att skickas. Dvs. ordrar med status Packad (200).
 
-3. När man klickar in på ordern får man information om ordern och en karta där paketet ska levereras.
+1. När man klickar in på ordern får man information om ordern och en karta där paketet ska levereras.
 
-4. Använd GPS för att visa nuvarande position på kartan.
+1. Använd GPS för att visa nuvarande position på kartan.
 
-5. Lägg till möjligheten att ta ett foto när paketet levererats i order-vyn med kartan.
+1. Lägg till möjligheten att ta ett foto när paketet levererats i order-vyn med kartan.
 
-6. När du har tagit ett kort ska det laddas upp till Foto-API tjänsten beskrivit i "[Kamera i mobilen](../kunskap/kamera-i-mobilen)".
+1. När du har tagit ett kort ska det laddas upp till Foto-API tjänsten beskrivit i "[Kamera i mobilen](../kunskap/kamera-i-mobilen)".
 
-7. När bilden har laddats upp ska order-status ändras till status **Skickad (400)** och attributet `image_url` på ordern ska sättas till bild url'n vi precis laddade upp.
+1. När bilden har laddats upp ska order-status ändras till status **Skickad (400)** och attributet `image_url` på ordern ska sättas till bild url'n vi precis laddade upp.
 
-8. Lägg till en vy som visar de levererade ordrar (status Skickad) och bilden som togs vid leverans.
+1. Lägg till en vy som visar de levererade ordrar (status Skickad) och bilden som togs vid leverans.
 
-9. Gör det enkelt att testa din app. Ha minst en order med status Packad, som har en adress som fungerar och visas upp med en Geocoder/nominatim.
+1. Gör det enkelt att testa din app. Ha minst en order med status Packad, som har en adress som fungerar och visas upp med en Geocoder/nominatim.

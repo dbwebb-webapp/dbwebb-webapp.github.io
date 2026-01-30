@@ -6,14 +6,19 @@ revision:
   "2023-03-20": (B, efo) Första utgåvan inför kursen webapp v5.
   "2018-03-02": (A, efo) Första utgåvan inför kursen webapp v3.
 ---
-GPS och karta v3
-==================================
 
 ![image/webapp/gps.png](https://dbwebb.se/image/webapp/gps.png)
 
 Vi ska i denna övning använda [leaflet.js](https://leafletjs.com) tillsammans med [OpenStreetMap](https://www.openstreetmap.org) och Web API:t `geolocation` för att visa positionsdata på en karta. Vi ska alltså titta på hur vi med hjälp av den inbyggda GPS'en kan visa användarens position på kartan.
 
 Exempelprogrammet från denna övning finns i kursrepot [webapp-example/gps-v5](https://github.com/dbwebb-webapp/webapp-example/tree/main/gps-v5) och i `webapp-example/gps-v5`. Använd det gärna tillsammans med övningen för att se hur de olika delarna hänger ihop. En del kod utelämnas i exemplet för att det ska vara mer lättläst i artikeln.
+
+
+
+Förkunskaper
+--------------------------------------
+
+I denna övning utgår vi från att ni gjort övningen [Byggverktyget Vite](/kunskap/vite).
 
 
 
@@ -40,9 +45,9 @@ I `map.scss` skapar vi en väldigt enkel grundstil. Viktigt att notera är att v
 Låt oss då börja med vår web-component. I `main.js` definierar vi först elementet.
 
 ```javascript
-import MapView from "./components/map-view.js";
+import MapView from "./components/map-view.js"
 
-customElements.define("map-view", MapView);
+customElements.define("map-view", MapView)
 ```
 
 Vi börjar sedan `src/components/map-view.js` med att skapa en instansvariabel för kartan `this.map` och sedan skriver vi ut en rubrik bara för att se att allt fungerar som det ska.
@@ -50,13 +55,13 @@ Vi börjar sedan `src/components/map-view.js` med att skapa en instansvariabel f
 ```javascript
 export default class MapView extends HTMLElement {
     constructor() {
-        super();
+        super()
 
-        this.map = null;
+        this.map = null
     }
 
     connectedCallback() {
-        this.innerHTML = `<h1>MapView</h1>`;
+        this.innerHTML = `<h1>MapView</h1>`
     }
 }
 ```
@@ -68,40 +73,41 @@ Om du lägger till en route i din router bör du nu kunna se en rubrik om du gå
 Leaflet
 --------------------------------------
 
-Låt oss lägga till modulen `leaflet` för att komma igång med kartan. Vi använder ett Content Delivery Network (CDN) för detta ändamålet. Vi ser på [Leaflets hemsida](https://leafletjs.com/download.html) hur vi kan göra detta.
+Låt oss lägga till modulen `leaflet` för att komma igång med kartan. Vi kommer använda npm och vite för att installera och importera paketen.
 
-Vi lägger dessa två rader i `<head>`-delen av vår `index.html`-fil.
-
-```html
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+```shell
+# stå i roten av webapp-lager
+npm install leaflet
 ```
 
-Vi bör nu (efter en omladdning) ha tillgång till ett global objekt `L`. För att valideringen inte ska klaga lägger vi en kommentar längst upp i filen om att vi vet att globala variabeln finns. Vi lägger även till `<div id="map" class="map"></div>` som en del av `innerHTML` för vår komponent. I funktionen `renderMap` renderar vi sedan ut kartan och lägger till vilka **tiles** vi vill använda, **tiles** är de små kartbilder som tillsammans bygger ihop kartan i olika grader av in-zoomning.
+Vi importerar sedan `L` och CSS'n från Leaflet i vår `mapview`-komponent.
+
+Vi lägger även till `<div id="map" class="map"></div>` som en del av `innerHTML` för vår komponent. I funktionen `renderMap` renderar vi sedan ut kartan och lägger till vilka **tiles** vi vill använda, **tiles** är de små kartbilder som tillsammans bygger ihop kartan i olika grader av in-zoomning.
 
 ```javascript
-/* global L */
+import L from "leaflet"
+import "leaflet/dist/leaflet.css"
 
 export default class MapView extends HTMLElement {
     constructor() {
-        super();
+        super()
 
-        this.map = null;
+        this.map = null
     }
 
     connectedCallback() {
-        this.innerHTML = `<h1>MapView</h1><div id="map" class="map"></div>`;
+        this.innerHTML = `<h1>MapView</h1><div id="map" class="map"></div>`
 
-        this.renderMap();
+        this.renderMap()
     }
 
     renderMap() {
-        this.map = L.map('map').setView([56.18219, 15.59094], 11);
+        this.map = L.map('map').setView([56.18219, 15.59094], 11)
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(this.map);
+        }).addTo(this.map)
     }
 }
 ```
@@ -115,59 +121,59 @@ För att vi ska kunna visa olika specifika platser på kartan vill vi kunna rita
 
 ```javascript
 export default async function getCoordinates(address) {
-    const urlEncodedAddress = encodeURIComponent(address);
-    const url = "https://nominatim.openstreetmap.org/search.php?format=jsonv2&q=";
-    const response = await fetch(`${url}${urlEncodedAddress}`);
-    const result = await response.json();
+    const urlEncodedAddress = encodeURIComponent(address)
+    const url = "https://nominatim.openstreetmap.org/search.php?format=jsonv2&q="
+    const response = await fetch(`${url}${urlEncodedAddress}`)
+    const result = await response.json()
 
-    return result;
+    return result
 }
 ```
 
 Vi kan sedan importera denna funktion till vår komponent. Från `connectedCallback`-metoden anropar vi sedan `this.renderMarkers`-metoden som ritar ut en markör baserat på koordinater och en från en adress vi omvandlar med hjälp av modellen.
 
 ```javascript
-/* global L */
-
-import getCoordinates from "../models/nominatim.js";
+import L from "leaflet"
+import "leaflet/dist/leaflet.css"
+import getCoordinates from "../models/nominatim.js"
 
 export default class MapView extends HTMLElement {
     constructor() {
-        super();
+        super()
 
-        this.map = null;
+        this.map = null
     }
 
     connectedCallback() {
-        this.innerHTML = `<h1>MapView</h1><div id="map" class="map"></div>`;
+        this.innerHTML = `<h1>MapView</h1><div id="map" class="map"></div>`
 
-        this.renderMap();
+        this.renderMap()
     }
 
     renderMap() {
-        this.map = L.map('map').setView([56.18219, 15.59094], 11);
+        this.map = L.map('map').setView([56.18219, 15.59094], 11)
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(this.map);
+        }).addTo(this.map)
 
-        this.renderMarkers();
+        this.renderMarkers()
     }
 
     async renderMarkers() {
-        let coordinates = [56.2345, 15.6034];
+        let coordinates = [56.2345, 15.6034]
 
-        L.marker(coordinates).addTo(this.map);
+        L.marker(coordinates).addTo(this.map)
 
-        let adress = "Stortorget 1, Karlskrona";
+        let adress = "Stortorget 1, Karlskrona"
 
-        const results = await getCoordinates(adress);
+        const results = await getCoordinates(adress)
 
         L.marker([
             parseFloat(results[0].lat),
             parseFloat(results[0].lon)
-        ]).addTo(this.map);
+        ]).addTo(this.map)
     }
 }
 ```

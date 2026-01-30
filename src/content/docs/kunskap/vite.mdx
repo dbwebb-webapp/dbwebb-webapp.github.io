@@ -1,0 +1,50 @@
+---
+title: Byggverktyget Vite
+author: efo
+---
+
+I denna övning tittar vi på hur vi kan använda byggverktyget vite för att bygga vår kod och hantera npm-moduler.
+
+
+
+## Förkunskaper
+
+Du har en fungerade labbmiljö efter kmom03 i ditt webapp-lager repo.
+
+
+
+## Installera Vite
+
+Vi börjar med att installera Vite som ett utvecklingsberoende (development dependency) med följande kommando.
+
+```shell
+## stå i webapp-lager
+npm install -D vite
+```
+
+Efter att du har installerat kommandot kan vi dra igång vite med följande kommando i terminalen.
+
+```shell
+## stå i webapp-lager
+npx vite
+```
+
+Nu startas en webbserver med hjälp av vite där du kan gå till din Lager-app i webbläsaren via den adress som visas i terminalen. Webbserver fungerar lite mer avancerat än `http-server` som vi har använt tidigare i kursen med kommandot `npm start`. Med vite webbservern får vi automatisk omladdning av webbläsaren om vi ändrar saker.
+
+För att underlätta för start av vite webbservern lägger vi till två stycken script i `package.json`, min `script` del i `package.json` ser nu ut på detta sättet.
+
+```json
+"scripts": {
+  "test": "echo \"Implement later\" && exit 0",
+  "start": "http-server .",
+  "posttest": "npm run eslint && npm run stylelint && npm run htmlhint",
+  "eslint": "eslint",
+  "eslint:fix": "eslint --fix",
+  "stylelint": "stylelint \"**/*.css\"",
+  "stylelint:fix": "stylelint --fix \"**/*.css\"",
+  "htmlhint": "htmlhint \"**/*.html\"",
+  "dev": "vite",
+  "build": "vite build"
+},
+```
+
