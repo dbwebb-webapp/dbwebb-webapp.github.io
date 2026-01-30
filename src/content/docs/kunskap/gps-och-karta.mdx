@@ -37,8 +37,8 @@ I `map.scss` skapar vi en väldigt enkel grundstil. Viktigt att notera är att v
 
 ```css
 .map {
-    height: 50vh;
-    width: 100%;
+    height: 50vh
+    width: 100%
 }
 ```
 
@@ -106,7 +106,7 @@ export default class MapView extends HTMLElement {
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            attribution: '&copy <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(this.map)
     }
 }
@@ -155,7 +155,7 @@ export default class MapView extends HTMLElement {
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            attribution: '&copy <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(this.map)
 
         this.renderMarkers()
@@ -187,52 +187,52 @@ Användarens plats
 
 Sista pusselbiten vi behöver att få på plats är användarens position utritad på kartan. Vi kommer då använda oss av webbläsarens inbyggda möjlighet för att plocka ut användarens position. [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) beskriver hur det fungerar med att hämta ut användarens position.
 
-Vi lägger till ytterligare en metod i vår komponent `renderLocation`, som vi anropar från `renderMap`. I metoden frågar vi först om `geolocation` är tillgängligt i `navigator`-objektet som är den webbläsare vi ser sidan via. Sedan frågar vi `navigator` om nuvarande position och får tillbaka ett result som vi sedan ritar ut som en markör. Vi väljer att ändra utseendet på markören bara för att visa att den ena är positionen och den andra en vanlig markör. `location.png`-bilden kn du hitta i `example/gps-v5`-katalogen.
+Vi lägger till ytterligare en metod i vår komponent `renderLocation`, som vi anropar från `renderMap`. I metoden frågar vi först om `geolocation` är tillgängligt i `navigator`-objektet som är den webbläsare vi ser sidan via. Sedan frågar vi `navigator` om nuvarande position och får tillbaka ett result som vi sedan ritar ut som en markör. Vi väljer att ändra utseendet på markören bara för att visa att den ena är positionen och den andra en vanlig markör. `location.png`-bilden kan du hitta i `example/gps-v5`-katalogen.
 
 ```javascript
 /* global L */
 
-import getCoordinates from "../models/nominatim.js";
+import getCoordinates from "../models/nominatim.js"
 
 export default class MapView extends HTMLElement {
     constructor() {
-        super();
+        super()
 
-        this.map = null;
+        this.map = null
     }
 
     connectedCallback() {
-        this.innerHTML = `<h1>MapView</h1><div id="map" class="map"></div>`;
+        this.innerHTML = `<h1>MapView</h1><div id="map" class="map"></div>`
 
-        this.renderMap();
+        this.renderMap()
     }
 
     renderMap() {
-        this.map = L.map('map').setView([56.18219, 15.59094], 11);
+        this.map = L.map('map').setView([56.18219, 15.59094], 11)
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(this.map);
+            attribution: '&copy <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(this.map)
 
-        this.renderMarkers();
+        this.renderMarkers()
 
-        this.renderLocation();
+        this.renderLocation()
     }
 
     async renderMarkers() {
-        let coordinates = [56.2345, 15.6034];
+        let coordinates = [56.2345, 15.6034]
 
-        L.marker(coordinates).addTo(this.map);
+        L.marker(coordinates).addTo(this.map)
 
-        let adress = "Stortorget 1, Karlskrona";
+        let adress = "Stortorget 1, Karlskrona"
 
-        const results = await getCoordinates(adress);
+        const results = await getCoordinates(adress)
 
         L.marker([
             parseFloat(results[0].lat),
             parseFloat(results[0].lon)
-        ]).addTo(this.map);
+        ]).addTo(this.map)
     }
 
     renderLocation() {
@@ -241,7 +241,7 @@ export default class MapView extends HTMLElement {
             iconSize:     [24, 24],
             iconAnchor:   [12, 12],
             popupAnchor:  [0, 0]
-        });
+        })
 
 
         if ("geolocation" in navigator) {
@@ -249,8 +249,8 @@ export default class MapView extends HTMLElement {
                 L.marker(
                     [position.coords.latitude,                  position.coords.longitude],
                     {icon: locationMarker}
-                ).addTo(this.map);
-            });
+                ).addTo(this.map)
+            })
         }
     }
 }

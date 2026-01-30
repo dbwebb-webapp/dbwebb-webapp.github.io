@@ -48,3 +48,29 @@ För att underlätta för start av vite webbservern lägger vi till två stycken
 },
 ```
 
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="caution">Kursmaterialet under denna rutan är under utveckling. Fortsätt inte under detta. Alla andra övningar bör gå att göra.</Aside>
+
+
+
+## Bygga koden med vite
+
+De som var skarpögda ser att vi även la in ett annat script än `npm run dev` scriptet. I detta fallet är det `build`, som kan användas för att skapa ett bygga av de kod. Då tas som vid `dev` scriptet utgångspunkt från `index.html` och all JavaScript och CSS som refereras därifrån och i alla underliggande filer och packas ihop till ett bygga i en `dist`-katalog.
+
+Så om du testar att skapa ett bygge med `npm run build`, bör du kunna se en ny katalog i ditt webapp-lager repo.
+
+För att vi inte vill ha med byggen till GitHub lägger vi in `dist/` i vår `.gitignore` fil. Min fil ser ut på detta sättet.
+
+```
+node_modules/
+.env
+dist/
+```
+
+
+
+## Driftsättning via GitHub Pages
+
+Tidigare har vi bara laddat upp vår koden till GitHub och sedan har det bara automagiskt driftsatts med hjälp av filen `.github/workflows/static-deploy.yml`. För att det ska fungera även efter ett vite bygge behöver vi ändra lite i denna filen.
+
