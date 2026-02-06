@@ -58,10 +58,70 @@ Så om du testar att skapa ett bygge med `npm run build`, bör du kunna se en ny
 
 För att vi inte vill ha med byggen till GitHub lägger vi in `dist/` i vår `.gitignore` fil. Min fil ser ut på detta sättet.
 
-```
+```shell
+# .gitignore
 node_modules/
 .env
 dist/
+```
+
+Då den CSS och JavaScript som genereras av vites bygg kommando inte riktigt följer vår kodstandard kan vi ignorera den från stylelint och eslint.
+
+I `.stylelintignore` skriver vi in:
+
+```shell
+# .stylelintignore
+**/*.min.css
+dist/
+```
+
+I `eslint.config.mjs` lägger vi till `dist/` i ignores delen längst ner:
+
+```javascript
+// eslint.config.mjs
+import js from "@eslint/js"
+import globals from "globals"
+import json from "@eslint/json"
+import css from "@eslint/css"
+import { defineConfig } from "eslint/config"
+
+export default defineConfig([
+  {
+    files: ["**/*.{js,mjs,cjs}"],
+    plugins: { js },
+    extends: ["js/recommended"],
+    languageOptions: { globals: { ...globals.browser, ...globals.node } },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'off',
+      semi: ['error', 'never'],
+      indent: ['error', 2]
+    }
+  },
+  {
+    files: ["**/*.json"],
+    plugins: { json },
+    language: "json/json",
+    extends: ["json/recommended"],
+  },
+  {
+    files: ["**/*.css"],
+    plugins: { css },
+    language: "css/css",
+    extends: ["css/recommended"],
+    rules: {
+      // allow unknown CSS-variables (var(--...)) defined in other files
+      "css/no-invalid-properties": ["error", { allowUnknownVariables: true }],
+      "css/use-baseline": ["error", { available: "newly" }],
+    },
+  },
+  {
+    ignores: [
+      "package-lock.json",
+      "dist"
+    ],
+  },
+])
 ```
 
 
