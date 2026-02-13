@@ -3,6 +3,9 @@ title: Progressive Web Apps
 author: efo
 ---
 
+import { Image } from 'astro:assets';
+import chromeDevTools from "../../../assets/chrome_dev_tools.png";
+
 I denna övning tittar vi på hur vi kan använda byggverktyget vite för att bygga vår kod och hantera npm-moduler.
 
 
@@ -15,7 +18,9 @@ Du har gjort kmom05 och har en trevlig webb app så här långt i kursen.
 
 ## En installerbar app
 
-En stor del av PWAs är att de går att installera på våra mobila enheter och för de behöver vi tre filer. Först och främst två loggor. En som är 512x512 pixlar stor och en som är 192x192 pixlar stor. Dessa får ni gärna göra själva, men om ni inte känner att det finns tid eller kunskap om hur man gör en sån logga finns det två stycken att ladda ner från kurswebbplatsen: [Logga 192x192](https://dbwebb-webapp.github.io/infinity_192.webp) och [Logga 512x512](https://dbwebb-webapp.github.io/infinity_512.webp). Lägg dessa i din public katalog i ditt repo.
+En stor del av PWAs är att de går att installera på våra mobila enheter och för de behöver vi tre filer. Först och främst två loggor. En som är 512x512 pixlar stor och en som är 192x192 pixlar stor. Dessa får ni gärna göra själva, men om ni inte känner att det finns tid eller kunskap om hur man gör en sån logga finns det två stycken att ladda ner från kurswebbplatsen: [Logga 192x192](https://dbwebb-webapp.github.io/infinity_192.webp) och [Logga 512x512](https://dbwebb-webapp.github.io/infinity_512.webp). Lägg dessa i en ny katalog `src/incons` i ditt repo.
+
+Då vi använder oss av 
 
 Sedan behöver vi en manifest-fil. Denna filen döper vi till `manifest.json` och lägger i roten av vårt repo. I den fyller vi i följande:
 
@@ -63,6 +68,16 @@ För att sedan ladda in `manifest.json` till vår applikation lägger vi till ra
 </head>
 ```
 
+Google och därigenom teamet bakom Google Chrome är de som lett utvecklingen av PWAs framåt. Dock har det intresset från deras sida dalat en del senaste åren, vilket är synd. Chromes utvecklar verktyg är dock fortfarande bäst när det gäller att felsöka PWA.
+
+Under fliken Application i Dev Tools bör ni kunna se namn, beskrivning och loggor om allt fungerar som det ska.
+
+<Image src={chromeDevTools} alt="Application delen av Chrome Dev Tools" />
+
 
 
 ## Offline-läge med ServiceWorkers
+
+En bra resurs för att förstå hur vi kan jobba med offline applikationer finns på web.dev: [Common techniques to build offline applications](https://web.dev/articles/offline-cookbook).
+
+https://www.codemag.com/Article/2309071/Vite-and-Progressive-Web-Apps
