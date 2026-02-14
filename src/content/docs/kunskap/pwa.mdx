@@ -18,54 +18,71 @@ Du har gjort kmom05 och har en trevlig webb app så här långt i kursen.
 
 ## En installerbar app
 
-En stor del av PWAs är att de går att installera på våra mobila enheter och för de behöver vi tre filer. Först och främst två loggor. En som är 512x512 pixlar stor och en som är 192x192 pixlar stor. Dessa får ni gärna göra själva, men om ni inte känner att det finns tid eller kunskap om hur man gör en sån logga finns det två stycken att ladda ner från kurswebbplatsen: [Logga 192x192](https://dbwebb-webapp.github.io/infinity_192.webp) och [Logga 512x512](https://dbwebb-webapp.github.io/infinity_512.webp). Lägg dessa i en ny katalog `src/incons` i ditt repo.
+En stor del av PWAs är att de går att installera på våra mobila enheter och för de behöver vi tre filer. Först och främst två loggor. En som är 512x512 pixlar stor och en som är 192x192 pixlar stor. Dessa får ni gärna göra själva, men om ni inte känner att det finns tid eller kunskap om hur man gör en sån logga finns det två stycken att ladda ner från kurswebbplatsen: [Logga 192x192](https://dbwebb-webapp.github.io/infinity_192.webp) och [Logga 512x512](https://dbwebb-webapp.github.io/infinity_512.webp). Lägg dessa i en ny katalog `icons` i ditt repo.
 
-Då vi använder oss av 
-
-Sedan behöver vi en manifest-fil. Denna filen döper vi till `manifest.json` och lägger i roten av vårt repo. I den fyller vi i följande:
+För att vi ska få ihop en PWA som är installerbar behövs ett manifest. I vanliga fall gör man det genom att skapa en `manifest.json` fil och inkludera den i head-delen av HTML sidan med `<link rel="manifest" href="manifest.json">`. Ett exempel på en sådan fil finns nedan, du ska dock inte kopiera in denna fil. Då vi använder vite måste vi göra på ett lite annat sätt som också ger oss fördelar sedan.
 
 ```json
 // manifest.json
 {
-  "short_name": "Infinity Warehouses",
+  "short_name": "Infinity",
   "name": "Infinity Warehouses",
   "icons": [
     {
-      "src": "/webapp-lager/infinity_192.webp",
+      "src": "/webapp-lager/icons/infinity_192.webp",
       "type": "image/webp",
       "sizes": "192x192"
     },
     {
-      "src": "/webapp-lager/infinity_512.webp",
+      "src": "/webapp-lager/icons/infinity_512.webp",
       "type": "image/webp",
       "sizes": "512x512"
     }
   ],
-  "id": "/webapp-lager",
-  "start_url": "/webapp-lager",
   "background_color": "#ff69b4",
   "display": "standalone",
-  "scope": "/webapp-lager",
   "theme_color": "#ff69b4",
-  "description": "Application for Infinity Warehouses"
+  "description": "Warehouse admin app for Infinity Warehouses"
 }
 ```
 
-Det som måste finnas i detta manifest är `short_name` eller `name` och länk till loggorna. Det andra är mest för att få till finesser.
+För att det ska fungera i vite's infrastruktur installerar vi ett npm-paket med kommandot `npm install vite-plugin-pwa -save-dev`. Vi ska sedan in i vite's konfiguration i filen `vite.config.js` och lägga till lite. Manifest-konfiguration nedan motsvarar den som finns i kodexemplet ovan.
 
-För att sedan ladda in `manifest.json` till vår applikation lägger vi till raden `<link rel="manifest" href="manifest.json">`. Min head-del ser nu ut på följande sätt:
 
-```html
-<!-- index.html -->
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Lager-Components</title>
+```javascript
+// vite.config.js
+import { VitePWA } from "vite-plugin-pwa"
 
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css" />
-  <script type="module" src="src/main.js" defer></script>
-</head>
+export default {
+  base: '/webapp-lager-videos/',
+  plugins: [
+    VitePWA({
+        manifest: {
+            name: "Infinity Warehouses",
+            short_name: "Infinity",
+            description: "Warehouse admin app for Infinity Warehouses",
+            icons: [
+                {
+                  src: '/webapp-lager-videos/icons/infinity_512.webp',
+                  sizes: '512x512',
+                  type: 'image/webp'
+                },
+                {
+                  src: '/webapp-lager-videos/icons/infinity_192.webp',
+                  sizes: '192x192',
+                  type: 'image/webp'
+                },
+            ],
+            background_color: "#ff69b4",
+            display: "standalone",
+            theme_color: "#ff69b4",
+        },
+        devOptions: {
+            enabled: true
+        }
+    })
+  ]
+}
 ```
 
 Google och därigenom teamet bakom Google Chrome är de som lett utvecklingen av PWAs framåt. Dock har det intresset från deras sida dalat en del senaste åren, vilket är synd. Chromes utvecklar verktyg är dock fortfarande bäst när det gäller att felsöka PWA.
@@ -78,6 +95,72 @@ Under fliken Application i Dev Tools bör ni kunna se namn, beskrivning och logg
 
 ## Offline-läge med ServiceWorkers
 
-En bra resurs för att förstå hur vi kan jobba med offline applikationer finns på web.dev: [Common techniques to build offline applications](https://web.dev/articles/offline-cookbook).
+En bra resurs för att förstå hur vi kan jobba med offline applikationer finns på web.dev: [Common techniques to build offline applications](https://web.dev/articles/offline-cookbook). Koden som finns i exempel där utgår inte från vite, så det kommer se lite annorlunda ut nedan.
 
-https://www.codemag.com/Article/2309071/Vite-and-Progressive-Web-Apps
+Först tar vi en titt på hur vi kan kolla om webbläsaren har tillgång till internet och det kan vi göra med `window.navigator.onLine`. Det attributet är `true` om webbläsare är online och `false` om den är offline.
+
+Sedan vill vi använda Cache för att göra våra applikationer tillgängliga offline. I `vite.config.js` lägger vi först till att vi vill ha alla HTML, CSS och JS filer i cachen.
+
+```javascript
+import { VitePWA } from "vite-plugin-pwa"
+
+export default {
+  base: '/webapp-lager-videos/',
+  plugins: [
+    VitePWA({
+        manifest: {
+            name: "Infinity Warehouses",
+            // förkortad för läsbarhet
+        },
+        devOptions: {
+            enabled: true
+        },
+        workbox: {
+          globPatterns: ["**/*.{js,css,html}"],
+        },
+    })
+  ]
+}
+```
+
+Nu bör ni kunna stänga av internet på datorn/mobilen och se att sidorna laddas, men inget data. Så låt oss göra nått åt det. Först sätt på internet igen, så webbläsaren har möjlighet för att hinna ladda.
+
+Vi lägger nu till följande i `vite.config.js`, där vi gör cache av alla url'er till lager-api:t, vi ger cachen ett namn och vi vill bara göra cache av alla svar med HTTP-kod 200 OK. Sedan vill vi även att data ska uppdateras automatiskt när användaren får internet, så då sätter vi `registerType: 'autoUpdate'`.
+
+```javascript
+import { VitePWA } from "vite-plugin-pwa"
+
+export default {
+  base: '/webapp-lager-videos/',
+  plugins: [
+    VitePWA({
+        manifest: {
+            name: "Infinity Warehouses",
+            // förkortad för läsbarhet
+        },
+        devOptions: {
+            enabled: true
+        },
+        workbox: {
+          globPatterns: ["**/*.{js,css,html}"],
+
+          runtimeCaching: [{
+              urlPattern: ({ url }) => {
+                  return url.hostname === "lager.emilfolino.se"
+              },
+              handler: "CacheFirst",
+              options: {
+                  cacheName: "api-cache",
+                  cacheableResponse: {
+                      statuses: [0, 200]
+                  }
+              }
+          }]
+        },
+        registerType: 'autoUpdate'
+    })
+  ]
+}
+```
+
+Nu bör det vara möjligt att se data efter du har laddat in det i applikationen och sedan stänger av internet.
