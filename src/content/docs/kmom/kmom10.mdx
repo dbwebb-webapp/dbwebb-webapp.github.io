@@ -7,9 +7,6 @@ import environment from "../../../assets/environments.png";
 
 import { YouTube } from 'astro-embed';
 
-import { Aside } from '@astrojs/starlight/components';
-
-<Aside type="caution">Kursmaterial är under utveckling. Påbörja inte kursmomentet så länge denna gula rutan finns.</Aside>
 
 ![KAJT Logga](https://dbwebb.se/image/webapp/v4/kajt.jpg)
 
@@ -41,7 +38,7 @@ Börja med att göra en fork av repot [dbwebb-webapp/webapp-project](https://git
 
 Skapa en branch `git checkout -b kmom10`.
 
-Se till att godkänna Actions och att sätta GitHub Actions som sätt att publicera GitHub Pages webbplatsen. Om du har menyvalet Settings>Environments se till att lägga kmom10 branchen som en Deployment Branch.
+Se till att godkänna Actions och att sätta GitHub Actions som sätt att publicera GitHub Pages webbplatsen. Se även till att lägga `kmom10` branchen som en Deployment Branch, så inte `kmom0*` men `kmom10` eller `kmom*` i bilden nedan.
 
 <Image src={environment} alt="Add deployment branch in GitHub" />
 
@@ -94,9 +91,9 @@ Din app ska visa upp förseningar i tågtrafiken i Sverige. I [trafik API:t](htt
 
 De två datasätten kan kopplas ihop med hjälp av `LocationSignature` från `/stations` och `/delayed`.
 
-Din webapp ska baseras på de tekniker vi har använt under kursens gång.
+Din webapp ska baseras på de tekniker vi har använt under kursens gång. Du ska använda vite för att bygga och driftsätta appen med hjälp GitHub Actions. Din app ska vara en PWA med en egen Logga.
 
-__Arkitektur__: Beskriv i ett textstycke, som en del av din inlämning, vilka val av teknik du har gjort för din app. Berätta hur du har organiserad din kod så att en kollega snabbt kan sätta sig in i din app.
+__Arkitektur__: Beskriv i ett textstycke, som en del av din inlämning, vilka val av teknik du har gjort för din app. Berätta hur du har organiserad din kod så att en kollega snabbt kan sätta sig in i din app. Beskriv vilken data du har valt att göra en cache av.
 
 Bygg sedan en så gott som felfri webapp, i enlighet med din spec.
 
