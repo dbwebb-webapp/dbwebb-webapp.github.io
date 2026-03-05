@@ -43,9 +43,9 @@ Krav
 * Leveransdatum (delivery_date)
 * Kommentar (comment)
 
-5. När formuläret skickas ska det skapas en inleverans i API:t.
+5. När formuläret skickas ska det skapas en inleverans i API:t och en redirect ska göras till inleverans listan. Utnyttja `location.hash = "nya-rutten"` för redirects.
 
-5. Lagersaldot för produkten ska ökas med den levererade mängden.
+6. Lagersaldot för produkten ska ökas med den levererade mängden.
 
 7. Använd ett `select`-element för att välja produkten som har levererats. Designa `select`-elementet så det passar in i resten av stilen för formuläret.
 
