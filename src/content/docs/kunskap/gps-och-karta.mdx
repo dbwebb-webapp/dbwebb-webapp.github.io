@@ -82,7 +82,7 @@ npm install leaflet
 
 Vi importerar sedan `L` och CSS'n från Leaflet i vår `mapview`-komponent.
 
-Vi lägger även till `<div id="map" class="map"></div>` som en del av `innerHTML` för vår komponent. I funktionen `renderMap` renderar vi sedan ut kartan och lägger till vilka **tiles** vi vill använda, **tiles** är de små kartbilder som tillsammans bygger ihop kartan i olika grader av in-zoomning.
+Vi lägger även till `<div id="map" class="map"></div>` som en del av `innerHTML` för vår komponent. I funktionen `renderMap` renderar vi sedan ut kartan och lägger till vilka **tiles** vi vill använda, **tiles** är de små kartbilder som tillsammans bygger ihop kartan i olika grader av in-zoomning. `referrerPolicy: 'strict-origin-when-cross-origin',` är till för att möjliggöra laddning av kartan, OpenStreetMap har införd den referrerPolicy för att undvika för många falska requests.
 
 ```javascript
 import L from "leaflet"
@@ -106,7 +106,8 @@ export default class MapView extends HTMLElement {
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            attribution: '&copy <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            attribution: '&copy <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+            referrerPolicy: 'strict-origin-when-cross-origin',
         }).addTo(this.map)
     }
 }
@@ -155,7 +156,8 @@ export default class MapView extends HTMLElement {
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            attribution: '&copy <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            attribution: '&copy <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+            referrerPolicy: 'strict-origin-when-cross-origin',
         }).addTo(this.map)
 
         this.renderMarkers()
@@ -212,7 +214,8 @@ export default class MapView extends HTMLElement {
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            attribution: '&copy <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            attribution: '&copy <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+            referrerPolicy: 'strict-origin-when-cross-origin',
         }).addTo(this.map)
 
         this.renderMarkers()
